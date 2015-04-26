@@ -1,4 +1,6 @@
 
 public class Coba {
-sdascsdcsdcsd
+void san(){
+	System.out.print("Sandy Ganteng");
+}
 }
