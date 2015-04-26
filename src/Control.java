@@ -53,7 +53,7 @@ public class Control {
 		System.out.println("Di mana posisi CCTV");
 		kelas.setPosisiCCTV(in.nextLine());
 	}
-	void KeamananRuangKelas() {
+	void inputKeamananRuangKelas() {
 
 		System.out.print("\n1.kokoh" + "\n2.Tidak kokoh");
 		System.out.println("\nTingkant kekokohan \t:");
@@ -69,7 +69,7 @@ public class Control {
 
 	}
 
-	void KeamananRuangKelas1() {
+	void analisisKeamananRuangKelas() {
 		if (kelas.getKekokohan() == 1)
 			System.out.println("Tingkant kekokohan \t:Sesuai");
 		else if (kelas.getKekokohan() == 2)
@@ -83,7 +83,7 @@ public class Control {
 		else if (kelas.getBahaya() == 2)
 			System.out.println("Tingkant bahaya \t:Sesuai");
 	}
-	void KenyamananRuangKelas() {
+	void inputKenyamananRuangKelas() {
 
 		System.out.print("\n1.bising" + "\n2.Tidak Bising");
 		System.out.println("\nTingkant kebisingan \t:");
@@ -107,7 +107,7 @@ public class Control {
 
 	}
 
-	void KenyamananRuangKelas1() {
+	void analisisKenyamananRuangKelas() {
 		if (kelas.getKebisingan() == 1)
 			System.out.print("Tingkat Kebisingan \t:Tidak Sesuai\n");
 		else if (kelas.getKebisingan() == 2)
@@ -137,6 +137,7 @@ public class Control {
 			System.out.print("Tingkat Keausan \t:Tidak Sesuai\n");
 		else if (kelas.getKeausan() == 2)
 			System.out.print("Tingkat Keausan \t:Sesuai\n");
+	}
 	
 	void analisisKelistrikan(){
 		if(kelas.getSteker()>=4){
@@ -222,7 +223,7 @@ public class Control {
 				System.out.println("Posisi CCTV Sesuai");
 			}
 		}
-<<<<<<< HEAD
+//<<<<<<< HEAD
 		
 	}
 	void AnalisisKebersihan(){
@@ -285,8 +286,5 @@ public class Control {
 		
 		}
 	}
-	
-=======
-	}
->>>>>>> origin/master
+
 }
