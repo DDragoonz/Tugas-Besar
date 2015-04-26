@@ -6,6 +6,7 @@ public class Control {
 
 	Scanner in = new Scanner(System.in);
 
+	// ade start coding
 	public void inputIdentitasRuang(){
 		System.out.println("Input nama ruang : ");
 		kelas.setNamaRuang(in.nextLine());
@@ -90,7 +91,9 @@ public class Control {
 		
 		
 	}
+	//ade stop coding
 	
+	//tri putra start coding
 	void InputKebersihan (){
 		System.out.println("Masukan Kondisi lantai : ");
 		kelas.setKondisiLantai (in.nextLine());
@@ -123,7 +126,9 @@ public class Control {
 		System.out.println("Masukan Kondisi Kelembapan : ");
 		kelas.setKelembapan (in.nextInt());
 	}
+	//tri putra stop coding
 	
+	//sandy start coding
 	void inputKeamananRuangKelas() {
 
 		System.out.print("\n1.kokoh" + "\n2.Tidak kokoh");
@@ -164,14 +169,6 @@ public class Control {
 
 	}
 	
-	void kondisiRuangKelas(){
-		double luas = kelas.getPanjangKelas()*kelas.getPanjangKelas();
-		System.out.println("Luas Kelas adalah : "+luas);
-		if(kelas.getPanjangKelas()!=kelas.getLebarKelas())System.out.println("Bentuk kelas sesuai");
-		if(luas/kelas.getJumlahKursi()>=0.5) System.out.println("Rasio Kelas sesuai");
-		if(kelas.getJumlahPintu()>=2&&kelas.getJumlahJendela()>=1)System.out.println("Jumlah pintu dan jendela sesuai");
-	}
-
 	void analisisKeamananRuangKelas() {
 		if (kelas.getKekokohan() == 1)
 			System.out.println("Tingkant kekokohan \t:Sesuai");
@@ -218,7 +215,18 @@ public class Control {
 		else if (kelas.getKeausan() == 2)
 			System.out.print("Tingkat Keausan \t:Sesuai\n");
 	}
+	//sandy stop coding
 
+	//ade start coding
+	void kondisiRuangKelas(){
+		double luas = kelas.getPanjangKelas()*kelas.getPanjangKelas();
+		System.out.println("Luas Kelas adalah : "+luas);
+		if(kelas.getPanjangKelas()!=kelas.getLebarKelas())System.out.println("Bentuk kelas sesuai");
+		if(luas/kelas.getJumlahKursi()>=0.5) System.out.println("Rasio Kelas sesuai");
+		if(kelas.getJumlahPintu()>=2&&kelas.getJumlahJendela()>=1)System.out.println("Jumlah pintu dan jendela sesuai");
+	}
+
+	
 	void analisisKelistrikan() {
 		if (kelas.getSteker() >= 4) {
 			System.out.println("Jumlah Steker Sesuai");
@@ -303,10 +311,11 @@ public class Control {
 				System.out.println("Posisi CCTV Sesuai");
 			}
 		}
-		// <<<<<<< HEAD
-
+				
 	}
+	// ade stop coding
 
+	//tri putra start coding
 	void AnalisisKebersihan() {
 		int NilaiBersih = 0;
 
@@ -369,3 +378,4 @@ public class Control {
 	}
 
 }
+//tri putra stop coding
