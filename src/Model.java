@@ -1,6 +1,8 @@
+//auto generate setget method
 
 public class Model {
 
+	//ade
 	private String namaRuang;
 	private String lokasiRuang;
 	private String programStudi;
@@ -31,7 +33,9 @@ public class Model {
 	private int CCTV;
 	private int jumlahCCTVberfungsi;
 	private String posisiCCTV;
+	//ade
 	
+	//tri putra
 	private String KondisiLantai;
 	private String KondisiDinding;
 	private String KondisiAtap;
@@ -42,6 +46,9 @@ public class Model {
 	private int Pencahayaan ;
 	private int Kelembapan ;
 	private int Suhu ;
+	//tri putra
+	
+	//sandy
 	private int kebisingan;
 	private int bau;
 	private int kebocoran;
@@ -52,7 +59,8 @@ public class Model {
 	private int bahaya;
 	private boolean benar = true;
 	private boolean salah = false;
-
+	//sandy
+	
 	public String getNamaRuang() {
 		return namaRuang;
 	}
