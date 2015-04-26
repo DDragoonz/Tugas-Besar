@@ -7,6 +7,7 @@ public class Main {
 		
 		kelas.inputIdentitasRuang();
 		kelas.inputKondisiRuang();
+		kelas.inputKursiPintuJendela();
 		kelas.kondisiRuangKelas();
 		
 		kelas.inputSarana();
@@ -24,17 +25,19 @@ public class Main {
 		kelas.InputSirkulasi();
 		kelas.AnalisisSirkulasi();
 		
-		kelas.inputKenyamananRuangKelas();
-		kelas.inputKeamananRuangKelas();
-		
-		
-		
-		
-		
+		kelas.InputPencahayaan();
 		kelas.AnalisisPencahayaan();
+		
+		kelas.InputKelembapan();
 		kelas.AnalisisKelembapan();
+		
+		kelas.InputSuhu();
 		kelas.AnalisisSuhu();
+		
+		kelas.inputKenyamananRuangKelas();
 		kelas.analisisKenyamananRuangKelas();
+		
+		kelas.inputKeamananRuangKelas();
 		kelas.analisisKeamananRuangKelas();
 		
 	}
