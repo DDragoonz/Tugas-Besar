@@ -143,11 +143,11 @@ public class Control {
 	void AnalisisKebersihan(){
 		int NilaiBersih = 0 ;
 		
-		if (Kelas.getKondisiLantai().equals("Baik"))NilaiBersih+=1;
-		if	(	Kelas.getKondisiDinding().equals("Baik"))NilaiBersih+=1;
-		if	(	Kelas.getKondisiAtap().equals("Baik"))NilaiBersih+=1;
-		if	(	Kelas.getKondisiPintu().equals("baik"))NilaiBersih+=1;
-		if	(	Kelas.getKondisiJendela().equals("Baik"))NilaiBersih+=1;
+		if (kelas.getKondisiLantai().equals("Baik"))NilaiBersih+=1;
+		if	(	kelas.getKondisiDinding().equals("Baik"))NilaiBersih+=1;
+		if	(	kelas.getKondisiAtap().equals("Baik"))NilaiBersih+=1;
+		if	(	kelas.getKondisiPintu().equals("baik"))NilaiBersih+=1;
+		if	(	kelas.getKondisiJendela().equals("Baik"))NilaiBersih+=1;
 		if (NilaiBersih >=3){
 			System.out.println ("Sesuai");
 		}
@@ -159,7 +159,7 @@ public class Control {
 		
 	}
 	void AnalisisSirkulasi(){
-		if (Kelas.getSirkulasiudara().equals("Baik")){
+		if (kelas.getSirkulasiudara().equals("Baik")){
 			System.out.println ("Sesuai");
 		}
 		else {
@@ -170,7 +170,7 @@ public class Control {
 		
 	}
 	void AnalisisPencahayaan(){
-		if (Kelas.getPencahayaan()>=250 && Kelas.getPencahayaan()<=350){
+		if (kelas.getPencahayaan()>=250 && kelas.getPencahayaan()<=350){
 			System.out.println ("Sesuai");
 		}
 		else {
@@ -181,7 +181,7 @@ public class Control {
 		
 	}
 	void AnalisisKelembapan(){
-		if (Kelas.getKelembapan()>=70 && Kelas.getKelembapan()<=80){
+		if (kelas.getKelembapan()>=70 && kelas.getKelembapan()<=80){
 			System.out.println ("Sesuai");
 		}
 		else {
@@ -192,12 +192,13 @@ public class Control {
 		
 	}
 	void AnalisisSuhu(){
-		if (Kelas.getSuhu()>=25 && Kelas.getSuhu()<=30){
+		if (kelas.getSuhu()>=25 && kelas.getSuhu()<=30){
 			System.out.println ("Sesuai");
 		}
 		else {
 			System.out.println ("Tidak Sesuai");
 		
 		}
+	}
 	
 }
