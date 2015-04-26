@@ -22,6 +22,13 @@ public class Model {
 	private int jumlahCCTVberfungsi;
 	private String posisiCCTV;
 	
+	private String KondisiLantai;
+	private String KondisiDinding;
+	private String KondisiAtap;
+	private String KondisiPintu;
+	private String KondisiJendela;
+	private String Sirkulasiudara ;
+	
 	private int kebisingan;
 	private int bau;
 	private int kebocoran;
@@ -234,5 +241,58 @@ public class Model {
 	public void setPosisiCCTV(String posisiCCTV) {
 		this.posisiCCTV = posisiCCTV;
 	}
-
+	public String getKondisiLantai() {
+		return KondisiLantai;
+	}
+	public void setKondisiLantai(String kondisiLantai) {
+		KondisiLantai = kondisiLantai;
+	}
+	public String getKondisiDinding() {
+		return KondisiDinding;
+	}
+	public void setKondisiDinding(String kondisiDinding) {
+		KondisiDinding = kondisiDinding;
+	}
+	public String getKondisiAtap() {
+		return KondisiAtap;
+	}
+	public void setKondisiAtap(String kondisiAtap) {
+		KondisiAtap = kondisiAtap;
+	}
+	public String getKondisiPintu() {
+		return KondisiPintu;
+	}
+	public void setKondisiPintu(String kondisiPintu) {
+		KondisiPintu = kondisiPintu;
+	}
+	public String getKondisiJendela() {
+		return KondisiJendela;
+	}
+	public void setKondisiJendela(String kondisiJendela) {
+		KondisiJendela = kondisiJendela;
+	}
+	public String getSirkulasiudara() {
+		return Sirkulasiudara;
+	}
+	public void setSirkulasiudara(String sirkulasiudara) {
+		Sirkulasiudara = sirkulasiudara;
+	}
+	public int getPencahayaan() {
+		return Pencahayaan;
+	}
+	public void setPencahayaan(int pencahayaan) {
+		Pencahayaan = pencahayaan;
+	}
+	public int getKelembapan() {
+		return Kelembapan;
+	}
+	public void setKelembapan(int kelembapan) {
+		Kelembapan = kelembapan;
+	}
+	public int getSuhu() {
+		return Suhu;
+	}
+	public void setSuhu(int suhu) {
+		Suhu = suhu;
+	}
 }

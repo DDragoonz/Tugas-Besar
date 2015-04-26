@@ -138,5 +138,66 @@ public class Control {
 				System.out.println("Posisi CCTV Sesuai");
 			}
 		}
+		
 	}
+	void AnalisisKebersihan(){
+		int NilaiBersih = 0 ;
+		
+		if (Kelas.getKondisiLantai().equals("Baik"))NilaiBersih+=1;
+		if	(	Kelas.getKondisiDinding().equals("Baik"))NilaiBersih+=1;
+		if	(	Kelas.getKondisiAtap().equals("Baik"))NilaiBersih+=1;
+		if	(	Kelas.getKondisiPintu().equals("baik"))NilaiBersih+=1;
+		if	(	Kelas.getKondisiJendela().equals("Baik"))NilaiBersih+=1;
+		if (NilaiBersih >=3){
+			System.out.println ("Sesuai");
+		}
+		else {
+			System.out.println ("Tidak Sesuai");
+		
+		}
+		
+		
+	}
+	void AnalisisSirkulasi(){
+		if (Kelas.getSirkulasiudara().equals("Baik")){
+			System.out.println ("Sesuai");
+		}
+		else {
+			System.out.println ("Tidak Sesuai");
+		
+		}
+		
+		
+	}
+	void AnalisisPencahayaan(){
+		if (Kelas.getPencahayaan()>=250 && Kelas.getPencahayaan()<=350){
+			System.out.println ("Sesuai");
+		}
+		else {
+			System.out.println ("Tidak Sesuai");
+		
+		}
+		
+		
+	}
+	void AnalisisKelembapan(){
+		if (Kelas.getKelembapan()>=70 && Kelas.getKelembapan()<=80){
+			System.out.println ("Sesuai");
+		}
+		else {
+			System.out.println ("Tidak Sesuai");
+		
+		}
+		
+		
+	}
+	void AnalisisSuhu(){
+		if (Kelas.getSuhu()>=25 && Kelas.getSuhu()<=30){
+			System.out.println ("Sesuai");
+		}
+		else {
+			System.out.println ("Tidak Sesuai");
+		
+		}
+	
 }
