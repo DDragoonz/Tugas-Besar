@@ -53,6 +53,90 @@ public class Control {
 		System.out.println("Di mana posisi CCTV");
 		kelas.setPosisiCCTV(in.nextLine());
 	}
+	void KeamananRuangKelas() {
+
+		System.out.print("\n1.kokoh" + "\n2.Tidak kokoh");
+		System.out.println("\nTingkant kekokohan \t:");
+		kelas.setKekokohan(in.nextInt());
+
+		System.out.print("\n1.ada" + "\n2.Tidak ada");
+		System.out.println("\n ada pintu Cendala  \t:");
+		kelas.setKuncipintudanjendela(in.nextInt());
+
+		System.out.print("\n1.Bahaya" + "\n2.Tidak Bahaya");
+		System.out.println("\nTingkant bahaya \t:");
+		kelas.setBahaya(in.nextInt());
+
+	}
+
+	void KeamananRuangKelas1() {
+		if (kelas.getKekokohan() == 1)
+			System.out.println("Tingkant kekokohan \t:Sesuai");
+		else if (kelas.getKekokohan() == 2)
+			System.out.println("Tingkant kekokohan \t:Tidak sesuai");
+		if (kelas.getKuncipintudanjendela() == 1)
+			System.out.println("pintu Cendala  \t\t:Sesuai");
+		else if (kelas.getKuncipintudanjendela() == 2)
+			System.out.println("\n pintu Cendala  \t\t:Tidak Sesuai");
+		if (kelas.getBahaya() == 1)
+			System.out.println("Tingkant Bahaya \t: Tidak Sesuai");
+		else if (kelas.getBahaya() == 2)
+			System.out.println("Tingkant bahaya \t:Sesuai");
+	}
+	void KenyamananRuangKelas() {
+
+		System.out.print("\n1.bising" + "\n2.Tidak Bising");
+		System.out.println("\nTingkant kebisingan \t:");
+		kelas.setKebisingan(in.nextInt());
+
+		System.out.print("\n1.bau" + "\n2.Tidak Bau");
+		System.out.println("\nTingkant Bau Ruangan \t:");
+		kelas.setBau(in.nextInt());
+
+		System.out.print("\n1.bocor" + "\n2.Tidak Bocor");
+		System.out.println("\nTingkant kebocoran kelas \t:");
+		kelas.setKebocoran(in.nextInt());
+
+		System.out.print("\n1.rusak" + "\n2.Tidak Rusak");
+		System.out.println("\nTingkant kerusakan kelas \t:");
+		kelas.setKerusakan(in.nextInt());
+
+		System.out.print("\n1.aus" + "\n2.Tidak aus");
+		System.out.println("\nTingkant keausan \t:");
+		kelas.setKeausan(in.nextInt());
+
+	}
+
+	void KenyamananRuangKelas1() {
+		if (kelas.getKebisingan() == 1)
+			System.out.print("Tingkat Kebisingan \t:Tidak Sesuai\n");
+		else if (kelas.getKebisingan() == 2)
+			System.out.print("Tingkat Kebisingan \t:Sesuai\n");
+
+		if (kelas.getBau() == 1)
+			System.out.print("Tingkat Bau \t:Tidak Sesuai\n");
+		else if (kelas.getBau() == 2)
+			System.out.print("Tingkat Bau \t:Sesuai\n");
+
+		if (kelas.getKebocoran() == 1)
+			System.out.print("Tingkat Kebocoran \t:Tidak Sesuai\n");
+		else if (kelas.getKebocoran() == 2)
+			System.out.print("Tingkat Kebocoran \t:Sesuai\n");
+
+		if (kelas.getKerusakan() == 1)
+			System.out.print("Tingkat Kerusakan \t:Tidak Sesuai\n");
+		else if (kelas.getKerusakan() == 2)
+			System.out.print("Tingkat Kerusakan \t:Sesuai\n");
+
+		if (kelas.getKerusakan() == 1)
+			System.out.print("Tingkat Kerusakan \t:Tidak Sesuai\n");
+		else if (kelas.getKerusakan() == 2)
+			System.out.print("Tingkat Kerusakan \t:Sesuai\n");
+
+		if (kelas.getKeausan() == 1)
+			System.out.print("Tingkat Keausan \t:Tidak Sesuai\n");
+		else if (kelas.getKeausan() == 2)
+			System.out.print("Tingkat Keausan \t:Sesuai\n");
 	
 	void analisisKelistrikan(){
 		if(kelas.getSteker()>=4){
@@ -138,66 +222,5 @@ public class Control {
 				System.out.println("Posisi CCTV Sesuai");
 			}
 		}
-		
 	}
-	void AnalisisKebersihan(){
-		int NilaiBersih = 0 ;
-		
-		if (Kelas.getKondisiLantai().equals("Baik"))NilaiBersih+=1;
-		if	(	Kelas.getKondisiDinding().equals("Baik"))NilaiBersih+=1;
-		if	(	Kelas.getKondisiAtap().equals("Baik"))NilaiBersih+=1;
-		if	(	Kelas.getKondisiPintu().equals("baik"))NilaiBersih+=1;
-		if	(	Kelas.getKondisiJendela().equals("Baik"))NilaiBersih+=1;
-		if (NilaiBersih >=3){
-			System.out.println ("Sesuai");
-		}
-		else {
-			System.out.println ("Tidak Sesuai");
-		
-		}
-		
-		
-	}
-	void AnalisisSirkulasi(){
-		if (Kelas.getSirkulasiudara().equals("Baik")){
-			System.out.println ("Sesuai");
-		}
-		else {
-			System.out.println ("Tidak Sesuai");
-		
-		}
-		
-		
-	}
-	void AnalisisPencahayaan(){
-		if (Kelas.getPencahayaan()>=250 && Kelas.getPencahayaan()<=350){
-			System.out.println ("Sesuai");
-		}
-		else {
-			System.out.println ("Tidak Sesuai");
-		
-		}
-		
-		
-	}
-	void AnalisisKelembapan(){
-		if (Kelas.getKelembapan()>=70 && Kelas.getKelembapan()<=80){
-			System.out.println ("Sesuai");
-		}
-		else {
-			System.out.println ("Tidak Sesuai");
-		
-		}
-		
-		
-	}
-	void AnalisisSuhu(){
-		if (Kelas.getSuhu()>=25 && Kelas.getSuhu()<=30){
-			System.out.println ("Sesuai");
-		}
-		else {
-			System.out.println ("Tidak Sesuai");
-		
-		}
-	
 }
