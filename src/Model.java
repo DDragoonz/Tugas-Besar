@@ -28,10 +28,16 @@ public class Model {
 	private String KondisiPintu;
 	private String KondisiJendela;
 	private String Sirkulasiudara ;
+<<<<<<< HEAD
 	private int Pencahayaan;
 	private int Kelembapan;
 	private int Suhu;
 	
+=======
+	private int Pencahayaan ;
+	private int Kelembapan ;
+	private int Suhu ;
+>>>>>>> origin/master
 	private int kebisingan;
 	private int bau;
 	private int kebocoran;
