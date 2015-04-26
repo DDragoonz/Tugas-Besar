@@ -6,7 +6,24 @@ public class Control {
 
 	Scanner in = new Scanner(System.in);
 
-	public void input() {
+	public void inputIdentitasRuang(){
+		System.out.println("Input nama ruang : ");
+		kelas.setNamaRuang(in.nextLine());
+		System.out.println("Input lokasi ruang : ");
+		kelas.setLokasiRuang(in.nextLine());
+		System.out.println("Input Program Studi : ");
+		kelas.setProgramStudi(in.nextLine());
+	}
+	
+	public void inputKondisiRuang(){
+		System.out.println("Input Panjang ruang");
+		kelas.setPanjangKelas(in.nextDouble());
+		System.out.println("Input Lebar Ruag");
+		kelas.setLebarKelas(in.nextDouble());
+		
+	}
+	
+	public void inputSarana() {
 		System.out.println("Masukan jumlah steker");
 		kelas.setSteker(in.nextInt());
 		in.nextLine();
@@ -67,92 +84,23 @@ public class Control {
 	
 	void InputKebersihan (){
 		System.out.println("Masukan Kondisi lantai : ");
-		Kelas.setKondisiLantai (in.nextLine());
+		kelas.setKondisiLantai (in.nextLine());
 		System.out.println("Masukan Kondisi Dinding : ");
-		Kelas.setKondisiDinding (in.nextLine());
+		kelas.setKondisiDinding (in.nextLine());
 		System.out.println("Masukan Kondisi Atap : ");
-		Kelas.setKondisiAtap (in.nextLine());
+		kelas.setKondisiAtap (in.nextLine());
 		System.out.println("Masukan Kondisi Pintu : ");
-		Kelas.setKondisiPintu (in.nextLine());
+		kelas.setKondisiPintu (in.nextLine());
 		System.out.println("Masukan Kondisi Jendela : ");
-		Kelas.setKondisiJendela (in.nextLine());
+		kelas.setKondisiJendela (in.nextLine());
 	}
-	void AnalisisKebersihan(){
-		int NilaiBersih = 0 ;
-		if (Kelas.getKondisiLantai().equals("Baik"))NilaiBersih+=1;
-		if	(	Kelas.getKondisiDinding().equals("Baik"))NilaiBersih+=1;
-		if	(	Kelas.getKondisiAtap().equals("Baik"))NilaiBersih+=1;
-		if	(	Kelas.getKondisiPintu().equals("baik"))NilaiBersih+=1;
-		if	(	Kelas.getKondisiJendela().equals("Baik"))NilaiBersih+=1;
-		if (NilaiBersih >=3){
-			System.out.println ("Sesuai");
-		}
-		else {
-			System.out.println ("Tidak Sesuai");
 		
-		}
-		
-		
-	}
+	
 	void InputSirkulasi (){
 		System.out.println("Masukan Sirkulasi : ");
-		Kelas.setSirkulasiudara (in.nextLine());
+		kelas.setSirkulasiudara (in.nextLine());
 	}
-	void AnalisisSirkulasi(){
-		if (Kelas.getSirkulasiudara().equals("Baik")){
-			System.out.println ("Sesuai");
-		}
-		else {
-			System.out.println ("Tidak Sesuai");
-		
-		}
-		
-		
-	}
-	void InputPencahayaan (){
-		System.out.println("Masukan Kondisi Pencahayaan : ");
-		Kelas.setPencahayaan (in.nextInt());
-	}
-	void AnalisisPencahayaan(){
-		if (Kelas.getPencahayaan()>=250 && Kelas.getPencahayaan()<=350){
-			System.out.println ("Sesuai");
-		}
-		else {
-			System.out.println ("Tidak Sesuai");
-		
-		}
-		
-		
-	}
-	void InputKelembapan (){
-		System.out.println("Masukan Kondisi Kelembapan : ");
-		Kelas.setKelembapan (in.nextInt());
-	}
-	void AnalisisKelembapan(){
-		if (Kelas.getKelembapan()>=70 && Kelas.getKelembapan()<=80){
-			System.out.println ("Sesuai");
-		}
-		else {
-			System.out.println ("Tidak Sesuai");
-		
-		}
-		
-		
-	}
-	void InputSuhu (){
-		System.out.println("Masukan Suhu : ");
-		Kelas.setSuhu (in.nextInt());
-	}
-	void AnalisisSuhu(){
-		if (Kelas.getSuhu()>=25 && Kelas.getSuhu()<=30){
-			System.out.println ("Sesuai");
-		}
-		else {
-			System.out.println ("Tidak Sesuai");
-		
-		}
-		
-	}
+	
 
 	void inputKeamananRuangKelas() {
 
@@ -185,13 +133,21 @@ public class Control {
 		kelas.setKebocoran(in.nextInt());
 
 		System.out.print("\n1.rusak" + "\n2.Tidak Rusak");
-		System.out.println("\nTingkant kerusakan kelas \t:");
+		System.out.println("\nTingkat kerusakan kelas \t:");
 		kelas.setKerusakan(in.nextInt());
 
 		System.out.print("\n1.aus" + "\n2.Tidak aus");
 		System.out.println("\nTingkant keausan \t:");
 		kelas.setKeausan(in.nextInt());
 
+	}
+	
+	void kondisiRuangKelas(){
+		double luas = kelas.getPanjangKelas()*kelas.getPanjangKelas();
+		System.out.println("Luas Kelas adalah : "+luas);
+		if(kelas.getPanjangKelas()!=kelas.getPanjangKelas())System.out.println("Bentuk kelas sesuai");
+		if(luas/kelas.getJumlahKursi()>=0.5) System.out.println("Rasio Kelas sesuai");
+		if(kelas.getJumlahPintu()>=2&&kelas.getJumlahJendela()>=1)System.out.println("Jumlah pintu dan jendela sesuai");
 	}
 
 	void analisisKeamananRuangKelas() {

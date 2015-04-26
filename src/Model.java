@@ -1,6 +1,16 @@
 
 public class Model {
 
+	private String namaRuang;
+	private String lokasiRuang;
+	private String programStudi;
+	
+	private double panjangKelas;
+	private double lebarKelas;
+	private int jumlahKursi;
+	private int jumlahPintu;
+	private int jumlahJendela;
+	
 	private int steker;
 	private int kondisiSteker;
 	private String posisiSteker;
@@ -28,16 +38,10 @@ public class Model {
 	private String KondisiPintu;
 	private String KondisiJendela;
 	private String Sirkulasiudara ;
-<<<<<<< HEAD
-	private int Pencahayaan;
-	private int Kelembapan;
-	private int Suhu;
 	
-=======
 	private int Pencahayaan ;
 	private int Kelembapan ;
 	private int Suhu ;
->>>>>>> origin/master
 	private int kebisingan;
 	private int bau;
 	private int kebocoran;
@@ -49,6 +53,71 @@ public class Model {
 	private boolean benar = true;
 	private boolean salah = false;
 
+	public String getNamaRuang() {
+		return namaRuang;
+	}
+
+	public void setNamaRuang(String namaRuang) {
+		this.namaRuang = namaRuang;
+	}
+
+	public String getLokasiRuang() {
+		return lokasiRuang;
+	}
+
+	public void setLokasiRuang(String lokasiRuang) {
+		this.lokasiRuang = lokasiRuang;
+	}
+
+	public String getProgramStudi() {
+		return programStudi;
+	}
+
+	public void setProgramStudi(String programStudi) {
+		this.programStudi = programStudi;
+	}
+
+	public double getPanjangKelas() {
+		return panjangKelas;
+	}
+
+	public void setPanjangKelas(double panjangKelas) {
+		this.panjangKelas = panjangKelas;
+	}
+
+	public double getLebarKelas() {
+		return lebarKelas;
+	}
+
+	public void setLebarKelas(double lebarKelas) {
+		this.lebarKelas = lebarKelas;
+	}
+
+	public int getJumlahKursi() {
+		return jumlahKursi;
+	}
+
+	public void setJumlahKursi(int jumlahKursi) {
+		this.jumlahKursi = jumlahKursi;
+	}
+
+	public int getJumlahPintu() {
+		return jumlahPintu;
+	}
+
+	public void setJumlahPintu(int jumlahPintu) {
+		this.jumlahPintu = jumlahPintu;
+	}
+
+	public int getJumlahJendela() {
+		return jumlahJendela;
+	}
+
+	public void setJumlahJendela(int jumlahJendela) {
+		this.jumlahJendela = jumlahJendela;
+	}
+
+	
 	public int getKekokohan() {
 		return kekokohan;
 	}
