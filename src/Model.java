@@ -22,6 +22,98 @@ public class Model {
 	private int jumlahCCTVberfungsi;
 	private String posisiCCTV;
 	
+	private int kebisingan;
+	private int bau;
+	private int kebocoran;
+	private int kerusakan;
+	private int keausan;
+	private int kekokohan;
+	private int kuncipintudanjendela;
+	private int bahaya;
+	private boolean benar = true;
+	private boolean salah = false;
+
+	public int getKekokohan() {
+		return kekokohan;
+	}
+
+	public void setKekokohan(int kekokohan) {
+		this.kekokohan = kekokohan;
+	}
+
+	public int getKuncipintudanjendela() {
+		return kuncipintudanjendela;
+	}
+
+	public void setKuncipintudanjendela(int kuncipintudanjendela) {
+		this.kuncipintudanjendela = kuncipintudanjendela;
+	}
+
+	public int getBahaya() {
+		return bahaya;
+	}
+
+	public void setBahaya(int bahaya) {
+		this.bahaya = bahaya;
+	}
+
+	public int getKebisingan() {
+		return kebisingan;
+	}
+
+	public void setKebisingan(int kebisingan) {
+		this.kebisingan = kebisingan;
+	}
+
+	public int getBau() {
+		return bau;
+	}
+
+	public void setBau(int bau) {
+		this.bau = bau;
+	}
+
+	public int getKebocoran() {
+		return kebocoran;
+	}
+
+	public void setKebocoran(int kebocoran) {
+		this.kebocoran = kebocoran;
+	}
+
+	public int getKerusakan() {
+		return kerusakan;
+	}
+
+	public void setKerusakan(int kerusakan) {
+		this.kerusakan = kerusakan;
+	}
+
+	public int getKeausan() {
+		return keausan;
+	}
+
+	public void setKeausan(int keausan) {
+		this.keausan = keausan;
+	}
+
+	public boolean isBenar() {
+		return benar;
+	}
+
+	public void setBenar(boolean benar) {
+		this.benar = benar;
+	}
+
+	public boolean isSalah() {
+		return salah;
+	}
+
+	public void setSalah(boolean salah) {
+		this.salah = salah;
+	}
+
+	
 	public int getSteker() {
 		return steker;
 	}
