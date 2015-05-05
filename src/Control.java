@@ -218,100 +218,153 @@ public class Control {
 	//sandy stop coding
 
 	//ade start coding
-	void kondisiRuangKelas(){
+	String kondisiRuangKelas(){
+		String result = "Kondisi ruang kelas Tidak sesuai";
 		double luas = kelas.getPanjangKelas()*kelas.getPanjangKelas();
 		System.out.println("Luas Kelas adalah : "+luas);
-		if(kelas.getPanjangKelas()!=kelas.getLebarKelas())System.out.println("Bentuk kelas sesuai");
-		if(luas/kelas.getJumlahKursi()>=0.5) System.out.println("Rasio Kelas sesuai");
-		if(kelas.getJumlahPintu()>=2&&kelas.getJumlahJendela()>=1)System.out.println("Jumlah pintu dan jendela sesuai");
+		if(kelas.getPanjangKelas()!=kelas.getLebarKelas()){
+			System.out.println("Bentuk kelas Sesuai");
+			if(luas/kelas.getJumlahKursi()>=0.5){
+				System.out.println("Rasio Kelas sesuai");
+				if(kelas.getJumlahPintu()>=2&&kelas.getJumlahJendela()>=1){
+					System.out.println("Jumlah pintu dan jendela sesuai");
+					result = "Kondisi ruang kelas Sesuai";
+				}
+				else System.out.println("Jumlah pintu dan jendela tidak sesuai");
+			}
+			else System.out.println("Rasio tidak sesuai");
+		}
+		else System.out.println("Bentuk kelas tidak sesuai");
+		
+		return result;
 	}
 
 	
-	void analisisKelistrikan() {
+	String analisisKelistrikan() {
+		String result = "Kelistrikan tidak sesuai";
 		if (kelas.getSteker() >= 4) {
 			System.out.println("Jumlah Steker Sesuai");
 			if (kelas.getKondisiSteker() >= 4) {
 				System.out.println("Kondisi Steker Sesuai");
+				if (kelas.getPosisiSteker().equals("pojok dekat dosen")) {
+					result = "Kelistrikan Sesuai";
+					System.out.println("Posisi Steker Sesuai");
+				}
+				else System.out.println("Posisi Steker tidak Sesuai");
 			}
-			if (kelas.getPosisiSteker().equals("pojok dekat dosen")) {
-				System.out.println("Posisi Steker Sesuai");
-			}
+			else System.out.println("Kondisi Steker tidak Sesuai");
 
 		}
+		else System.out.println("Jumlah Steker tidak Sesuai");
+		return result;
 	}
 
-	void analisisLCD() {
+	String analisisLCD() {
+		String result = "LCD tidak sesuai";
 		if (kelas.getKabelLCD() >= 1) {
 			System.out.println("Jumlah kabel LCD sesuai");
 			if (kelas.getKondisiKabelLCD().equals("berfungsi")) {
 				System.out.println("Kabel berfungsi");
+				if (kelas.getPosisiKabelLCD().equals("pojok dekat dosen")) {
+					System.out.println("Posisi kabel Sesuai");
+					result = "Kabel LCD sesuai";
+				}
+				else System.out.println("Posisi kabel Tidak Sesuai");
 			}
-			if (kelas.getPosisiKabelLCD().equals("pojok dekat dosen")) {
-				System.out.println("Posisi kabel Sesuai");
-			}
+			else System.out.println("Kabel Tidak bergungsi");
 
 		}
+		else System.out.println("Jumlah kabel LCD tidak Sesuai");
+		return result;
 	}
 
-	void analisisLampu() {
+	String analisisLampu() {
+		String result = "Lampu Tidak Sesuai";
 		if (kelas.getLampu() >= 18) {
 			System.out.println("Jumlah Lampu sesuai");
 			if (kelas.getLampuBerfungsi() >= 18) {
 				System.out.println("Kondisi Lampu baik sesuai");
+				if (kelas.getPosisiLampu().equals("Langit langit ruangan")) {
+					System.out.println("Posisi Lampu Sesuai");
+					result = "Lampu sesuai";
+				}
+				else System.out.println("Posisi lampu tidak sesuai");
 			}
-			if (kelas.getPosisiLampu().equals("Langit langit ruangan")) {
-				System.out.println("Posisi Lampu Sesuai");
-			}
-
+			else System.out.println("Kondisi lampu tidak sesuai");
 		}
+		else System.out.println("Jumlah lampu tidak sesuai");
+		
+		return result;
 	}
 
-	void analisisKipas() {
+	String analisisKipas() {
+		String result = "Kipas tidak sesuai";
 		if (kelas.getKipas() >= 2) {
 			System.out.println("Jumlah kipas sesuai");
 			if (kelas.getKipasBerfungsi() >= 2) {
-				System.out.println("Jumlah kipas berfungsis sesuai");
+				System.out.println("Jumlah kipas berfungsi sesuai");
+				if (kelas.getPosisiKipas().equals("Langit langit ruangan")) {
+					System.out.println("Posisi kipas Sesuai");
+					result = "Kipas Sesuai";
+				}
+				else System.out.println("Posisi kipas sesuai");
 			}
-			if (kelas.getPosisiKipas().equals("Langit langit ruangan")) {
-				System.out.println("Posisi kipas Sesuai");
-			}
+			else System.out.println("Jumlah kipas berfungsi tidak sesuai");
 		}
+		else System.out.println("Jumlah kipas tidak sesuai");
+		return result;
 	}
 
-	void analisisAC() {
+	String analisisAC() {
+		String result = "AC tidak sesuai";
 		if (kelas.getAC() >= 1) {
 			System.out.println("Jumlah AC sesuai");
 			if (kelas.getKondisiAC().equals("baik")) {
 				System.out.println("Fungsi AC sesuai");
+				if (kelas.getPosisiAC().equals("Belakang")
+						|| kelas.getPosisiAC().equals("Samping")) {
+					System.out.println("Posisi AC Sesuai");
+					result = "AC sesuai";
+				}
+				else System.out.println("posisi AC tidak sesuai");
 			}
-			if (kelas.getPosisiAC().equals("Belakang")
-					|| kelas.getPosisiAC().equals("Samping")) {
-				System.out.println("Posisi AC Sesuai");
-			}
+			else System.out.println("kondisi AC tidak sesuai");
 		}
+		else System.out.println("Jumlah AC tidak sesuai");
+		return result;
 	}
 
-	void analisisInternet() {
+	String analisisInternet() {
+		String result = "Internet tidak sesuai";
 		if (kelas.getSSID().equals("UMM Hotspot")) {
 			System.out.println("SSID sesuai");
 			if (kelas.isLoginState()) {
-				System.out.println("Login sukses. Internet sesuai");
+				System.out.println("Login sukses");
+				result = "Internet sesuai";
 			}
+			else System.out.println("Gagal login");
 		}
+		else System.out.println("SSID tidak sesuai");
+		return result;
 	}
 
-	void analisisCCTV() {
+	String analisisCCTV() {
+		String result = "CCTV tidak sesuai";
 		if (kelas.getCCTV() >= 2) {
 			System.out.println("Jumlah CCTV sesuai");
 			if (kelas.getJumlahCCTVberfungsi() == 2) {
 				System.out.println("fungsi CCTV sesuai");
+				if (kelas.getPosisiCCTV().equals("Belakang")
+						|| kelas.getPosisiCCTV().equals("Depan")) {
+					System.out.println("Posisi CCTV Sesuai");
+					result = "CCTV sesuai";
+				}
+				else System.out.println("Posisi CCTV tidak sesuai");
 			}
-			if (kelas.getPosisiCCTV().equals("Belakang")
-					|| kelas.getPosisiCCTV().equals("Depan")) {
-				System.out.println("Posisi CCTV Sesuai");
-			}
+			else System.out.println("CCTV yang berfungsi tidak sesuai");
 		}
-				
+		else System.out.println("Jumlah CCTV tidak sesuai");
+		return result;
 	}
 	// ade stop coding
 
