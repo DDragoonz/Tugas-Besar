@@ -19,6 +19,7 @@ public class ObjekBenda extends ObjekKelas{
 	}
 	
 	
+	
 	public ObjekBenda (String nama ,boolean kondisi ,int jumlah , int min, boolean posisi){
 		this.nama = nama ;
 		this.kondisi = kondisi ;
