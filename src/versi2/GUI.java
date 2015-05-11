@@ -1,5 +1,4 @@
 package versi2;
-
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -20,10 +19,15 @@ public class tampilan extends JFrame {
 	private JTextField lokasiRuang;
 	private JTextField ProgStudi;
 	private JTextField panjangRuangan;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField LebarRuangan;
+	private JTextField JumlahKursi;
+	private JTextField JumlahPintu;
+	private JTextField JumlahCendela;
+	private JTextField JumlahStopKontak;
+	private JTextField JumlahKabelLCD;
+	private JTextField JumlahLampu;
+	private JTextField LampuYangHidup;
+	private JTextField LampuYangMati;
 	
 	/**
 	 * Launch the application.
@@ -110,46 +114,46 @@ public class tampilan extends JFrame {
 		lblLebarRuangan.setBounds(20, 288, 142, 19);
 		getContentPane().add(lblLebarRuangan);
 		
-		textField = new JTextField();
-		textField.setBounds(221, 288, 165, 20);
-		getContentPane().add(textField);
-		textField.setColumns(10);
+		LebarRuangan = new JTextField();
+		LebarRuangan.setBounds(221, 288, 165, 20);
+		getContentPane().add(LebarRuangan);
+		LebarRuangan.setColumns(10);
 		
 		JLabel lblJumlahKursi = new JLabel("Jumlah Kursi");
 		lblJumlahKursi.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblJumlahKursi.setBounds(20, 328, 142, 19);
 		getContentPane().add(lblJumlahKursi);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(221, 328, 165, 20);
-		getContentPane().add(textField_1);
-		textField_1.setColumns(10);
+		JumlahKursi = new JTextField();
+		JumlahKursi.setBounds(221, 328, 165, 20);
+		getContentPane().add(JumlahKursi);
+		JumlahKursi.setColumns(10);
 		
 		JLabel lblJumlahPintu = new JLabel("Jumlah Pintu");
 		lblJumlahPintu.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblJumlahPintu.setBounds(20, 371, 142, 19);
 		getContentPane().add(lblJumlahPintu);
 		
-		textField_2 = new JTextField();
-		textField_2.setBounds(221, 371, 165, 20);
-		getContentPane().add(textField_2);
-		textField_2.setColumns(10);
+		JumlahPintu = new JTextField();
+		JumlahPintu.setBounds(221, 371, 165, 20);
+		getContentPane().add(JumlahPintu);
+		JumlahPintu.setColumns(10);
 		
 		JLabel lblJumlahJendela = new JLabel("Jumlah Jendela");
 		lblJumlahJendela.setFont(new Font("Times New Roman", Font.PLAIN, 14));
 		lblJumlahJendela.setBounds(20, 410, 142, 19);
 		getContentPane().add(lblJumlahJendela);
 		
-		textField_3 = new JTextField();
-		textField_3.setBounds(221, 410, 165, 20);
-		getContentPane().add(textField_3);
-		textField_3.setColumns(10);
+		JumlahCendela = new JTextField();
+		JumlahCendela.setBounds(221, 410, 165, 20);
+		getContentPane().add(JumlahCendela);
+		JumlahCendela.setColumns(10);
 		
 		JButton btnNext = new JButton("Next");
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//Frame2_____________________________________________________________________________________________AA
-				setTitle("Inventaris Kelas");
+				setTitle("keLAS");
 				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				setBounds(100, 100, 500, 547);
 				contentPane = new JPanel();
@@ -157,20 +161,20 @@ public class tampilan extends JFrame {
 				setContentPane(contentPane);
 				contentPane.setLayout(null);
 				
-				JLabel JumlahStopKontaksteker = new JLabel("Jumlah Stop Kontak/Steker");
-				JumlahStopKontaksteker.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-				JumlahStopKontaksteker.setBounds(22, 45, 172, 19);
-				contentPane.add(JumlahStopKontaksteker);
+				JLabel lblJumlahStopKontaksteker = new JLabel("Jumlah Stop Kontak/Steker");
+				lblJumlahStopKontaksteker.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+				lblJumlahStopKontaksteker.setBounds(22, 45, 172, 19);
+				contentPane.add(lblJumlahStopKontaksteker);
 				
-				textField = new JTextField();
-				textField.setBounds(249, 45, 137, 20);
-				contentPane.add(textField);
-				textField.setColumns(10);
+				JumlahStopKontak = new JTextField();
+				JumlahStopKontak.setBounds(249, 45, 137, 20);
+				contentPane.add(JumlahStopKontak);
+				JumlahStopKontak.setColumns(10);
 				
-				JLabel KondisiStopKontaksteker = new JLabel("Kondisi Stop Kontak/Steker");
-				KondisiStopKontaksteker.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-				KondisiStopKontaksteker.setBounds(22, 89, 172, 19);
-				contentPane.add(KondisiStopKontaksteker);
+				JLabel KondisiStopKontak = new JLabel("Kondisi Stop Kontak/Steker");
+				KondisiStopKontak.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+				KondisiStopKontak.setBounds(22, 89, 172, 19);
+				contentPane.add(KondisiStopKontak);
 				
 				JLabel label = new JLabel("Jumlah Stop Kontak/Steker");
 				label.setFont(new Font("Times New Roman", Font.PLAIN, 15));
@@ -182,7 +186,7 @@ public class tampilan extends JFrame {
 				contentPane.add(rdbtnNewRadioButton);
 				
 				JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Dekat Mahasiswa dan dosen");
-				rdbtnNewRadioButton_1.setBounds(249, 154, 161, 19);
+				rdbtnNewRadioButton_1.setBounds(249, 154, 200, 19);
 				contentPane.add(rdbtnNewRadioButton_1);
 				
 				JRadioButton rdbtnLainlain = new JRadioButton("Lain-Lain");
@@ -202,10 +206,10 @@ public class tampilan extends JFrame {
 				lblJumlahKabelLcd.setBounds(22, 210, 172, 19);
 				contentPane.add(lblJumlahKabelLcd);
 				
-				textField_1 = new JTextField();
-				textField_1.setBounds(249, 207, 137, 20);
-				contentPane.add(textField_1);
-				textField_1.setColumns(10);
+				JumlahKabelLCD = new JTextField();
+				JumlahKabelLCD.setBounds(249, 207, 137, 20);
+				contentPane.add(JumlahKabelLCD);
+				JumlahKabelLCD.setColumns(10);
 				
 				JLabel lblKondisiKabelLcd = new JLabel("Kondisi Kabel LCD");
 				lblKondisiKabelLcd.setFont(new Font("Times New Roman", Font.PLAIN, 15));
@@ -217,7 +221,7 @@ public class tampilan extends JFrame {
 				contentPane.add(rdbtnNewRadioButton_4);
 				
 				JRadioButton rdbtnNewRadioButton_5 = new JRadioButton("Tidak Berfungsi");
-				rdbtnNewRadioButton_5.setBounds(249, 269, 109, 23);
+				rdbtnNewRadioButton_5.setBounds(249, 269, 150, 23);
 				contentPane.add(rdbtnNewRadioButton_5);
 				
 				JLabel lblPosisiKabelLcd = new JLabel("Posisi Kabel LCD");
@@ -238,7 +242,7 @@ public class tampilan extends JFrame {
 				contentPane.add(radioButton);
 				
 				JRadioButton radioButton_1 = new JRadioButton("Dekat Mahasiswa dan dosen");
-				radioButton_1.setBounds(249, 329, 161, 19);
+				radioButton_1.setBounds(249, 329, 200, 19);
 				contentPane.add(radioButton_1);
 				
 				JRadioButton radioButton_2 = new JRadioButton("Lain-Lain");
@@ -250,42 +254,34 @@ public class tampilan extends JFrame {
 				lblJumlah.setBounds(22, 378, 172, 19);
 				contentPane.add(lblJumlah);
 				
-				textField_2 = new JTextField();
-				textField_2.setBounds(249, 378, 137, 19);
-				contentPane.add(textField_2);
-				textField_2.setColumns(10);
+				JumlahLampu = new JTextField();
+				JumlahLampu.setBounds(249, 378, 137, 19);
+				contentPane.add(JumlahLampu);
+				JumlahLampu.setColumns(10);
 				
 				JLabel lblLampuYangHidup = new JLabel("Lampu yang Hidup");
 				lblLampuYangHidup.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 				lblLampuYangHidup.setBounds(22, 408, 172, 19);
 				contentPane.add(lblLampuYangHidup);
 				
-				textField_3 = new JTextField();
-				textField_3.setBounds(249, 406, 137, 20);
-				contentPane.add(textField_3);
-				textField_3.setColumns(10);
+				LampuYangHidup = new JTextField();
+				LampuYangHidup.setBounds(249, 406, 137, 20);
+				contentPane.add(LampuYangHidup);
+				LampuYangHidup.setColumns(10);
 				
 				JLabel lblLampuYangMati = new JLabel("Lampu yang Mati");
 				lblLampuYangMati.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 				lblLampuYangMati.setBounds(22, 438, 172, 19);
 				contentPane.add(lblLampuYangMati);
 				
-				JTextField textField_4 = new JTextField();
-				textField_4.setBounds(249, 437, 137, 20);
-				contentPane.add(textField_4);
-				textField_4.setColumns(10);
+				LampuYangMati = new JTextField();
+				LampuYangMati.setBounds(249, 437, 137, 20);
+				contentPane.add(LampuYangMati);
+				LampuYangMati.setColumns(10);
 				
-				JButton btnNewButton = new JButton("Next");
-				btnNext.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-						//frame3_______________________________________________________________________________________AAA
-						
-						
-					}
-				});
-					
-				btnNewButton.setBounds(380, 468, 89, 23);
-				contentPane.add(btnNewButton);
+				JButton Next0 = new JButton("Next");
+				Next0.setBounds(380, 468, 89, 23);
+				contentPane.add(Next0);
 			}
 		});
 		btnNext.setBounds(395, 441, 70, 26);
