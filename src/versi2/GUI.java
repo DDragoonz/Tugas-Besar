@@ -46,6 +46,7 @@ public class GUI extends JFrame {
 			}
 		});
 	}
+	
 	public GUI() {
 		setTitle("Inventaris Kelas");
 		
