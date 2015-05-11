@@ -1,8 +1,12 @@
 package versi2;
 
 public class ObjekBenda extends ObjekKelas{
+
+	
+
 	private int min ;
 	private String posisi;
+
 	private int jumlah ;
 	
 
@@ -19,7 +23,12 @@ public class ObjekBenda extends ObjekKelas{
 	}
 	
 	
+
+	
+	
+
 	public ObjekBenda (String nama ,boolean kondisi ,int jumlah , int min, String posisi){
+
 		this.nama = nama ;
 		this.kondisi = kondisi ;
 		this.min = min ;
