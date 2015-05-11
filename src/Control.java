@@ -369,9 +369,8 @@ public class Control {
 	// ade stop coding
 
 	//tri putra start coding
-	String AnalisisKebersihan() {
+	void AnalisisKebersihan() {
 		int NilaiBersih = 0;
-		String result;
 
 		if (kelas.getKondisiLantai().equals("Baik"))
 			NilaiBersih += 1;
@@ -384,59 +383,51 @@ public class Control {
 		if (kelas.getKondisiJendela().equals("Baik"))
 			NilaiBersih += 1;
 		if (NilaiBersih >= 3) {
-			//int nilai = (JOptionPane.showMessageDialog(null,"sesuai"+NilaiBersih)) ;
-			result = "Sesuai";
+			System.out.println("Sesuai");
 		} else {
-			result = "tidak sesuai";
+			System.out.println("Tidak Sesuai");
+
 		}
-		return result;
+
 	}
 
-	String AnalisisSirkulasi() {
-		String result ;
+	void AnalisisSirkulasi() {
 		if (kelas.getSirkulasiudara().equals("Baik")) {
-			result = "Sesuai";
+			System.out.println("Sesuai");
 		} else {
-		result = "Tidak Sesuai";
+			System.out.println("Tidak Sesuai");
 
 		}
-		return result;
 
 	}
 
-	int AnalisisPencahayaan() {
-		int result = 0;
+	void AnalisisPencahayaan() {
 		if (kelas.getPencahayaan() >= 250 && kelas.getPencahayaan() <= 350) {
-			 System.out.println ("Sesuai");
+			System.out.println("Sesuai");
 		} else {
-			System.out.println ("Tidak Sesuai");
+			System.out.println("Tidak Sesuai");
 
 		}
-		return result ;
-		
 
 	}
 
-	String AnalisisKelembapan() {
-		String result ;
+	void AnalisisKelembapan() {
 		if (kelas.getKelembapan() >= 70 && kelas.getKelembapan() <= 80) {
-			result = "Sesuai";
+			System.out.println("Sesuai");
 		} else {
-			result = "Tidak Sesuai";
+			System.out.println("Tidak Sesuai");
 
 		}
-		return result ;
+
 	}
 
-	int AnalisisSuhu() {
-		int result = 0 ;
+	void AnalisisSuhu() {
 		if (kelas.getSuhu() >= 25 && kelas.getSuhu() <= 30) {
-			System.out.println ("Sesuai");
+			System.out.println("Sesuai");
 		} else {
-			System.out.println ("Tidak Sesuai");
+			System.out.println("Tidak Sesuai");
 
 		}
-		return result ;
 	}
 
 }
