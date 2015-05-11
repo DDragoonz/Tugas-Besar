@@ -280,6 +280,7 @@ public class tampilan extends JFrame {
 				LampuYangMati.setColumns(10);
 				
 				JButton Next0 = new JButton("Next");
+				
 				Next0.setBounds(380, 468, 89, 23);
 				contentPane.add(Next0);
 			}
