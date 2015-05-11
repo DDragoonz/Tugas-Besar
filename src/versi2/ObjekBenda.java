@@ -2,7 +2,7 @@ package versi2;
 
 public class ObjekBenda extends ObjekKelas{
 	private int min ;
-	private String posisi;
+	private boolean posisi;
 	private int jumlah ;
 	
 
@@ -11,7 +11,7 @@ public class ObjekBenda extends ObjekKelas{
 	}
 	
 
-	public String getPosisi() {
+	public boolean getPosisi() {
 		return posisi;
 	}
 	public int getjumlah (){
@@ -19,7 +19,7 @@ public class ObjekBenda extends ObjekKelas{
 	}
 	
 	
-	public ObjekBenda (String nama ,boolean kondisi ,int jumlah , int min, String posisi){
+	public ObjekBenda (String nama ,boolean kondisi ,int jumlah , int min, boolean posisi){
 		this.nama = nama ;
 		this.kondisi = kondisi ;
 		this.min = min ;
