@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 
-public class tampilan extends JFrame {
+public class GUI extends JFrame {
 	private JPanel contentPane;
 	private JTextField namaRuang;
 	private JTextField lokasiRuang;
@@ -36,7 +36,7 @@ public class tampilan extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					tampilan frame = new tampilan();
+					GUI frame = new GUI();
 					frame.setSize(500,521);
 					frame.setResizable(false);
 					frame.setVisible(true);
@@ -47,7 +47,7 @@ public class tampilan extends JFrame {
 		});
 	}
 	
-	public tampilan() {
+	public GUI() {
 		setTitle("Inventaris Kelas");
 		
 		

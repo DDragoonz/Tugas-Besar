@@ -12,7 +12,7 @@ public class ObjekNonBenda extends ObjekKelas{
 
 		
 	}
-	Boolean AnalisisObjek(boolean kondisi){
+	boolean analisisObjek(){
 		if (kondisi = true){
 			return true ;
 		}

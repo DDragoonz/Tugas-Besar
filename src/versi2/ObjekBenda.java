@@ -38,8 +38,8 @@ public class ObjekBenda extends ObjekKelas{
 		
 	}
 	
-	Boolean analisisObjek (){
-		Boolean result ;
+	boolean analisisObjek (){
+		boolean result ;
 		if (jumlah >= min){
 			result = true;
 		}
@@ -48,7 +48,6 @@ public class ObjekBenda extends ObjekKelas{
 		}
 		return result ;
 			
-		
 	}
 
 }
