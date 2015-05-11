@@ -1,13 +1,12 @@
 package versi2;
 
 public class ObjekBenda extends ObjekKelas{
-<<<<<<< HEAD
-	private int min ;
-	private boolean posisi;
-=======
+
+	
+
 	private int min ;
 	private String posisi;
->>>>>>> parent of bfa46fc... new lagi l
+
 	private int jumlah ;
 	
 
@@ -24,12 +23,12 @@ public class ObjekBenda extends ObjekKelas{
 	}
 	
 	
-<<<<<<< HEAD
+
 	
-	public ObjekBenda (String nama ,boolean kondisi ,int jumlah , int min, boolean posisi){
-=======
+	
+
 	public ObjekBenda (String nama ,boolean kondisi ,int jumlah , int min, String posisi){
->>>>>>> parent of bfa46fc... new lagi l
+
 		this.nama = nama ;
 		this.kondisi = kondisi ;
 		this.min = min ;
