@@ -45,10 +45,10 @@ public class Tampilan2 extends JFrame {
 	 */
 	public Tampilan2() {
 		setTitle("keLAS");
-		Tampilan2 frame = new Tampilan2();
-		frame.setVisible(true);
-		frame.setSize(500,596);
-		frame.setResizable(false);
+		//Tampilan2 frame = new Tampilan2();
+		setVisible(true);
+		setSize(500,596);
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 500, 596);
 		contentPane = new JPanel();
