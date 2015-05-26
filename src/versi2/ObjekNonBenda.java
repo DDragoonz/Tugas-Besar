@@ -1,11 +1,13 @@
 package versi2;
 
+
 public class ObjekNonBenda extends ObjekKelas{
-	/*private boolean posisi ;
-	private int min;
-	private int jumlah ;
-	*/
+
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public ObjekNonBenda (String nama ,boolean kondisi ){
 		this.nama = nama ;
 		this.kondisi = kondisi ;
@@ -13,7 +15,7 @@ public class ObjekNonBenda extends ObjekKelas{
 		
 	}
 	boolean analisisObjek(){
-		if (kondisi = true){
+		if (kondisi == true){
 			return true ;
 		}
 		else return false ;

@@ -1,10 +1,13 @@
 package versi2;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-import com.sun.xml.internal.messaging.saaj.packaging.mime.util.BEncoderStream;
-
-public class RuangKelas {
+public class RuangKelas implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String nama;
 	private String lokasi;
 	private String fakultas;
@@ -68,7 +71,7 @@ public class RuangKelas {
 		daftarObjekTerukur.add(new ObjekTerukur(nama, nilai, min, max));
 	}
 	
-	void analisisObjek(){
+	public void analisisObjek(){
 		for(ObjekBenda a:daftarObjekBenda){
 			if(a.analisisObjek()){
 					System.out.println(a.getNama() + " sesuai");
@@ -90,7 +93,7 @@ public class RuangKelas {
 		
 	}
 	
-	void tampilInfoKelas(){
+	public void tampilInfoKelas(){
 		System.out.println("nama kelas : " + nama);
 		System.out.println("Lokasi kelas: " + lokasi);
 		System.out.println("Fakultas : " + fakultas);

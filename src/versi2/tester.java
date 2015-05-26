@@ -1,23 +1,25 @@
 package versi2;
 
+import java.io.*;
 import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 
 public class tester {
 
-	public static void main(String[] args) {
-		RuangKelas kelas;
-		String nama;
-		String lokasi;
-		String fakultas;
-		float panjang;
-		float lebar;
-		boolean kondisi;
-		int jumlah;
-		int min;
-		float nilai;
-		
-		
-		Scanner in = new Scanner(System.in);
+	private static Scanner in = new Scanner(System.in);
+	private RuangKelas kelas;
+	private String nama;
+	private String lokasi;
+	private String fakultas;
+	private float panjang;
+	private float lebar;
+	private boolean kondisi;
+	private int jumlah;
+	//private int min;
+	private float nilai;
+	
+	private void testInput(){
 		System.out.println("Masukan nama kelas : ");
 		nama = in.nextLine();
 		System.out.println("Masukan lokasi : ");
@@ -64,8 +66,54 @@ public class tester {
 		
 		kelas.tambahObjekTerukur("suhu", nilai, 20, 30);
 		
+
+	}
+	
+	void testOutput(){
 		kelas.tampilInfoKelas();
 		kelas.analisisObjek();
+	}
+	
+	void save(){
+		try {
+	         ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream("Kelas.dat"));
+	         os.writeObject(kelas);
+	         os.close();
+	         JOptionPane.showMessageDialog(null, "Kelas berhasil disimpan");
+	      } catch(Exception ex) {
+	          ex.printStackTrace();
+	      }
+	}
+	
+	void load() {
+		try {
+
+			ObjectInputStream is = new ObjectInputStream(new FileInputStream("Kelas.dat"));
+			kelas = (RuangKelas)is.readObject();
+			is.close();
+			testOutput();
+		} catch (Exception ex) {
+			JOptionPane.showMessageDialog(null, "Data not Found !");
+			//ex.printStackTrace();
+		}
+
+	}
+
+
+	
+	public static void main(String[] args) {
+		tester t = new tester();
+		System.out.println("Pilih : \n 1. load kelas\n 2. buat kelas baru");
+		int pilihan = in.nextInt();
+		switch(pilihan){
+		case 1 :
+			t.load();
+			break;
+		case 2 :
+			t.testInput();
+			t.save();
+			break;
+		}
 	}
 
 }

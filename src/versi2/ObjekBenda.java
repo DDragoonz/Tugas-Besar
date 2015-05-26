@@ -2,8 +2,11 @@ package versi2;
 
 public class ObjekBenda extends ObjekKelas{
 
-	
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int min ;
 	private String posisi;
 
@@ -38,6 +41,7 @@ public class ObjekBenda extends ObjekKelas{
 		
 	}
 	
+	@Override
 	boolean analisisObjek (){
 		boolean result ;
 		if (jumlah >= min){

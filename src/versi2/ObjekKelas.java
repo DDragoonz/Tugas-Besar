@@ -1,6 +1,12 @@
 package versi2;
 
-public class ObjekKelas {
+import java.io.Serializable;
+
+public abstract class ObjekKelas implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	protected String nama ;
 	protected boolean kondisi;
 	
@@ -16,6 +22,8 @@ public class ObjekKelas {
 	public void setKondisi(boolean kondisi) {
 		this.kondisi = kondisi;
 	}
+	
+	abstract boolean analisisObjek();
 	
 
 }

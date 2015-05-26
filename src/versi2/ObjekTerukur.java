@@ -1,9 +1,15 @@
 package versi2;
 
 public class ObjekTerukur extends ObjekKelas{
-	float nilai ;
-	float min ;
-	float max ;
+	
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private float nilai ;
+	private float min ;
+	private float max ;
 	
 
 	
@@ -15,6 +21,8 @@ public class ObjekTerukur extends ObjekKelas{
 		this.nilai = nilai;
 		
 	}
+	
+	@Override
 	boolean analisisObjek (){
 		if (nilai >= min && nilai <= max){
 			 return true ; 
