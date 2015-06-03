@@ -1,16 +1,17 @@
 package versi2;
-
-
-
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
-import java.awt.Font;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JRadioButton;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JRadioButton;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
 
 public class Tampilan32 extends JFrame {
 
@@ -97,6 +98,13 @@ public class Tampilan32 extends JFrame {
 		contentPane.add(btnSubmit);
 		
 		JButton btnBack = new JButton("Back");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			Tampilan3 panggil = new Tampilan3();
+			dispose();
+			panggil.show();
+			}
+		});
 		btnBack.setBounds(268, 162, 89, 23);
 		contentPane.add(btnBack);
 	}

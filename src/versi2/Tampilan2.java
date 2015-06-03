@@ -1,19 +1,22 @@
 package versi2;
 
-
-
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JScrollBar;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-import javax.swing.JTextField;
-import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+
 
 public class Tampilan2 extends JFrame {
 
@@ -45,7 +48,6 @@ public class Tampilan2 extends JFrame {
 	 */
 	public Tampilan2() {
 		setTitle("keLAS");
-		//Tampilan2 frame = new Tampilan2();
 		setVisible(true);
 		setSize(500,596);
 		setResizable(false);
@@ -163,6 +165,10 @@ public class Tampilan2 extends JFrame {
 		Next0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//pindah frame......
+				Tampilan21 panggil = new Tampilan21();
+				dispose();
+				panggil.show();
+				
 				
 			}
 		});
@@ -185,6 +191,9 @@ public class Tampilan2 extends JFrame {
 		JButton btnBack = new JButton("Back");
 		btnBack.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Tampilan panggil = new Tampilan();
+				dispose();
+				panggil.show();
 				
 			}
 		});

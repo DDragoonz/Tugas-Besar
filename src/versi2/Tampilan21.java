@@ -1,19 +1,20 @@
 package versi2;
-
-
-
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
-import java.awt.Font;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
-import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class Tampilan21 extends JFrame {
+
+public class Tampilan21 extends Tampilan2 {
 
 	private JPanel contentPane;
 	private JTextField JumlahKipasAngin;
@@ -211,10 +212,24 @@ public class Tampilan21 extends JFrame {
 		contentPane.add(Lainlain_3);
 		
 		JButton btnNext = new JButton("Next");
+		btnNext.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			Tampilan3 panggil = new Tampilan3();
+			dispose();
+			panggil.show();
+			}
+		});
 		btnNext.setBounds(385, 557, 89, 23);
 		contentPane.add(btnNext);
 		
 		JButton btnBack = new JButton("Back");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			dispose();
+			Tampilan2 panggil = new Tampilan2();
+			panggil.show();
+			}
+		});
 		btnBack.setBounds(283, 557, 89, 23);
 		contentPane.add(btnBack);
 		
