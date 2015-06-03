@@ -93,6 +93,99 @@ public class RuangKelas implements Serializable{
 		
 	}
 	
+	public String getJumlahObjek (String nama){
+		String result = "-";
+		for(ObjekBenda a:daftarObjekBenda){
+			if(a.getNama().equals(nama)){
+					result = (""+a.getjumlah());
+					break;
+				}
+		}
+		
+		return result;
+	}
+	
+	public String getKondisiObjek (String nama){
+		boolean hasil = false;
+		String result = "-";
+		for(ObjekBenda a:daftarObjekBenda){
+			if(a.getNama().equals(nama)){
+					hasil = a.isKondisi();
+					break;
+				}
+		}
+		for(ObjekNonBenda a:daftarObjekNonBenda){
+			if(a.getNama().equals(nama)){
+				hasil = a.isKondisi();
+				break;
+			}
+		}
+		for(ObjekTerukur a:daftarObjekTerukur){
+			if(a.getNama().equals(nama)){
+				hasil = a.isKondisi();
+				break;
+			}
+		}
+		
+		if(hasil)result = "Baik";
+		
+		return result;
+	}
+	
+	public String getPosisiObjek(String nama){
+		String result = "-";
+		for(ObjekBenda a:daftarObjekBenda){
+			if(a.getNama().equals(nama)){
+					result = a.getPosisi();
+					break;
+				}
+		}
+		
+		return result;
+	}
+	
+	public String getMinObjek(String nama){
+		String result = "-";
+		for(ObjekBenda a:daftarObjekBenda){
+			if(a.getNama().equals(nama)){
+					result = (""+a.getMin());
+					break;
+				}
+		}
+		for(ObjekTerukur a:daftarObjekTerukur){
+			if(a.getNama().equals(nama)){
+					result = (""+a.getMin());
+					break;
+				}
+		}
+		
+		return result;
+	}
+	
+	public String getMaxObjek(String nama){
+		String result = "-";
+		for(ObjekTerukur a:daftarObjekTerukur){
+			if(a.getNama().equals(nama)){
+					result = (""+a.getMax());
+					break;
+				}
+		}
+		
+		return result;
+	}
+	
+	public String getNilaiObjek(String nama){
+		String result = "-";
+		for(ObjekTerukur a:daftarObjekTerukur){
+			if(a.getNama().equals(nama)){
+					result = (""+a.getNilai());
+					break;
+				}
+		}
+		
+		return result;
+	}
+	
 	public void tampilInfoKelas(){
 		System.out.println("nama kelas : " + nama);
 		System.out.println("Lokasi kelas: " + lokasi);
