@@ -41,7 +41,7 @@ public class tester {
 		System.out.println("masukan jumlah kursi : ");
 		jumlah = in.nextInt();in.nextLine();
 		
-		kelas.tambahObjekBenda("kursi", true, jumlah, 18, "di lantai");
+		kelas.tambahObjekBenda("Kursi", true, jumlah, 18, "di lantai");
 		
 		System.out.println("Masukan jumlah Lampu");
 		jumlah = in.nextInt();in.nextLine();

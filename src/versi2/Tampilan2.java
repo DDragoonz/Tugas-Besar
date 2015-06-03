@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
@@ -20,6 +21,8 @@ import javax.swing.JButton;
 
 public class Tampilan2 extends JFrame {
 
+	
+	
 	private JPanel contentPane;
 	private JTextField JumlahStopKontak;
 	private JTextField JumlahKabelLCD;
@@ -168,7 +171,6 @@ public class Tampilan2 extends JFrame {
 				Tampilan21 panggil = new Tampilan21();
 				dispose();
 				panggil.show();
-				
 				
 			}
 		});

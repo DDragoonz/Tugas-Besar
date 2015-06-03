@@ -14,7 +14,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 
-public class Tampilan21 extends Tampilan2 {
+public class Tampilan21 extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField JumlahKipasAngin;

@@ -18,6 +18,7 @@ public class RuangKelas implements Serializable{
 	ArrayList<ObjekNonBenda> daftarObjekNonBenda = new ArrayList<ObjekNonBenda>();
 	ArrayList<ObjekTerukur> daftarObjekTerukur = new ArrayList<ObjekTerukur>();
 	
+	
 	public RuangKelas(String nama, String lokasi, String fakultas){
 		this.nama = nama;
 		this.lokasi = lokasi;
@@ -48,6 +49,23 @@ public class RuangKelas implements Serializable{
 		return panjang*lebar;
 	}
 	
+	public float getPanjang() {
+		return panjang;
+	}
+
+	public void setPanjang(float panjang) {
+		this.panjang = panjang;
+	}
+
+	public float getLebar() {
+		return lebar;
+	}
+
+	public void setLebar(float lebar) {
+		this.lebar = lebar;
+	}
+
+	
 	boolean ukurBentuk(){
 		if(panjang!=lebar)return true;
 		else return false;
@@ -60,7 +78,7 @@ public class RuangKelas implements Serializable{
 	
 	void tambahObjekBenda(String nama, boolean kondisi, int jumlah, int min, String posisi){
 		daftarObjekBenda.add(new ObjekBenda(nama, kondisi, jumlah, min, posisi));
-		if(nama.equals("kursi"))kursi=jumlah;
+		if(nama.equals("Kursi"))kursi=jumlah;
 	}
 	
 	void tambahObjekNonBenda(String nama, boolean kondisi){
