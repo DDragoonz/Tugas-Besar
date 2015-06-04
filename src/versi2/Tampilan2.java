@@ -6,6 +6,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.ButtonGroup;
 import javax.swing.JScrollBar;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
@@ -18,6 +19,8 @@ import java.io.File;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
 
+import sun.net.www.content.audio.basic;
+
 
 public class Tampilan2 extends JFrame {
 
@@ -27,6 +30,32 @@ public class Tampilan2 extends JFrame {
 	private JTextField JumlahStopKontak;
 	private JTextField JumlahKabelLCD;
 	private JTextField JumlahLampu;
+
+	private ButtonGroup posisiSteker = new ButtonGroup();
+	private JRadioButton rbPosisiSteker1 = new JRadioButton("Dekat Dosen");
+	private JRadioButton rbPosisiSteker2 = new JRadioButton("Dekat Mahasiswa dan dosen");
+	private JRadioButton rbPosisiSteker3 = new JRadioButton("Lain-Lain");
+	
+	private ButtonGroup kondisiSteker = new ButtonGroup();
+	private JRadioButton rbKondisiSteker1 = new JRadioButton("Baik");
+	private JRadioButton rbKondisiSteker2 = new JRadioButton("Kurang Baik");
+	
+	private ButtonGroup kondisiLCD = new ButtonGroup();
+	private JRadioButton rbKondisiLCD1 = new JRadioButton("Berfungsi");
+	private JRadioButton rbKondisiLCD2 = new JRadioButton("Tidak Berfungsi");
+	
+	private ButtonGroup posisiLCD = new ButtonGroup();
+	private JRadioButton rbPosisiLCD1 = new JRadioButton("Dekat Dosen");
+	private JRadioButton rbPosisiLCD2 = new JRadioButton("Dekat Mahasiswa dan dosen");
+	private JRadioButton rbPosisiLCD3 = new JRadioButton("Lain-Lain");
+	
+	private ButtonGroup posisiLampu = new ButtonGroup();
+	private JRadioButton rbPosisiLampu1 = new JRadioButton("Lain-Lain");
+	private JRadioButton rbPosisiLampu2 = new JRadioButton("Di Atap");
+	
+	private ButtonGroup kondisiLampu = new ButtonGroup();
+	private JRadioButton rbKondisiLampu1 = new JRadioButton("Semua Hidup");
+	private JRadioButton rbKondisiLampu2 = new JRadioButton("Ada yang mati");
 
 	/**
 	 * Launch the application.
@@ -81,25 +110,29 @@ public class Tampilan2 extends JFrame {
 		label.setBounds(22, 138, 172, 19);
 		contentPane.add(label);
 		
-		JRadioButton rdbtnNewRadioButton = new JRadioButton("Dekat Dosen");
-		rdbtnNewRadioButton.setBounds(249, 138, 109, 19);
-		contentPane.add(rdbtnNewRadioButton);
 		
-		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Dekat Mahasiswa dan dosen");
-		rdbtnNewRadioButton_1.setBounds(249, 154, 200, 19);
-		contentPane.add(rdbtnNewRadioButton_1);
+		rbPosisiSteker1.setBounds(249, 138, 109, 19);
+		contentPane.add(rbPosisiSteker1);
+				
+		rbPosisiSteker2.setBounds(249, 154, 200, 19);
+		contentPane.add(rbPosisiSteker2);
+
+		rbPosisiSteker3.setBounds(249, 170, 109, 19);
+		contentPane.add(rbPosisiSteker3);
 		
-		JRadioButton rdbtnLainlain = new JRadioButton("Lain-Lain");
-		rdbtnLainlain.setBounds(249, 170, 109, 19);
-		contentPane.add(rdbtnLainlain);
+		posisiSteker.add(rbPosisiSteker1);
+		posisiSteker.add(rbPosisiSteker2);
+		posisiSteker.add(rbPosisiSteker3);
 		
-		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("Baik");
-		rdbtnNewRadioButton_2.setBounds(249, 88, 109, 19);
-		contentPane.add(rdbtnNewRadioButton_2);
 		
-		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton("Kurang Baik");
-		rdbtnNewRadioButton_3.setBounds(249, 104, 109, 23);
-		contentPane.add(rdbtnNewRadioButton_3);
+		rbKondisiSteker1.setBounds(249, 88, 109, 19);
+		contentPane.add(rbKondisiSteker1);
+		
+		rbKondisiSteker2.setBounds(249, 104, 109, 23);
+		contentPane.add(rbKondisiSteker2);
+		
+		kondisiSteker.add(rbKondisiSteker1);
+		kondisiSteker.add(rbKondisiSteker2);
 		
 		JLabel lblJumlahKabelLcd = new JLabel("Jumlah Kabel LCD");
 		lblJumlahKabelLcd.setFont(new Font("Times New Roman", Font.PLAIN, 15));
@@ -116,13 +149,15 @@ public class Tampilan2 extends JFrame {
 		lblKondisiKabelLcd.setBounds(22, 255, 172, 19);
 		contentPane.add(lblKondisiKabelLcd);
 		
-		JRadioButton rdbtnNewRadioButton_4 = new JRadioButton("Berfungsi");
-		rdbtnNewRadioButton_4.setBounds(249, 251, 109, 23);
-		contentPane.add(rdbtnNewRadioButton_4);
 		
-		JRadioButton rdbtnNewRadioButton_5 = new JRadioButton("Tidak Berfungsi");
-		rdbtnNewRadioButton_5.setBounds(249, 269, 150, 23);
-		contentPane.add(rdbtnNewRadioButton_5);
+		rbKondisiLCD1.setBounds(249, 251, 109, 23);
+		contentPane.add(rbKondisiLCD1);
+		
+		rbKondisiLCD2.setBounds(249, 269, 150, 23);
+		contentPane.add(rbKondisiLCD2);
+		
+		kondisiLCD.add(rbKondisiLCD1);
+		kondisiLCD.add(rbKondisiLCD2);
 		
 		JLabel lblPosisiKabelLcd = new JLabel("Posisi Kabel LCD");
 		lblPosisiKabelLcd.setFont(new Font("Times New Roman", Font.PLAIN, 15));
@@ -136,18 +171,19 @@ public class Tampilan2 extends JFrame {
 		JLabel lblJumlahkondisiDanPosisi = new JLabel("Jumlah,Kondisi dan Posisi Sarana");
 		lblJumlahkondisiDanPosisi.setBounds(10, 20, 184, 14);
 		contentPane.add(lblJumlahkondisiDanPosisi);
+
+		rbPosisiLCD1.setBounds(249, 313, 109, 19);
+		contentPane.add(rbPosisiLCD1);
+
+		rbPosisiLCD2.setBounds(249, 329, 200, 19);
+		contentPane.add(rbPosisiLCD2);
+
+		rbPosisiLCD3.setBounds(249, 345, 109, 19);
+		contentPane.add(rbPosisiLCD3);
 		
-		JRadioButton radioButton = new JRadioButton("Dekat Dosen");
-		radioButton.setBounds(249, 313, 109, 19);
-		contentPane.add(radioButton);
-		
-		JRadioButton radioButton_1 = new JRadioButton("Dekat Mahasiswa dan dosen");
-		radioButton_1.setBounds(249, 329, 200, 19);
-		contentPane.add(radioButton_1);
-		
-		JRadioButton radioButton_2 = new JRadioButton("Lain-Lain");
-		radioButton_2.setBounds(249, 345, 109, 19);
-		contentPane.add(radioButton_2);
+		posisiLCD.add(rbPosisiLCD1);
+		posisiLCD.add(rbPosisiLCD2);
+		posisiLCD.add(rbPosisiLCD3);
 		
 		JLabel lblJumlah = new JLabel("Jumlah Lampu");
 		lblJumlah.setFont(new Font("Times New Roman", Font.PLAIN, 15));
@@ -172,18 +208,20 @@ public class Tampilan2 extends JFrame {
 				dispose();
 				panggil.show();
 				
+				
 			}
 		});
 		Next0.setBounds(376, 520, 89, 23);
 		contentPane.add(Next0);
+
+		rbPosisiLampu1.setBounds(250, 475, 100, 19);
+		contentPane.add(rbPosisiLampu1);
+
+		rbPosisiLampu2.setBounds(250, 454, 109, 23);
+		contentPane.add(rbPosisiLampu2);
 		
-		JRadioButton radioButton_3 = new JRadioButton("Lain-Lain");
-		radioButton_3.setBounds(250, 475, 100, 19);
-		contentPane.add(radioButton_3);
-		
-		JRadioButton radioButton_4 = new JRadioButton("Di Atap");
-		radioButton_4.setBounds(250, 454, 109, 23);
-		contentPane.add(radioButton_4);
+		posisiLampu.add(rbPosisiLampu1);
+		posisiLampu.add(rbPosisiLampu2);
 		
 		JLabel label_2 = new JLabel("Posisi Lampu");
 		label_2.setFont(new Font("Times New Roman", Font.PLAIN, 15));
@@ -201,13 +239,14 @@ public class Tampilan2 extends JFrame {
 		});
 		btnBack.setBounds(269, 520, 89, 23);
 		contentPane.add(btnBack);
+
+		rbKondisiLampu1.setBounds(249, 407, 109, 23);
+		contentPane.add(rbKondisiLampu1);
+
+		rbKondisiLampu2.setBounds(249, 428, 109, 23);
+		contentPane.add(rbKondisiLampu2);
 		
-		JRadioButton rdbtnSemuaHidup = new JRadioButton("Semua Hidup");
-		rdbtnSemuaHidup.setBounds(249, 407, 109, 23);
-		contentPane.add(rdbtnSemuaHidup);
-		
-		JRadioButton rdbtnAdaYang = new JRadioButton("Ada yang mati");
-		rdbtnAdaYang.setBounds(249, 428, 109, 23);
-		contentPane.add(rdbtnAdaYang);
+		kondisiLampu.add(rbKondisiLampu1);
+		kondisiLampu.add(rbKondisiLampu2);
 	}
 }
