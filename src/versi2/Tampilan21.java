@@ -6,10 +6,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+
 import java.awt.Font;
+
+import javax.swing.ButtonGroup;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -17,14 +21,36 @@ import java.awt.event.ActionEvent;
 public class Tampilan21 extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField JumlahKipasAngin;
-	private JTextField KipasBerfungsi;
-	private JTextField KipasTdkBerfungsi;
-	private JTextField JumlahAC;
-	private JTextField JumlahCCTV;
-	private JTextField CCTVBerfungsi;
-	private JTextField CCTVTdkBerfungsi;
+	private JTextField JumlahKipasAngin= new JTextField();
+	private JTextField KipasBerfungsi = new JTextField();
+	private JTextField KipasTdkBerfungsi = new JTextField();;
+	private JTextField JumlahAC= new JTextField();
+	private JTextField JumlahCCTV= new JTextField();;
+	private JTextField CCTVBerfungsi = new JTextField();;
+	private JTextField CCTVTdkBerfungsi = new JTextField();
+	
 
+	
+	private ButtonGroup kondisiAC = new ButtonGroup();
+	JRadioButton AcBaik = new JRadioButton("Baik");
+	JRadioButton AcKurangBaik = new JRadioButton("Kurang Baik");
+	
+	private ButtonGroup posisiAC = new ButtonGroup();
+	JRadioButton AcBelakang = new JRadioButton("Belakang");
+	JRadioButton AcSamping = new JRadioButton("Samping");
+	JRadioButton AcLainlain_1 = new JRadioButton("Lain-lain");
+
+	private ButtonGroup Hotspot = new ButtonGroup();
+	JRadioButton UmmHospot = new JRadioButton("UMM HOTSPOT");
+	JRadioButton SSIDLainlain = new JRadioButton("Lain-lain");
+
+	private ButtonGroup login = new ButtonGroup();
+	JRadioButton BisaLogin = new JRadioButton("Bisa Login");
+	JRadioButton TidakBisaLogin = new JRadioButton("Tidak Bisa Login");
+	
+	private ButtonGroup posisiCCTV = new ButtonGroup();
+	JRadioButton DepanBelakang = new JRadioButton("Depan & Belakang");
+	JRadioButton Lainlain_3 = new JRadioButton("Lain-Lain");
 	/**
 	 * Launch the application.
 	 */
@@ -67,7 +93,7 @@ public class Tampilan21 extends JFrame {
 		lblJumlahKipasAngin.setBounds(20, 48, 172, 19);
 		contentPane.add(lblJumlahKipasAngin);
 		
-		JumlahKipasAngin = new JTextField();
+		
 		JumlahKipasAngin.setBounds(248, 48, 100, 20);
 		contentPane.add(JumlahKipasAngin);
 		JumlahKipasAngin.setColumns(10);
@@ -77,7 +103,7 @@ public class Tampilan21 extends JFrame {
 		lblKondisiKipasAngin.setBounds(22, 79, 224, 19);
 		contentPane.add(lblKondisiKipasAngin);
 		
-		KipasBerfungsi = new JTextField();
+		
 		KipasBerfungsi.setBounds(248, 79, 100, 20);
 		contentPane.add(KipasBerfungsi);
 		KipasBerfungsi.setColumns(10);
@@ -92,7 +118,7 @@ public class Tampilan21 extends JFrame {
 		lblBerfungsi.setBounds(20, 126, 172, 19);
 		contentPane.add(lblBerfungsi);
 		
-		KipasTdkBerfungsi = new JTextField();
+		
 		KipasTdkBerfungsi.setBounds(248, 109, 100, 20);
 		contentPane.add(KipasTdkBerfungsi);
 		KipasTdkBerfungsi.setColumns(10);
@@ -102,7 +128,7 @@ public class Tampilan21 extends JFrame {
 		lblJumlahKipasAc.setBounds(20, 167, 172, 19);
 		contentPane.add(lblJumlahKipasAc);
 		
-		JumlahAC = new JTextField();
+		
 		JumlahAC.setBounds(248, 167, 100, 20);
 		contentPane.add(JumlahAC);
 		JumlahAC.setColumns(10);
@@ -111,12 +137,12 @@ public class Tampilan21 extends JFrame {
 		lblKondisiAc.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblKondisiAc.setBounds(20, 197, 172, 19);
 		contentPane.add(lblKondisiAc);
+		kondisiAC.add(AcBaik);
+		kondisiAC.add(AcKurangBaik);
 		
-		JRadioButton AcBaik = new JRadioButton("Baik");
 		AcBaik.setBounds(248, 193, 109, 23);
 		contentPane.add(AcBaik);
 		
-		JRadioButton AcKurangBaik = new JRadioButton("Kurang Baik");
 		AcKurangBaik.setBounds(248, 210, 109, 23);
 		contentPane.add(AcKurangBaik);
 		
@@ -124,16 +150,17 @@ public class Tampilan21 extends JFrame {
 		lblPosisiAc.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblPosisiAc.setBounds(20, 243, 172, 19);
 		contentPane.add(lblPosisiAc);
+		posisiAC.add(AcBelakang);
+		posisiAC.add(AcSamping);
+		posisiAC.add(AcLainlain_1);
 		
-		JRadioButton AcBelakang = new JRadioButton("Belakang");
 		AcBelakang.setBounds(248, 242, 109, 23);
 		contentPane.add(AcBelakang);
 		
-		JRadioButton AcSamping = new JRadioButton("Samping");
 		AcSamping.setBounds(248, 261, 109, 23);
 		contentPane.add(AcSamping);
 		
-		JRadioButton AcLainlain_1 = new JRadioButton("Lain-lain");
+		
 		AcLainlain_1.setBounds(248, 280, 109, 23);
 		contentPane.add(AcLainlain_1);
 		
@@ -141,12 +168,12 @@ public class Tampilan21 extends JFrame {
 		lblSsid.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblSsid.setBounds(22, 308, 172, 19);
 		contentPane.add(lblSsid);
+		Hotspot.add(UmmHospot);
+		Hotspot.add(SSIDLainlain);
 		
-		JRadioButton UmmHospot = new JRadioButton("UMM HOTSPOT");
 		UmmHospot.setBounds(248, 307, 130, 23);
 		contentPane.add(UmmHospot);
 		
-		JRadioButton SSIDLainlain = new JRadioButton("Lain-lain");
 		SSIDLainlain.setBounds(248, 325, 109, 23);
 		contentPane.add(SSIDLainlain);
 		
@@ -154,12 +181,12 @@ public class Tampilan21 extends JFrame {
 		lblBand.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblBand.setBounds(22, 354, 172, 19);
 		contentPane.add(lblBand);
+		login.add(BisaLogin);
+		login.add(TidakBisaLogin);
 		
-		JRadioButton BisaLogin = new JRadioButton("Bisa Login");
 		BisaLogin.setBounds(248, 351, 109, 23);
 		contentPane.add(BisaLogin);
-		
-		JRadioButton TidakBisaLogin = new JRadioButton("Tidak Bisa Login");
+
 		TidakBisaLogin.setBounds(248, 369, 130, 23);
 		contentPane.add(TidakBisaLogin);
 		
@@ -168,7 +195,7 @@ public class Tampilan21 extends JFrame {
 		lblJumlahCctv.setBounds(20, 405, 172, 19);
 		contentPane.add(lblJumlahCctv);
 		
-		JumlahCCTV = new JTextField();
+		
 		JumlahCCTV.setBounds(248, 405, 100, 20);
 		contentPane.add(JumlahCCTV);
 		JumlahCCTV.setColumns(10);
@@ -178,7 +205,7 @@ public class Tampilan21 extends JFrame {
 		lblJumlahCctvYang.setBounds(20, 435, 226, 19);
 		contentPane.add(lblJumlahCctvYang);
 		
-		CCTVBerfungsi = new JTextField();
+		
 		CCTVBerfungsi.setBounds(248, 435, 100, 20);
 		contentPane.add(CCTVBerfungsi);
 		CCTVBerfungsi.setColumns(10);
@@ -193,7 +220,7 @@ public class Tampilan21 extends JFrame {
 		lblBerfungsi_1.setBounds(20, 478, 226, 19);
 		contentPane.add(lblBerfungsi_1);
 		
-		CCTVTdkBerfungsi = new JTextField();
+		
 		CCTVTdkBerfungsi.setBounds(248, 466, 100, 20);
 		contentPane.add(CCTVTdkBerfungsi);
 		CCTVTdkBerfungsi.setColumns(10);
@@ -202,12 +229,12 @@ public class Tampilan21 extends JFrame {
 		lblPosisiCctv.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblPosisiCctv.setBounds(20, 512, 226, 19);
 		contentPane.add(lblPosisiCctv);
+		posisiCCTV.add(DepanBelakang);
+		posisiCCTV.add(Lainlain_3);
 		
-		JRadioButton DepanBelakang = new JRadioButton("Depan & Belakang");
 		DepanBelakang.setBounds(248, 511, 149, 23);
 		contentPane.add(DepanBelakang);
 		
-		JRadioButton Lainlain_3 = new JRadioButton("Lain-Lain");
 		Lainlain_3.setBounds(248, 529, 109, 23);
 		contentPane.add(Lainlain_3);
 		
