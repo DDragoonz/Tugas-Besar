@@ -6,6 +6,7 @@ import java.awt.BorderLayout;
 
 
 
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -13,6 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
 import javax.swing.JLabel;
 
 import java.awt.Font;
@@ -47,7 +49,7 @@ public class Tampilan extends JPanel {
 
 	
 	public Tampilan() {
-		
+		//setBackground(Color.RED);
 		boolean adaKelas = false;
 		
 		try {
@@ -72,15 +74,7 @@ public class Tampilan extends JPanel {
 		//getContentPane().
 		add(lblNamaRuangan);
 		
-		JLabel lblIdentitasRuangKelas = new JLabel("IDENTITAS RUANG KELAS");
-		lblIdentitasRuangKelas.setBounds(20, 24, 191, 26);
-		//getContentPane().
-		add(lblIdentitasRuangKelas);
 		
-		JLabel label = new JLabel("_____________________________________________________________________");
-		label.setBounds(10, 45, 484, 14);
-		//getContentPane().
-		add(label);
 		
 		if(adaKelas){
 			namaRuang = new JTextField(kelasSementara.getNama());
@@ -138,15 +132,8 @@ public class Tampilan extends JPanel {
 		//getContentPane().
 		add(lblPanjangRuangan);
 		
-		JLabel label_1 = new JLabel("_____________________________________________________________________");
-		label_1.setBounds(10, 203, 484, 14);
-		//getContentPane().
-		add(label_1);
 		
-		JLabel lblKondisiRuangKelas = new JLabel("KONDISI RUANG KELAS");
-		lblKondisiRuangKelas.setBounds(10, 182, 191, 26);
-		//getContentPane().
-		add(lblKondisiRuangKelas);
+		
 		
 		
 		panjangRuangan.setBounds(221, 243, 165, 20);
@@ -204,7 +191,17 @@ public class Tampilan extends JPanel {
 				
 				
 				
+		JPanel lblIdentitasRuangKelas = new JPanel();
+		lblIdentitasRuangKelas.setBounds(11, 34, 400, 149);
+		//lblIdentitasRuangKelas.setOpaque(false);
+		lblIdentitasRuangKelas.setBorder(new TitledBorder("IDENTITAS RUANG KELAS"));
+		//getContentPane().
+		add(lblIdentitasRuangKelas);
 		
+		JPanel lblKondisiRuangKelas = new JPanel();
+		lblKondisiRuangKelas.setBounds(10, 220, 400, 250);
+		lblKondisiRuangKelas.setBorder(new TitledBorder("KONDISI RUANG KELAS"));
+		add(lblKondisiRuangKelas);
 			}
 
 }
