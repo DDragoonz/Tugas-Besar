@@ -22,7 +22,7 @@ import javax.swing.JButton;
 import sun.net.www.content.audio.basic;
 
 
-public class Tampilan2 extends JFrame {
+public class Tampilan2 extends JPanel {
 
 	
 	
@@ -60,65 +60,57 @@ public class Tampilan2 extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Tampilan2 frame = new Tampilan2();
-					frame.setVisible(true);
-					frame.setSize(500,596);
-					frame.setResizable(false);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
-	/**
-	 * Create the frame.
-	 */
+	
+	
 	public Tampilan2() {
-		setTitle("keLAS");
+		setLayout(null);
+		//setTitle("keLAS");
 		setVisible(true);
-		setSize(500,596);
-		setResizable(false);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 500, 596);
+		setSize(500,650);
+		//setResizable(false);
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(0, 0, 500, 596);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
+		setBorder(new EmptyBorder(5, 5, 5, 5));
+		//setContentPane(contentPane);
+		setLayout(null);
 		
 		JLabel lblJumlahStopKontaksteker = new JLabel("Jumlah Stop Kontak/Steker");
 		lblJumlahStopKontaksteker.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblJumlahStopKontaksteker.setBounds(22, 45, 172, 19);
-		contentPane.add(lblJumlahStopKontaksteker);
+		//
+		add(lblJumlahStopKontaksteker);
 		
 		JumlahStopKontak = new JTextField();
 		JumlahStopKontak.setBounds(249, 45, 137, 20);
-		contentPane.add(JumlahStopKontak);
+		add(JumlahStopKontak);
 		JumlahStopKontak.setColumns(10);
 		
 		JLabel KondisiStopKontak = new JLabel("Kondisi Stop Kontak/Steker");
 		KondisiStopKontak.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		KondisiStopKontak.setBounds(22, 89, 172, 19);
-		contentPane.add(KondisiStopKontak);
+		//
+		add(KondisiStopKontak);
 		
 		JLabel label = new JLabel("Jumlah Stop Kontak/Steker");
 		label.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		label.setBounds(22, 138, 172, 19);
-		contentPane.add(label);
+		//
+		add(label);
 		
 		
 		rbPosisiSteker1.setBounds(249, 138, 109, 19);
-		contentPane.add(rbPosisiSteker1);
+		//
+		add(rbPosisiSteker1);
 				
 		rbPosisiSteker2.setBounds(249, 154, 200, 19);
-		contentPane.add(rbPosisiSteker2);
+		//
+		add(rbPosisiSteker2);
 
 		rbPosisiSteker3.setBounds(249, 170, 109, 19);
-		contentPane.add(rbPosisiSteker3);
+		//
+		add(rbPosisiSteker3);
 		
 		posisiSteker.add(rbPosisiSteker1);
 		posisiSteker.add(rbPosisiSteker2);
@@ -126,10 +118,12 @@ public class Tampilan2 extends JFrame {
 		
 		
 		rbKondisiSteker1.setBounds(249, 88, 109, 19);
-		contentPane.add(rbKondisiSteker1);
+		//
+		add(rbKondisiSteker1);
 		
 		rbKondisiSteker2.setBounds(249, 104, 109, 23);
-		contentPane.add(rbKondisiSteker2);
+		//
+		add(rbKondisiSteker2);
 		
 		kondisiSteker.add(rbKondisiSteker1);
 		kondisiSteker.add(rbKondisiSteker2);
@@ -137,24 +131,29 @@ public class Tampilan2 extends JFrame {
 		JLabel lblJumlahKabelLcd = new JLabel("Jumlah Kabel LCD");
 		lblJumlahKabelLcd.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblJumlahKabelLcd.setBounds(22, 210, 172, 19);
-		contentPane.add(lblJumlahKabelLcd);
+		//
+		add(lblJumlahKabelLcd);
 		
 		JumlahKabelLCD = new JTextField();
 		JumlahKabelLCD.setBounds(249, 207, 137, 20);
-		contentPane.add(JumlahKabelLCD);
+		//
+		add(JumlahKabelLCD);
 		JumlahKabelLCD.setColumns(10);
 		
 		JLabel lblKondisiKabelLcd = new JLabel("Kondisi Kabel LCD");
 		lblKondisiKabelLcd.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblKondisiKabelLcd.setBounds(22, 255, 172, 19);
-		contentPane.add(lblKondisiKabelLcd);
+		//
+		add(lblKondisiKabelLcd);
 		
 		
 		rbKondisiLCD1.setBounds(249, 251, 109, 23);
-		contentPane.add(rbKondisiLCD1);
+		//
+		add(rbKondisiLCD1);
 		
 		rbKondisiLCD2.setBounds(249, 269, 150, 23);
-		contentPane.add(rbKondisiLCD2);
+		//
+		add(rbKondisiLCD2);
 		
 		kondisiLCD.add(rbKondisiLCD1);
 		kondisiLCD.add(rbKondisiLCD2);
@@ -162,24 +161,30 @@ public class Tampilan2 extends JFrame {
 		JLabel lblPosisiKabelLcd = new JLabel("Posisi Kabel LCD");
 		lblPosisiKabelLcd.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblPosisiKabelLcd.setBounds(22, 313, 172, 19);
-		contentPane.add(lblPosisiKabelLcd);
+		//
+		add(lblPosisiKabelLcd);
 		
 		JLabel label_1 = new JLabel("_____________________________________________________________________");
 		label_1.setBounds(10, 23, 484, 14);
-		contentPane.add(label_1);
+		//
+		add(label_1);
 		
 		JLabel lblJumlahkondisiDanPosisi = new JLabel("Jumlah,Kondisi dan Posisi Sarana");
 		lblJumlahkondisiDanPosisi.setBounds(10, 20, 184, 14);
-		contentPane.add(lblJumlahkondisiDanPosisi);
+		//
+		add(lblJumlahkondisiDanPosisi);
 
 		rbPosisiLCD1.setBounds(249, 313, 109, 19);
-		contentPane.add(rbPosisiLCD1);
+		//
+		add(rbPosisiLCD1);
 
 		rbPosisiLCD2.setBounds(249, 329, 200, 19);
-		contentPane.add(rbPosisiLCD2);
+		//
+		add(rbPosisiLCD2);
 
 		rbPosisiLCD3.setBounds(249, 345, 109, 19);
-		contentPane.add(rbPosisiLCD3);
+		//
+		add(rbPosisiLCD3);
 		
 		posisiLCD.add(rbPosisiLCD1);
 		posisiLCD.add(rbPosisiLCD2);
@@ -188,37 +193,28 @@ public class Tampilan2 extends JFrame {
 		JLabel lblJumlah = new JLabel("Jumlah Lampu");
 		lblJumlah.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblJumlah.setBounds(22, 378, 172, 19);
-		contentPane.add(lblJumlah);
+		//
+		add(lblJumlah);
 		
 		JumlahLampu = new JTextField();
 		JumlahLampu.setBounds(249, 378, 137, 19);
-		contentPane.add(JumlahLampu);
+		//
+		add(JumlahLampu);
 		JumlahLampu.setColumns(10);
 		
 		JLabel lblLampuYangHidup = new JLabel("Kondisi Lampu ");
 		lblLampuYangHidup.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblLampuYangHidup.setBounds(22, 408, 172, 19);
-		contentPane.add(lblLampuYangHidup);
+	//	
+		add(lblLampuYangHidup);
 		
-		JButton Next0 = new JButton("Next");
-		Next0.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				//pindah frame......
-				Tampilan21 panggil = new Tampilan21();
-				dispose();
-				panggil.show();
-				
-				
-			}
-		});
-		Next0.setBounds(376, 520, 89, 23);
-		contentPane.add(Next0);
+		
 
 		rbPosisiLampu1.setBounds(250, 475, 100, 19);
-		contentPane.add(rbPosisiLampu1);
+		add(rbPosisiLampu1);
 
 		rbPosisiLampu2.setBounds(250, 454, 109, 23);
-		contentPane.add(rbPosisiLampu2);
+		add(rbPosisiLampu2);
 		
 		posisiLampu.add(rbPosisiLampu1);
 		posisiLampu.add(rbPosisiLampu2);
@@ -226,25 +222,17 @@ public class Tampilan2 extends JFrame {
 		JLabel label_2 = new JLabel("Posisi Lampu");
 		label_2.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		label_2.setBounds(22, 455, 172, 19);
-		contentPane.add(label_2);
+		//
+		add(label_2);
 		
-		JButton btnBack = new JButton("Back");
-		btnBack.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Tampilan panggil = new Tampilan();
-				dispose();
-				panggil.show();
-				
-			}
-		});
-		btnBack.setBounds(269, 520, 89, 23);
-		contentPane.add(btnBack);
-
+		
 		rbKondisiLampu1.setBounds(249, 407, 109, 23);
-		contentPane.add(rbKondisiLampu1);
+		//
+		add(rbKondisiLampu1);
 
 		rbKondisiLampu2.setBounds(249, 428, 109, 23);
-		contentPane.add(rbKondisiLampu2);
+		//
+		add(rbKondisiLampu2);
 		
 		kondisiLampu.add(rbKondisiLampu1);
 		kondisiLampu.add(rbKondisiLampu2);

@@ -18,273 +18,312 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Tampilan3 extends JFrame {
+public class Tampilan3 extends JPanel {
 
 	private JPanel contentPane;
 	private JTextField IntensitasCahaya;
 	private JTextField Kelembapan;
 	private JTextField Suhu;
+	
+	private ButtonGroup kondisilantai = new ButtonGroup();
+	JRadioButton kondisilantai1 = new JRadioButton("Baik");
+	JRadioButton kondisilantai2 = new JRadioButton("Kurang Baik");
 
+	private ButtonGroup dinding = new ButtonGroup();
+	JRadioButton kondisidinding = new JRadioButton("Baik");
+	JRadioButton kondisidinding1 = new JRadioButton("Kurang Baik");
+	
+	private ButtonGroup atap = new ButtonGroup();
+	JRadioButton kondisiAtap = new JRadioButton("Baik");
+	JRadioButton kondisiAtap1 = new JRadioButton("Kurang Baik");
+	
+	private ButtonGroup pintu = new ButtonGroup();
+	JRadioButton Kondisipintu = new JRadioButton("Baik");
+	JRadioButton Kondisipintu1 = new JRadioButton("Kurang Baik");
+	
+	private ButtonGroup cendela = new ButtonGroup();
+	JRadioButton kondisiCendela = new JRadioButton("Baik");
+	JRadioButton kondisiCendela1 = new JRadioButton("Kurang Baik");
+
+	private ButtonGroup udara = new ButtonGroup();
+	JRadioButton kondisiudara = new JRadioButton("Lancar");
+	JRadioButton kondisiudara1 = new JRadioButton("Tidak Lancar");
+	
+	private ButtonGroup kebising = new ButtonGroup();
+	JRadioButton kebisingan = new JRadioButton("Bising ");
+	JRadioButton kebisingan1 = new JRadioButton("Tidak Bising");
 	// private ButtonGroup login = new ButtonGroup();
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Tampilan3 frame = new Tampilan3();
-					frame.setSize(500, 641);
-					frame.setResizable(false);
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
+	 
+	 
 	public Tampilan3() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	/*	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 499, 641);
 		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		contentPane.setLayout(null);
-
+		
+*/setLayout(null);
 		JLabel lblLingkunganRuangKelas = new JLabel("Lingkungan Ruang Kelas");
 		lblLingkunganRuangKelas.setBounds(10, 11, 184, 14);
-		contentPane.add(lblLingkunganRuangKelas);
+		//
+		add(lblLingkunganRuangKelas);
 
 		JLabel label_1 = new JLabel(
 				"_____________________________________________________________________");
 		label_1.setBounds(0, 14, 484, 14);
-		contentPane.add(label_1);
+		//
+		add(label_1);
 
 		JLabel lblKondisiLantai = new JLabel("Kondisi Lantai");
 		lblKondisiLantai.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblKondisiLantai.setBounds(20, 45, 172, 19);
-		contentPane.add(lblKondisiLantai);
+		//
+		add(lblKondisiLantai);
 
-		JRadioButton kondisilantai1 = new JRadioButton("Baik");
+		
 		kondisilantai1.setBounds(198, 44, 109, 23);
-		contentPane.add(kondisilantai1);
+		//
+		add(kondisilantai1);
 
-		JRadioButton kondisilantai1_1 = new JRadioButton("Kurang Baik");
-		kondisilantai1_1.setBounds(309, 44, 109, 23);
-		contentPane.add(kondisilantai1_1);
-
+		kondisilantai2.setBounds(309, 44, 109, 23);
+		//
+		add(kondisilantai2);
+		kondisilantai.add(kondisilantai1);
+		kondisilantai.add(kondisilantai2);
+		
 		JLabel lblKondisiDinding = new JLabel("Kondisi Dinding");
 		lblKondisiDinding.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblKondisiDinding.setBounds(20, 75, 172, 19);
-		contentPane.add(lblKondisiDinding);
+		//
+		add(lblKondisiDinding);
 
-		JRadioButton rdbtnBaik = new JRadioButton("Baik");
-		rdbtnBaik.setBounds(198, 74, 109, 23);
-		contentPane.add(rdbtnBaik);
+		kondisidinding.setBounds(198, 74, 109, 23);
+		//
+		add(kondisidinding);
 
-		JRadioButton rdbtnKurangBaik = new JRadioButton("Kurang Baik");
-		rdbtnKurangBaik.setBounds(309, 74, 109, 23);
-		contentPane.add(rdbtnKurangBaik);
-
+		
+		kondisidinding1.setBounds(309, 74, 109, 23);
+		//
+		add(kondisidinding1);
+		dinding.add(kondisidinding);
+		dinding.add(kondisidinding1);
 		JLabel lblKondisiAtap = new JLabel("Kondisi Atap");
 		lblKondisiAtap.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblKondisiAtap.setBounds(20, 105, 172, 19);
-		contentPane.add(lblKondisiAtap);
+		//
+		add(lblKondisiAtap);
 
-		JRadioButton rdbtnBaik_1 = new JRadioButton("Baik");
-		rdbtnBaik_1.setBounds(198, 104, 109, 23);
-		contentPane.add(rdbtnBaik_1);
+		
+		kondisiAtap.setBounds(198, 104, 109, 23);
+		//
+		add(kondisiAtap);
 
-		JRadioButton rdbtnKurangBaik_1 = new JRadioButton("Kurang Baik");
-		rdbtnKurangBaik_1.setBounds(309, 104, 109, 23);
-		contentPane.add(rdbtnKurangBaik_1);
-
+		kondisiAtap1.setBounds(309, 104, 109, 23);
+		//
+		add(kondisiAtap1);
+		atap.add(kondisiAtap);
+		atap.add(kondisiAtap1);
+		
 		JLabel lblKondisiPintu = new JLabel("Kondisi Pintu");
 		lblKondisiPintu.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblKondisiPintu.setBounds(20, 136, 172, 19);
-		contentPane.add(lblKondisiPintu);
+		//
+		add(lblKondisiPintu);
 
-		JRadioButton rdbtnBaik_2 = new JRadioButton("Baik");
-		rdbtnBaik_2.setBounds(198, 135, 109, 23);
-		contentPane.add(rdbtnBaik_2);
+		
+		Kondisipintu.setBounds(198, 135, 109, 23);
+		//
+		add(Kondisipintu);
 
-		JRadioButton rdbtnKurangBaik_2 = new JRadioButton("Kurang Baik");
-		rdbtnKurangBaik_2.setBounds(309, 135, 109, 23);
-		contentPane.add(rdbtnKurangBaik_2);
-
+		
+		Kondisipintu1.setBounds(309, 135, 109, 23);
+		//
+		add(Kondisipintu1);
+		pintu.add(Kondisipintu);
+		pintu.add(Kondisipintu1);
+		
 		JLabel lblKondisiCendela = new JLabel("Kondisi Cendela");
 		lblKondisiCendela.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblKondisiCendela.setBounds(20, 166, 172, 19);
-		contentPane.add(lblKondisiCendela);
+		//
+		add(lblKondisiCendela);
 
-		JRadioButton rdbtnBaik_3 = new JRadioButton("Baik");
-		rdbtnBaik_3.setBounds(198, 165, 109, 23);
-		contentPane.add(rdbtnBaik_3);
+		
+		kondisiCendela.setBounds(198, 165, 109, 23);
+		//
+		add(kondisiCendela);
 
-		JRadioButton rdbtnKurangBaik_3 = new JRadioButton("Kurang Baik");
-		rdbtnKurangBaik_3.setBounds(309, 165, 109, 23);
-		contentPane.add(rdbtnKurangBaik_3);
-
+		
+		kondisiCendela1.setBounds(309, 165, 109, 23);
+		//
+		add(kondisiCendela1);
+		cendela.add(kondisiCendela);
+		cendela.add(kondisiCendela1);
 		JLabel lblKebersihanRuangKelas = new JLabel("Kebersihan Ruang kelas");
 		lblKebersihanRuangKelas.setBounds(10, 206, 184, 14);
-		contentPane.add(lblKebersihanRuangKelas);
+		//
+		add(lblKebersihanRuangKelas);
 
 		JLabel label_2 = new JLabel(
 				"_____________________________________________________________________");
 		label_2.setBounds(0, 209, 484, 14);
-		contentPane.add(label_2);
+		//
+		add(label_2);
 
 		JLabel lblSirkulasiUdara = new JLabel("Sirkulasi Udara");
 		lblSirkulasiUdara.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblSirkulasiUdara.setBounds(20, 240, 172, 19);
-		contentPane.add(lblSirkulasiUdara);
+		//
+		add(lblSirkulasiUdara);
 
-		JRadioButton kondisilantai1_2 = new JRadioButton("Lancar");
-		kondisilantai1_2.setBounds(198, 239, 109, 23);
-		contentPane.add(kondisilantai1_2);
 
-		JRadioButton rdbtnTidakLancar = new JRadioButton("Tidak Lancar");
-		rdbtnTidakLancar.setBounds(309, 239, 109, 23);
-		contentPane.add(rdbtnTidakLancar);
+		kondisiudara.setBounds(198, 239, 109, 23);
+		//
+		add(kondisiudara);
 
+		
+		kondisiudara1.setBounds(309, 239, 109, 23);
+		//
+		add(kondisiudara1);
+		udara.add(kondisiudara);
+		udara.add(kondisiudara1);
+		
 		JLabel lblIntensitasCahaya = new JLabel("Intensitas Cahaya");
-		lblIntensitasCahaya
-				.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblIntensitasCahaya.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblIntensitasCahaya.setBounds(20, 279, 172, 19);
-		contentPane.add(lblIntensitasCahaya);
+		//
+		add(lblIntensitasCahaya);
 
 		IntensitasCahaya = new JTextField();
 		IntensitasCahaya.setBounds(198, 279, 38, 20);
-		contentPane.add(IntensitasCahaya);
+		//
+		add(IntensitasCahaya);
 		IntensitasCahaya.setColumns(10);
 
 		JLabel lblKelembapan = new JLabel("Kelembapan");
 		lblKelembapan.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblKelembapan.setBounds(20, 319, 172, 19);
-		contentPane.add(lblKelembapan);
+		//
+		add(lblKelembapan);
 
 		Kelembapan = new JTextField();
 		Kelembapan.setBounds(198, 319, 38, 20);
-		contentPane.add(Kelembapan);
+		//
+		add(Kelembapan);
 		Kelembapan.setColumns(10);
 
 		JLabel lblSuhu = new JLabel("Suhu");
 		lblSuhu.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblSuhu.setBounds(20, 364, 172, 19);
-		contentPane.add(lblSuhu);
+		//
+		add(lblSuhu);
 
 		Suhu = new JTextField();
 		Suhu.setBounds(199, 364, 37, 20);
-		contentPane.add(Suhu);
+		//
+		add(Suhu);
 		Suhu.setColumns(10);
 
 		JLabel lblC = new JLabel("C");
 		lblC.setFont(new Font("Times New Roman", Font.BOLD, 12));
 		lblC.setBounds(246, 367, 46, 14);
-		contentPane.add(lblC);
+		//
+		add(lblC);
 
 		JLabel label = new JLabel("Kebersihan Ruang kelas");
 		label.setBounds(10, 399, 184, 14);
-		contentPane.add(label);
+		//
+		add(label);
 
 		JLabel label_3 = new JLabel(
 				"_____________________________________________________________________");
 		label_3.setBounds(0, 402, 484, 14);
-		contentPane.add(label_3);
+		//
+		add(label_3);
 
 		JLabel lblTingkatKebisingan = new JLabel("Tingkat Kebisingan");
-		lblTingkatKebisingan
-				.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblTingkatKebisingan.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblTingkatKebisingan.setBounds(10, 424, 172, 19);
-		contentPane.add(lblTingkatKebisingan);
+		//
+		add(lblTingkatKebisingan);
 
-		JRadioButton rdbtnBising = new JRadioButton("Bising ");
-		rdbtnBising.setBounds(198, 423, 109, 23);
-		contentPane.add(rdbtnBising);
+		
+		kebisingan.setBounds(198, 423, 109, 23);
+		//
+		add(kebisingan);
 
-		JRadioButton rdbtnTidakBising = new JRadioButton("Tidak Bising");
-		rdbtnTidakBising.setBounds(322, 423, 109, 23);
-		contentPane.add(rdbtnTidakBising);
+		
+		kebisingan1.setBounds(322, 423, 109, 23);
+		//
+		add(kebisingan1);
+		kebising.add(kebisingan);
+		kebising.add(kebisingan1);
 
 		JLabel lblBau = new JLabel("Bau");
 		lblBau.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblBau.setBounds(10, 450, 172, 19);
-		contentPane.add(lblBau);
+		//
+		add(lblBau);
 
 		JRadioButton rdbtnBau = new JRadioButton("Bau");
 		rdbtnBau.setBounds(198, 449, 109, 23);
-		contentPane.add(rdbtnBau);
+		//
+		add(rdbtnBau);
 
 		JRadioButton rdbtnTidakBau = new JRadioButton("Tidak Bau");
 		rdbtnTidakBau.setBounds(322, 449, 109, 23);
-		contentPane.add(rdbtnTidakBau);
+		//
+		add(rdbtnTidakBau);
 
 		JLabel lblKebocoran = new JLabel("Kebocoran");
 		lblKebocoran.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblKebocoran.setBounds(10, 474, 172, 19);
-		contentPane.add(lblKebocoran);
+		//
+		add(lblKebocoran);
 
 		JRadioButton kondisilantai1_3 = new JRadioButton("Bocor");
 		kondisilantai1_3.setBounds(198, 473, 109, 23);
-		contentPane.add(kondisilantai1_3);
+		//
+		add(kondisilantai1_3);
 
 		JRadioButton kondisilantai1_4 = new JRadioButton("Tidak Bocor");
 		kondisilantai1_4.setBounds(322, 473, 109, 23);
-		contentPane.add(kondisilantai1_4);
+		//
+		add(kondisilantai1_4);
 
 		JLabel lblKerusakan = new JLabel("Kerusakan");
 		lblKerusakan.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblKerusakan.setBounds(10, 498, 172, 19);
-		contentPane.add(lblKerusakan);
+		//
+		add(lblKerusakan);
 
-		JRadioButton kondisilantai1 = new JRadioButton("Rusak");
-		kondisilantai1.setBounds(198, 497, 109, 23);
-		contentPane.add(kondisilantai1);
+		JRadioButton kondisilantai = new JRadioButton("Rusak");
+		kondisilantai.setBounds(198, 497, 109, 23);
+		//
+		add(kondisilantai);
 
 		JRadioButton rdbtnTidakRusak = new JRadioButton("Tidak Rusak");
 		rdbtnTidakRusak.setBounds(322, 497, 109, 23);
-		contentPane.add(rdbtnTidakRusak);
+		add(rdbtnTidakRusak);
 
 		JLabel lblKeausan = new JLabel("Keausan");
 		lblKeausan.setFont(new Font("Times New Roman", Font.PLAIN, 15));
 		lblKeausan.setBounds(10, 523, 172, 19);
-		contentPane.add(lblKeausan);
+		//
+		add(lblKeausan);
 
 		JRadioButton rdbtnAus = new JRadioButton("Aus");
 		rdbtnAus.setBounds(198, 522, 109, 23);
-		contentPane.add(rdbtnAus);
+		//
+		add(rdbtnAus);
 
 		JRadioButton rdbtnTidakAus = new JRadioButton("Tidak Aus");
 		rdbtnTidakAus.setBounds(322, 523, 109, 23);
-		contentPane.add(rdbtnTidakAus);
+		//
+		add(rdbtnTidakAus);
 
-		JButton btnBack = new JButton("Back");
-		btnBack.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				Tampilan21 panggil = new Tampilan21();
-				dispose();
-				panggil.show();
-			}
-		});
-		btnBack.setBounds(291, 572, 89, 23);
-		contentPane.add(btnBack);
-
-		JButton btnNext = new JButton("Next");
-		btnNext.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				Tampilan32 panggil = new Tampilan32();
-				dispose();
-				panggil.show();
-
-			}
-		});
-		btnNext.setBounds(390, 572, 89, 23);
-		contentPane.add(btnNext);
+	
 	}
 
 }
