@@ -79,24 +79,24 @@ public class Tampilan2 extends JPanel {
 		
 		JLabel lblJumlahStopKontaksteker = new JLabel("Jumlah Stop Kontak/Steker");
 		lblJumlahStopKontaksteker.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		lblJumlahStopKontaksteker.setBounds(22, 45, 172, 19);
+		lblJumlahStopKontaksteker.setBounds(22, 45, 200, 19);
 		//
 		add(lblJumlahStopKontaksteker);
 		
 		JumlahStopKontak = new JTextField();
-		JumlahStopKontak.setBounds(249, 45, 137, 20);
+		JumlahStopKontak.setBounds(249, 45, 200, 20);
 		add(JumlahStopKontak);
 		JumlahStopKontak.setColumns(10);
 		
 		JLabel KondisiStopKontak = new JLabel("Kondisi Stop Kontak/Steker");
 		KondisiStopKontak.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		KondisiStopKontak.setBounds(22, 89, 172, 19);
+		KondisiStopKontak.setBounds(22, 89, 200, 19);
 		//
 		add(KondisiStopKontak);
 		
-		JLabel label = new JLabel("Jumlah Stop Kontak/Steker");
+		JLabel label = new JLabel("Posisi Stop Kontak/Steker");
 		label.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		label.setBounds(22, 138, 172, 19);
+		label.setBounds(22, 138, 200, 19);
 		//
 		add(label);
 		

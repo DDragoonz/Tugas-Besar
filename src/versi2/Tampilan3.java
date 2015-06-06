@@ -58,18 +58,12 @@ public class Tampilan3 extends JPanel {
 	 
 	 
 	public Tampilan3() {
-	/*	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 499, 641);
-		contentPane = new JPanel();
-		setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		
-*/setLayout(null);
+		setLayout(null);
 		
 
 		
 		JLabel lblKondisiLantai = new JLabel("Kondisi Lantai");
-		lblKondisiLantai.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblKondisiLantai.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKondisiLantai.setBounds(20, 45, 172, 19);
 		//
 		add(lblKondisiLantai);
@@ -86,7 +80,7 @@ public class Tampilan3 extends JPanel {
 		kondisilantai.add(kondisilantai2);
 		
 		JLabel lblKondisiDinding = new JLabel("Kondisi Dinding");
-		lblKondisiDinding.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblKondisiDinding.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKondisiDinding.setBounds(20, 75, 172, 19);
 		//
 		add(lblKondisiDinding);
@@ -102,7 +96,7 @@ public class Tampilan3 extends JPanel {
 		dinding.add(kondisidinding);
 		dinding.add(kondisidinding1);
 		JLabel lblKondisiAtap = new JLabel("Kondisi Atap");
-		lblKondisiAtap.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblKondisiAtap.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKondisiAtap.setBounds(20, 105, 172, 19);
 		//
 		add(lblKondisiAtap);
@@ -119,7 +113,7 @@ public class Tampilan3 extends JPanel {
 		atap.add(kondisiAtap1);
 		
 		JLabel lblKondisiPintu = new JLabel("Kondisi Pintu");
-		lblKondisiPintu.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblKondisiPintu.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKondisiPintu.setBounds(20, 136, 172, 19);
 		//
 		add(lblKondisiPintu);
@@ -137,7 +131,7 @@ public class Tampilan3 extends JPanel {
 		pintu.add(Kondisipintu1);
 		
 		JLabel lblKondisiCendela = new JLabel("Kondisi Cendela");
-		lblKondisiCendela.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblKondisiCendela.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKondisiCendela.setBounds(20, 166, 172, 19);
 		//
 		add(lblKondisiCendela);
@@ -155,7 +149,7 @@ public class Tampilan3 extends JPanel {
 		cendela.add(kondisiCendela1);
 		
 		JLabel lblSirkulasiUdara = new JLabel("Sirkulasi Udara");
-		lblSirkulasiUdara.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblSirkulasiUdara.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblSirkulasiUdara.setBounds(20, 240, 172, 19);
 		//
 		add(lblSirkulasiUdara);
@@ -173,7 +167,7 @@ public class Tampilan3 extends JPanel {
 		udara.add(kondisiudara1);
 		
 		JLabel lblIntensitasCahaya = new JLabel("Intensitas Cahaya");
-		lblIntensitasCahaya.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblIntensitasCahaya.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblIntensitasCahaya.setBounds(20, 279, 172, 19);
 		//
 		add(lblIntensitasCahaya);
@@ -185,7 +179,7 @@ public class Tampilan3 extends JPanel {
 		IntensitasCahaya.setColumns(10);
 
 		JLabel lblKelembapan = new JLabel("Kelembapan");
-		lblKelembapan.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblKelembapan.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKelembapan.setBounds(20, 319, 172, 19);
 		//
 		add(lblKelembapan);
@@ -197,7 +191,7 @@ public class Tampilan3 extends JPanel {
 		Kelembapan.setColumns(10);
 
 		JLabel lblSuhu = new JLabel("Suhu");
-		lblSuhu.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblSuhu.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblSuhu.setBounds(20, 354, 172, 19);
 		//
 		add(lblSuhu);
@@ -209,7 +203,7 @@ public class Tampilan3 extends JPanel {
 		Suhu.setColumns(10);
 
 		JLabel lblC = new JLabel("C");
-		lblC.setFont(new Font("Times New Roman", Font.BOLD, 12));
+		lblC.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblC.setBounds(246, 357, 46, 14);
 		//
 		add(lblC);
@@ -218,7 +212,7 @@ public class Tampilan3 extends JPanel {
 		
 
 		JLabel lblTingkatKebisingan = new JLabel("Tingkat Kebisingan");
-		lblTingkatKebisingan.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblTingkatKebisingan.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblTingkatKebisingan.setBounds(10, 424, 172, 19);
 		//
 		add(lblTingkatKebisingan);
@@ -236,7 +230,7 @@ public class Tampilan3 extends JPanel {
 		kebising.add(kebisingan1);
 
 		JLabel lblBau = new JLabel("Bau");
-		lblBau.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblBau.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblBau.setBounds(10, 450, 172, 19);
 		//
 		add(lblBau);
@@ -252,7 +246,7 @@ public class Tampilan3 extends JPanel {
 		add(rdbtnTidakBau);
 
 		JLabel lblKebocoran = new JLabel("Kebocoran");
-		lblKebocoran.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblKebocoran.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKebocoran.setBounds(10, 474, 172, 19);
 		//
 		add(lblKebocoran);
@@ -268,7 +262,7 @@ public class Tampilan3 extends JPanel {
 		add(kondisilantai1_4);
 
 		JLabel lblKerusakan = new JLabel("Kerusakan");
-		lblKerusakan.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblKerusakan.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKerusakan.setBounds(10, 498, 172, 19);
 		//
 		add(lblKerusakan);
@@ -283,7 +277,7 @@ public class Tampilan3 extends JPanel {
 		add(rdbtnTidakRusak);
 
 		JLabel lblKeausan = new JLabel("Keausan");
-		lblKeausan.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblKeausan.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKeausan.setBounds(10, 523, 172, 19);
 		//
 		add(lblKeausan);
@@ -299,18 +293,18 @@ public class Tampilan3 extends JPanel {
 		add(rdbtnTidakAus);
 
 		JPanel lblLingkunganRuangKelas = new JPanel();
-		lblLingkunganRuangKelas.setBounds(10, 11, 410,185);
+		lblLingkunganRuangKelas.setBounds(10, 11, 456,185);
 		lblLingkunganRuangKelas.setBorder(new TitledBorder("Lingkungan Ruang Kelas"));
 		add(lblLingkunganRuangKelas);
 	
 		JPanel lblKebersihanRuangKelas = new JPanel();
-		lblKebersihanRuangKelas.setBounds(10, 206, 410, 185);
+		lblKebersihanRuangKelas.setBounds(10, 206, 456, 185);
 		lblKebersihanRuangKelas.setBorder(new TitledBorder("Kebersihan Ruang kelas"));
 		add(lblKebersihanRuangKelas);
 		
 		JPanel label = new JPanel();
 		label.setBorder(new TitledBorder("KENYAMANAN RUANG KELAS"));
-		label.setBounds(3, 399, 420, 160);
+		label.setBounds(3, 399, 456, 160);
 		add(label);
 
 

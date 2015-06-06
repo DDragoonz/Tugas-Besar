@@ -2,6 +2,7 @@ package versi2;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -21,14 +22,18 @@ public class Tampilan32 extends JPanel {
 
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
 
-
-	/**
-	 * Create the frame.
-	 */
+	private ButtonGroup kokoh = new ButtonGroup();
+	JRadioButton rdbtnKokoh = new JRadioButton("Kokoh");
+	JRadioButton rdbtnTidakKokoh = new JRadioButton("Tidak Kokoh");
+	
+	private ButtonGroup kunci = new ButtonGroup();
+	JRadioButton rdbtnAdaKunci = new JRadioButton("Ada Kunci");
+	JRadioButton rdbtnTidakAdaKunci = new JRadioButton("Tidak Ada Kunci");
+	
+	private ButtonGroup aman = new ButtonGroup();
+	JRadioButton rdbtnAman = new JRadioButton("Aman");
+	JRadioButton rdbtnTidakAman = new JRadioButton("Tidak Aman");
 	public Tampilan32() {
 		setLayout(null);
 		setSize(500,650);
@@ -37,51 +42,52 @@ public class Tampilan32 extends JPanel {
 	
 		
 		JLabel lblKekokohan = new JLabel("Kekokohan");
-		lblKekokohan.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblKekokohan.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKekokohan.setBounds(30, 36, 172, 19);
 		add(lblKekokohan);
 		
-		JRadioButton rdbtnKokoh = new JRadioButton("Kokoh");
+		
 		rdbtnKokoh.setBounds(196, 35, 90, 23);
 		add(rdbtnKokoh);
 		
-		JRadioButton rdbtnTidakKokoh = new JRadioButton("Tidak Kokoh");
 		rdbtnTidakKokoh.setBounds(294, 35, 109, 23);
 		add(rdbtnTidakKokoh);
+		kokoh.add(rdbtnKokoh);
+		kokoh.add(rdbtnTidakKokoh);
 		
 		JLabel lblKunciPintuDan = new JLabel("Kunci pintu dan Cendela");
-		lblKunciPintuDan.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblKunciPintuDan.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKunciPintuDan.setBounds(30, 66, 172, 19);
 		add(lblKunciPintuDan);
 		
-		JRadioButton rdbtnAdaKunci = new JRadioButton("Ada Kunci");
-		rdbtnAdaKunci.setBounds(196, 65, 90, 23);
+		
+		rdbtnAdaKunci.setBounds(196, 65, 200, 23);
 		add(rdbtnAdaKunci);
 		
-		JRadioButton rdbtnTidakAdaKunci = new JRadioButton("Tidak Ada Kunci");
-		rdbtnTidakAdaKunci.setBounds(294, 65, 109, 23);
+		rdbtnTidakAdaKunci.setBounds(294, 65, 200, 23);
 		add(rdbtnTidakAdaKunci);
-		
+		kunci.add(rdbtnAdaKunci);
+		kunci.add(rdbtnTidakAdaKunci);
 		JLabel lblTingkatBahaya = new JLabel("Tingkat Bahaya");
-		lblTingkatBahaya.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblTingkatBahaya.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblTingkatBahaya.setBounds(30, 96, 172, 19);
 		add(lblTingkatBahaya);
 		
-		JRadioButton rdbtnAman = new JRadioButton("Aman");
+		
 		rdbtnAman.setBounds(196, 95, 90, 23);
 		add(rdbtnAman);
 		
-		JRadioButton rdbtnTidakAman = new JRadioButton("Tidak Aman");
 		rdbtnTidakAman.setBounds(294, 95, 109, 23);
 		add(rdbtnTidakAman);
-		
+		aman.add(rdbtnAman);
+		aman.add(rdbtnTidakAman);
 		JButton btnSubmit = new JButton("Submit");
 		btnSubmit.setBounds(373, 162, 89, 23);
 		add(btnSubmit);
 		
 		JPanel lblKeamananRuangKelas = new JPanel();
 		lblKeamananRuangKelas.setBorder(new TitledBorder("KEAMANAN RUANG KELAS"));
-		lblKeamananRuangKelas.setBounds(20, 11, 420, 120);
+		lblKeamananRuangKelas.setBounds(20, 11, 456, 120);
 		add(lblKeamananRuangKelas);
 	}
 

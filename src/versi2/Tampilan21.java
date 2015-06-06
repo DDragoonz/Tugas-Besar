@@ -1,6 +1,7 @@
 package versi2;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Window;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -52,6 +53,14 @@ public class Tampilan21 extends JPanel {
 	private ButtonGroup posisiCCTV = new ButtonGroup();
 	JRadioButton DepanBelakang = new JRadioButton("Depan & Belakang");
 	JRadioButton Lainlain_3 = new JRadioButton("Lain-Lain");
+	
+	private ButtonGroup kipas = new ButtonGroup();
+	JRadioButton KondisiKipas = new JRadioButton("Baik");
+	JRadioButton KondisiKipas1 = new JRadioButton("Sebagian Tidak Bisa");
+	
+	private ButtonGroup cctv = new ButtonGroup();
+	JRadioButton cctv1 = new JRadioButton("Baik");
+	JRadioButton cctv2 = new JRadioButton("Sebgaian Tidak Bisa");
 	/**
 	 * Launch the application.
 	 */
@@ -67,7 +76,7 @@ public class Tampilan21 extends JPanel {
 		
 
 		JLabel lblJumlahKipasAngin = new JLabel("Jumlah Kipas Angin");
-		lblJumlahKipasAngin.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblJumlahKipasAngin.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblJumlahKipasAngin.setBounds(20, 48, 190, 19);
 		//
 		add(lblJumlahKipasAngin);
@@ -77,37 +86,25 @@ public class Tampilan21 extends JPanel {
 		add(JumlahKipasAngin);
 		JumlahKipasAngin.setColumns(10);
 		
-		JLabel lblKondisiKipasAngin = new JLabel("Jumlah Kipas Angin yang berfungsi");
-		lblKondisiKipasAngin.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblKondisiKipasAngin.setBounds(22, 79, 224, 19);
-		//
-		add(lblKondisiKipasAngin);
+		
+		JLabel lblKondisiKipasAngin1 = new JLabel("Kondisi Kipas Kipas");
+		lblKondisiKipasAngin1.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		lblKondisiKipasAngin1.setBounds(20, 100, 200, 23);
+		add(lblKondisiKipasAngin1);
 		
 		
-		KipasBerfungsi.setBounds(248, 79, 100, 20);
-		add(KipasBerfungsi);
-		KipasBerfungsi.setColumns(10);
+		KondisiKipas.setBounds(248, 100, 109, 23);
+		add(KondisiKipas);
 		
-		JLabel lblJumlahKipasAngin_1 = new JLabel("Jumlah Kipas Angin yang Tidak");
-		lblJumlahKipasAngin_1.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblJumlahKipasAngin_1.setBounds(20, 109, 253, 19);
-		//
-		add(lblJumlahKipasAngin_1);
-		
-		JLabel lblBerfungsi = new JLabel("berfungsi");
-		lblBerfungsi.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblBerfungsi.setBounds(20, 126, 172, 19);
-		//
-		add(lblBerfungsi);
+		KondisiKipas1.setBounds(248, 120, 200, 23);
+		add(KondisiKipas1);
+		kipas.add(KondisiKipas);
+		kipas.add(KondisiKipas1);
 		
 		
-		KipasTdkBerfungsi.setBounds(248, 109, 100, 20);
-		//
-		add(KipasTdkBerfungsi);
-		KipasTdkBerfungsi.setColumns(10);
 		
 		JLabel lblJumlahKipasAc = new JLabel("Jumlah AC");
-		lblJumlahKipasAc.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblJumlahKipasAc.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblJumlahKipasAc.setBounds(20, 167, 172, 19);
 		//
 		add(lblJumlahKipasAc);
@@ -119,7 +116,7 @@ public class Tampilan21 extends JPanel {
 		JumlahAC.setColumns(10);
 		
 		JLabel lblKondisiAc = new JLabel("Kondisi AC");
-		lblKondisiAc.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblKondisiAc.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKondisiAc.setBounds(20, 197, 172, 19);
 		//
 		add(lblKondisiAc);
@@ -130,12 +127,12 @@ public class Tampilan21 extends JPanel {
 		//
 		add(AcBaik);
 		
-		AcKurangBaik.setBounds(248, 210, 109, 23);
+		AcKurangBaik.setBounds(248, 210, 200, 23);
 		//
 		add(AcKurangBaik);
 		
 		JLabel lblPosisiAc = new JLabel("Posisi AC");
-		lblPosisiAc.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblPosisiAc.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblPosisiAc.setBounds(20, 243, 172, 19);
 		//
 		add(lblPosisiAc);
@@ -156,7 +153,7 @@ public class Tampilan21 extends JPanel {
 		add(AcLainlain_1);
 		
 		JLabel lblSsid = new JLabel("SSID");
-		lblSsid.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblSsid.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblSsid.setBounds(22, 308, 172, 19);
 		//
 		add(lblSsid);
@@ -172,7 +169,7 @@ public class Tampilan21 extends JPanel {
 		add(SSIDLainlain);
 		
 		JLabel lblBand = new JLabel("Bandwidht");
-		lblBand.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblBand.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblBand.setBounds(22, 354, 172, 19);
 		//
 		add(lblBand);
@@ -188,7 +185,7 @@ public class Tampilan21 extends JPanel {
 		add(TidakBisaLogin);
 		
 		JLabel lblJumlahCctv = new JLabel("Jumlah CCTV");
-		lblJumlahCctv.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblJumlahCctv.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblJumlahCctv.setBounds(20, 405, 172, 19);
 		//
 		add(lblJumlahCctv);
@@ -198,11 +195,10 @@ public class Tampilan21 extends JPanel {
 		//
 		add(JumlahCCTV);
 		JumlahCCTV.setColumns(10);
-		
+		/*
 		JLabel lblJumlahCctvYang = new JLabel("Jumlah CCTV Yang Bisa Berfungsi");
-		lblJumlahCctvYang.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblJumlahCctvYang.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblJumlahCctvYang.setBounds(20, 435, 226, 19);
-		//
 		add(lblJumlahCctvYang);
 		
 		
@@ -212,13 +208,13 @@ public class Tampilan21 extends JPanel {
 		CCTVBerfungsi.setColumns(10);
 		
 		JLabel lblJumlahCctvYang_1 = new JLabel("Jumlah CCTV Yang Tidak Bisa");
-		lblJumlahCctvYang_1.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblJumlahCctvYang_1.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblJumlahCctvYang_1.setBounds(20, 465, 209, 19);
 		//
 		add(lblJumlahCctvYang_1);
 		
 		JLabel lblBerfungsi_1 = new JLabel("Berfungsi");
-		lblBerfungsi_1.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblBerfungsi_1.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblBerfungsi_1.setBounds(20, 478, 226, 19);
 		//
 		add(lblBerfungsi_1);
@@ -228,9 +224,23 @@ public class Tampilan21 extends JPanel {
 		//
 		add(CCTVTdkBerfungsi);
 		CCTVTdkBerfungsi.setColumns(10);
+		*/
+		JLabel lblJumlahCctvYang = new JLabel("Keadan CCTV ");
+		lblJumlahCctvYang.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		lblJumlahCctvYang.setBounds(20, 450, 226, 19);
+		add(lblJumlahCctvYang);
+		
+		
+		cctv1.setBounds(248, 450, 190, 23);
+		add(cctv1);
+		
+		cctv2.setBounds(248, 465, 149, 23);
+		add(cctv2);
+		cctv.add(cctv1);
+		cctv.add(cctv2);
 		
 		JLabel lblPosisiCctv = new JLabel("Posisi CCTV");
-		lblPosisiCctv.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblPosisiCctv.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblPosisiCctv.setBounds(20, 512, 226, 19);
 		//
 		add(lblPosisiCctv);
@@ -247,7 +257,7 @@ public class Tampilan21 extends JPanel {
 		
 		JPanel label = new JPanel();
 		label.setBorder(new TitledBorder("JUMLAH,KONDISI,DAN POSISI SARANA"));
-		label.setBounds(10, 11, 400, 550);
+		label.setBounds(10, 11, 456, 550);
 		add(label);
 		
 	}

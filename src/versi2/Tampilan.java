@@ -69,7 +69,7 @@ public class Tampilan extends JPanel {
 		setLayout(null);
 		
 		JLabel lblNamaRuangan = new JLabel("Nama Ruangan");
-		lblNamaRuangan.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblNamaRuangan.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblNamaRuangan.setBounds(20, 71, 98, 19);
 		//getContentPane().
 		add(lblNamaRuangan);
@@ -103,7 +103,7 @@ public class Tampilan extends JPanel {
 		namaRuang.setColumns(10);
 		
 		JLabel lblLokasiRuang = new JLabel("Lokasi Ruang");
-		lblLokasiRuang.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblLokasiRuang.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblLokasiRuang.setBounds(20, 104, 98, 19);
 		//getContentPane().
 		add(lblLokasiRuang);
@@ -115,8 +115,8 @@ public class Tampilan extends JPanel {
 		lokasiRuang.setColumns(10);
 		
 		JLabel lblProgramStudi = new JLabel("Program Studi/Fakultas");
-		lblProgramStudi.setFont(new Font("Times New Roman", Font.PLAIN, 14));
-		lblProgramStudi.setBounds(20, 134, 142, 19);
+		lblProgramStudi.setFont(new Font("Times New Roman", Font.BOLD, 15));
+		lblProgramStudi.setBounds(20, 134, 200, 19);
 		//getContentPane().
 		add(lblProgramStudi);
 		
@@ -127,7 +127,7 @@ public class Tampilan extends JPanel {
 		ProgStudi.setColumns(10);
 		
 		JLabel lblPanjangRuangan = new JLabel("Panjang Ruangan");
-		lblPanjangRuangan.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblPanjangRuangan.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblPanjangRuangan.setBounds(20, 243, 142, 19);
 		//getContentPane().
 		add(lblPanjangRuangan);
@@ -142,7 +142,7 @@ public class Tampilan extends JPanel {
 		panjangRuangan.setColumns(10);
 		
 		JLabel lblLebarRuangan = new JLabel("Lebar Ruangan");
-		lblLebarRuangan.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblLebarRuangan.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblLebarRuangan.setBounds(20, 288, 142, 19);
 		//getContentPane().
 		add(lblLebarRuangan);
@@ -154,7 +154,7 @@ public class Tampilan extends JPanel {
 		LebarRuangan.setColumns(10);
 		
 		JLabel lblJumlahKursi = new JLabel("Jumlah Kursi");
-		lblJumlahKursi.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblJumlahKursi.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblJumlahKursi.setBounds(20, 328, 142, 19);
 		//getContentPane().
 		add(lblJumlahKursi);
@@ -165,7 +165,7 @@ public class Tampilan extends JPanel {
 		JumlahKursi.setColumns(10);
 		
 		JLabel lblJumlahPintu = new JLabel("Jumlah Pintu");
-		lblJumlahPintu.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblJumlahPintu.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblJumlahPintu.setBounds(20, 371, 142, 19);
 		//getContentPane().
 		add(lblJumlahPintu);
@@ -177,7 +177,7 @@ public class Tampilan extends JPanel {
 		JumlahPintu.setColumns(10);
 		
 		JLabel lblJumlahJendela = new JLabel("Jumlah Jendela");
-		lblJumlahJendela.setFont(new Font("Times New Roman", Font.PLAIN, 14));
+		lblJumlahJendela.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblJumlahJendela.setBounds(20, 410, 142, 19);
 		//getContentPane().
 		add(lblJumlahJendela);
@@ -192,14 +192,14 @@ public class Tampilan extends JPanel {
 				
 				
 		JPanel lblIdentitasRuangKelas = new JPanel();
-		lblIdentitasRuangKelas.setBounds(11, 34, 400, 149);
+		lblIdentitasRuangKelas.setBounds(11, 34, 456, 149);
 		//lblIdentitasRuangKelas.setOpaque(false);
 		lblIdentitasRuangKelas.setBorder(new TitledBorder("IDENTITAS RUANG KELAS"));
 		//getContentPane().
 		add(lblIdentitasRuangKelas);
 		
 		JPanel lblKondisiRuangKelas = new JPanel();
-		lblKondisiRuangKelas.setBounds(10, 220, 400, 250);
+		lblKondisiRuangKelas.setBounds(10, 220, 456, 250);
 		lblKondisiRuangKelas.setBorder(new TitledBorder("KONDISI RUANG KELAS"));
 		add(lblKondisiRuangKelas);
 			}
