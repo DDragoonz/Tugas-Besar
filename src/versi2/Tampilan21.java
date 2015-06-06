@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
 import javax.swing.JLabel;
 
 import java.awt.Font;
@@ -63,19 +64,11 @@ public class Tampilan21 extends JPanel {
 		//setContentPane(contentPane);
 		setLayout(null);
 		
-		JLabel label = new JLabel("Jumlah,Kondisi dan Posisi Sarana");
-		label.setBounds(10, 11, 184, 14);
-		//
-		add(label);
 		
-		JLabel label_1 = new JLabel("_____________________________________________________________________");
-		label_1.setBounds(10, 14, 484, 14);
-		//
-		add(label_1);
-		
+
 		JLabel lblJumlahKipasAngin = new JLabel("Jumlah Kipas Angin");
 		lblJumlahKipasAngin.setFont(new Font("Times New Roman", Font.PLAIN, 15));
-		lblJumlahKipasAngin.setBounds(20, 48, 172, 19);
+		lblJumlahKipasAngin.setBounds(20, 48, 190, 19);
 		//
 		add(lblJumlahKipasAngin);
 		
@@ -252,7 +245,10 @@ public class Tampilan21 extends JPanel {
 		//
 		add(Lainlain_3);
 		
-	
+		JPanel label = new JPanel();
+		label.setBorder(new TitledBorder("JUMLAH,KONDISI,DAN POSISI SARANA"));
+		label.setBounds(10, 11, 400, 550);
+		add(label);
 		
 	}
 }

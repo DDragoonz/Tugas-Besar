@@ -175,8 +175,8 @@ public class MainFrame extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				getContentPane().remove(t4);
-				setContentPane(t3);
+				getContentPane().remove(t5);
+				setContentPane(t4);
 				revalidate();
 				repaint();
 				

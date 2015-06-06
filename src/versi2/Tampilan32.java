@@ -5,10 +5,14 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
 import javax.swing.JLabel;
+
 import java.awt.Font;
+
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -29,13 +33,8 @@ public class Tampilan32 extends JPanel {
 		setLayout(null);
 		setSize(500,650);
 		
-		JLabel lblKeamananRuangKelas = new JLabel("Keamanan Ruang Kelas");
-		lblKeamananRuangKelas.setBounds(20, 11, 184, 14);
-		add(lblKeamananRuangKelas);
 		
-		JLabel label_1 = new JLabel("_____________________________________________________________________");
-		label_1.setBounds(10, 14, 484, 14);
-		add(label_1);
+	
 		
 		JLabel lblKekokohan = new JLabel("Kekokohan");
 		lblKekokohan.setFont(new Font("Times New Roman", Font.PLAIN, 15));
@@ -80,7 +79,10 @@ public class Tampilan32 extends JPanel {
 		btnSubmit.setBounds(373, 162, 89, 23);
 		add(btnSubmit);
 		
-		
+		JPanel lblKeamananRuangKelas = new JPanel();
+		lblKeamananRuangKelas.setBorder(new TitledBorder("KEAMANAN RUANG KELAS"));
+		lblKeamananRuangKelas.setBounds(20, 11, 420, 120);
+		add(lblKeamananRuangKelas);
 	}
 
 }

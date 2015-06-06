@@ -6,6 +6,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
 import javax.swing.ButtonGroup;
 import javax.swing.JScrollBar;
 import javax.swing.JTextField;
@@ -77,7 +78,7 @@ public class Tampilan2 extends JPanel {
 		setLayout(null);
 		
 		JLabel lblJumlahStopKontaksteker = new JLabel("Jumlah Stop Kontak/Steker");
-		lblJumlahStopKontaksteker.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblJumlahStopKontaksteker.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblJumlahStopKontaksteker.setBounds(22, 45, 172, 19);
 		//
 		add(lblJumlahStopKontaksteker);
@@ -88,13 +89,13 @@ public class Tampilan2 extends JPanel {
 		JumlahStopKontak.setColumns(10);
 		
 		JLabel KondisiStopKontak = new JLabel("Kondisi Stop Kontak/Steker");
-		KondisiStopKontak.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		KondisiStopKontak.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		KondisiStopKontak.setBounds(22, 89, 172, 19);
 		//
 		add(KondisiStopKontak);
 		
 		JLabel label = new JLabel("Jumlah Stop Kontak/Steker");
-		label.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		label.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		label.setBounds(22, 138, 172, 19);
 		//
 		add(label);
@@ -129,7 +130,7 @@ public class Tampilan2 extends JPanel {
 		kondisiSteker.add(rbKondisiSteker2);
 		
 		JLabel lblJumlahKabelLcd = new JLabel("Jumlah Kabel LCD");
-		lblJumlahKabelLcd.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblJumlahKabelLcd.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblJumlahKabelLcd.setBounds(22, 210, 172, 19);
 		//
 		add(lblJumlahKabelLcd);
@@ -141,7 +142,7 @@ public class Tampilan2 extends JPanel {
 		JumlahKabelLCD.setColumns(10);
 		
 		JLabel lblKondisiKabelLcd = new JLabel("Kondisi Kabel LCD");
-		lblKondisiKabelLcd.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblKondisiKabelLcd.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKondisiKabelLcd.setBounds(22, 255, 172, 19);
 		//
 		add(lblKondisiKabelLcd);
@@ -159,23 +160,14 @@ public class Tampilan2 extends JPanel {
 		kondisiLCD.add(rbKondisiLCD2);
 		
 		JLabel lblPosisiKabelLcd = new JLabel("Posisi Kabel LCD");
-		lblPosisiKabelLcd.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblPosisiKabelLcd.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblPosisiKabelLcd.setBounds(22, 313, 172, 19);
 		//
 		add(lblPosisiKabelLcd);
-		
-		JLabel label_1 = new JLabel("_____________________________________________________________________");
-		label_1.setBounds(10, 23, 484, 14);
-		//
-		add(label_1);
-		
-		JLabel lblJumlahkondisiDanPosisi = new JLabel("Jumlah,Kondisi dan Posisi Sarana");
-		lblJumlahkondisiDanPosisi.setBounds(10, 20, 184, 14);
-		//
-		add(lblJumlahkondisiDanPosisi);
 
+		
 		rbPosisiLCD1.setBounds(249, 313, 109, 19);
-		//
+		
 		add(rbPosisiLCD1);
 
 		rbPosisiLCD2.setBounds(249, 329, 200, 19);
@@ -191,7 +183,7 @@ public class Tampilan2 extends JPanel {
 		posisiLCD.add(rbPosisiLCD3);
 		
 		JLabel lblJumlah = new JLabel("Jumlah Lampu");
-		lblJumlah.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblJumlah.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblJumlah.setBounds(22, 378, 172, 19);
 		//
 		add(lblJumlah);
@@ -203,7 +195,7 @@ public class Tampilan2 extends JPanel {
 		JumlahLampu.setColumns(10);
 		
 		JLabel lblLampuYangHidup = new JLabel("Kondisi Lampu ");
-		lblLampuYangHidup.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		lblLampuYangHidup.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblLampuYangHidup.setBounds(22, 408, 172, 19);
 	//	
 		add(lblLampuYangHidup);
@@ -220,7 +212,7 @@ public class Tampilan2 extends JPanel {
 		posisiLampu.add(rbPosisiLampu2);
 		
 		JLabel label_2 = new JLabel("Posisi Lampu");
-		label_2.setFont(new Font("Times New Roman", Font.PLAIN, 15));
+		label_2.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		label_2.setBounds(22, 455, 172, 19);
 		//
 		add(label_2);
@@ -236,5 +228,10 @@ public class Tampilan2 extends JPanel {
 		
 		kondisiLampu.add(rbKondisiLampu1);
 		kondisiLampu.add(rbKondisiLampu2);
+		
+		JPanel lblJumlahkondisiDanPosisi = new JPanel();
+		lblJumlahkondisiDanPosisi.setBorder(new TitledBorder("JUMLAH,KONDISI DAN POSISI SARANA"));
+		lblJumlahkondisiDanPosisi.setBounds(10, 20, 456, 500);
+		add(lblJumlahkondisiDanPosisi);
 	}
 }
