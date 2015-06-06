@@ -2,6 +2,8 @@ package versi2;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import javafx.stage.FileChooser;
+
 import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -20,9 +22,6 @@ import java.awt.event.ActionEvent;
 
 public class Tampilan32 extends JPanel {
 
-	private JPanel contentPane;
-
-
 	private ButtonGroup kokoh = new ButtonGroup();
 	JRadioButton rdbtnKokoh = new JRadioButton("Kokoh");
 	JRadioButton rdbtnTidakKokoh = new JRadioButton("Tidak Kokoh");
@@ -34,6 +33,7 @@ public class Tampilan32 extends JPanel {
 	private ButtonGroup aman = new ButtonGroup();
 	JRadioButton rdbtnAman = new JRadioButton("Aman");
 	JRadioButton rdbtnTidakAman = new JRadioButton("Tidak Aman");
+	
 	public Tampilan32() {
 		setLayout(null);
 		setSize(500,650);
@@ -82,9 +82,6 @@ public class Tampilan32 extends JPanel {
 		add(rdbtnTidakAman);
 		aman.add(rdbtnAman);
 		aman.add(rdbtnTidakAman);
-		JButton btnSubmit = new JButton("Submit");
-		btnSubmit.setBounds(373, 162, 89, 23);
-		add(btnSubmit);
 		
 		JPanel lblKeamananRuangKelas = new JPanel();
 		lblKeamananRuangKelas.setBorder(new TitledBorder("KEAMANAN RUANG KELAS"));

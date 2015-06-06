@@ -9,7 +9,6 @@ public class ObjekBenda extends ObjekKelas{
 	private static final long serialVersionUID = 1L;
 	private int min ;
 	private String posisi;
-
 	private int jumlah ;
 	
 
@@ -21,14 +20,26 @@ public class ObjekBenda extends ObjekKelas{
 	public String getPosisi() {
 		return posisi;
 	}
-	public int getjumlah (){
-		return jumlah ;
-	}
-	
-	
 
-	
-	
+	public int getJumlah() {
+		return jumlah;
+	}
+
+
+	public void setJumlah(int jumlah) {
+		this.jumlah = jumlah;
+	}
+
+
+	public void setMin(int min) {
+		this.min = min;
+	}
+
+
+	public void setPosisi(String posisi) {
+		this.posisi = posisi;
+	}
+
 
 	public ObjekBenda (String nama ,boolean kondisi ,int jumlah , int min, String posisi){
 

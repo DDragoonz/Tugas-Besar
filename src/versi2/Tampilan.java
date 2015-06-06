@@ -34,15 +34,14 @@ public class Tampilan extends JPanel {
 	
 	private RuangKelas kelasSementara;
 	
-	private JPanel contentPane;
-	private JTextField namaRuang;
-	private JTextField lokasiRuang;
-	private JTextField ProgStudi;
-	private JTextField panjangRuangan;
-	private JTextField LebarRuangan;
-	private JTextField JumlahKursi;
-	private JTextField JumlahPintu;
-	private JTextField JumlahCendela;
+	JTextField namaRuang;
+	 JTextField lokasiRuang;
+	 JTextField ProgStudi;
+	 JTextField panjangRuangan;
+	 JTextField LebarRuangan;
+	 JTextField JumlahKursi;
+	 JTextField JumlahPintu;
+	 JTextField JumlahCendela;
 	
 	
 	

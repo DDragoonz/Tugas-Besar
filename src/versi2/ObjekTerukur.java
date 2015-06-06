@@ -14,6 +14,18 @@ public class ObjekTerukur extends ObjekKelas{
 
 	
 	
+	public void setNilai(float nilai) {
+		this.nilai = nilai;
+	}
+
+	public void setMin(float min) {
+		this.min = min;
+	}
+
+	public void setMax(float max) {
+		this.max = max;
+	}
+
 	public float getNilai() {
 		return nilai;
 	}

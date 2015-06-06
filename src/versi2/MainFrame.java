@@ -6,6 +6,8 @@ import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javafx.stage.FileChooser;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -40,6 +42,10 @@ public class MainFrame extends JFrame {
 	Tampilan21 t3 ;
 	Tampilan3 t4 ;
 	Tampilan32 t5;
+
+	RuangKelas kelas;
+	FileChooser fc;
+
 	
 	public MainFrame() {
 	try {
@@ -184,6 +190,31 @@ public class MainFrame extends JFrame {
 			}
 		});
 		t5.add(back4);
+		
+		JButton btnSubmit = new JButton("Submit");
+		btnSubmit.setBounds(373, 162, 89, 23);
+		btnSubmit.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if (t1.panjangRuangan.getText().isEmpty()
+						|| t1.LebarRuangan.getText().isEmpty())
+					kelas = new RuangKelas(t1.namaRuang.getText(),
+							t1.lokasiRuang.getText(), t1.ProgStudi.getText());
+				else
+					kelas = new RuangKelas(t1.namaRuang.getText(),
+							t1.lokasiRuang.getText(), t1.ProgStudi.getText(),
+							Float.parseFloat(t1.panjangRuangan.getText()),
+							Float.parseFloat(t1.LebarRuangan.getText()));
+				kelas.setup();
+				kelas.setJumlahObjek("Kursi", t1.JumlahKursi.getText());
+				kelas.setJumlahObjek("Pintu", t1.JumlahPintu.getText());
+				kelas.setJumlahObjek("Jendela", t1.JumlahCendela.getText());
+				
+				
+			}
+		});
+		t5.add(btnSubmit);
 		
 		
 		

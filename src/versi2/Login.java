@@ -6,12 +6,16 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.UIManager;
+
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
 import javax.swing.JPasswordField;
 
 public class Login extends JFrame {
@@ -40,6 +44,12 @@ public class Login extends JFrame {
 	 * Create the frame.
 	 */
 	public Login() {
+		try {
+			UIManager.setLookAndFeel(new NimbusLookAndFeel());
+		} catch ( Exception e) {
+			// TODO: handle exception
+		}
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 500, 650);
 		contentPane = new JPanel();
@@ -94,7 +104,8 @@ public class Login extends JFrame {
 		JButton btnInputdata = new JButton("INPUT DATA");
 		btnInputdata.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+				new MainFrame().setVisible(true);
+				dispose();
 			}
 		});
 		btnInputdata.setFont(new Font("Times New Roman", Font.PLAIN, 12));
@@ -118,6 +129,14 @@ public class Login extends JFrame {
 		btnexit.setBounds(123, 194, 200, 36);
 		//btnexit.setEnabled(false);
 		panel_1.add(btnexit);
+		btnexit.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				System.exit(0);
+			}
+		});
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBounds(10, 11, 289, 150);
