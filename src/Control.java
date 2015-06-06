@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Control {
 
 	Model kelas = new Model();
-int a;
+
 	Scanner in = new Scanner(System.in);
 
 	// ade start coding
