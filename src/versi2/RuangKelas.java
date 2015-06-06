@@ -184,10 +184,10 @@ public class RuangKelas implements Serializable{
 		}
 	}
 	
-	public void setNilaiObjek (String nama, float nilai){
+	public void setNilaiObjek (String nama, String nilai){
 		for(ObjekTerukur a:daftarObjekTerukur){
 			if(a.getNama().equals(nama)){
-					a.setNilai(nilai);
+					a.setNilai(Float.parseFloat(nilai));
 					break;
 				}
 		}
@@ -210,19 +210,19 @@ public class RuangKelas implements Serializable{
 		String result = "-";
 		for(ObjekBenda a:daftarObjekBenda){
 			if(a.getNama().equals(nama)){
-					hasil = a.isKondisi();
+					hasil = a.getKondisi();
 					break;
 				}
 		}
 		for(ObjekNonBenda a:daftarObjekNonBenda){
 			if(a.getNama().equals(nama)){
-				hasil = a.isKondisi();
+				hasil = a.getKondisi();
 				break;
 			}
 		}
 		for(ObjekTerukur a:daftarObjekTerukur){
 			if(a.getNama().equals(nama)){
-				hasil = a.isKondisi();
+				hasil = a.getKondisi();
 				break;
 			}
 		}

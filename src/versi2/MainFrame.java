@@ -210,7 +210,9 @@ public class MainFrame extends JFrame {
 				kelas.setJumlahObjek("Kursi", t1.JumlahKursi.getText());
 				kelas.setJumlahObjek("Pintu", t1.JumlahPintu.getText());
 				kelas.setJumlahObjek("Jendela", t1.JumlahCendela.getText());
-				
+				kelas.setJumlahObjek("Steker", t2.JumlahStopKontak.getText());
+				if(t2.rbKondisiSteker1.isSelected())kelas.setKondisiObjek("Steker", true);
+				else if(t2.rbKondisiSteker2.isSelected())kelas.setKondisiObjek("Steker", false);
 				
 			}
 		});
