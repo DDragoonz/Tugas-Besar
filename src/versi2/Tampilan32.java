@@ -73,6 +73,7 @@ public class Tampilan32 extends JPanel {
 		lblTingkatBahaya.setBounds(30, 96, 172, 19);
 		add(lblTingkatBahaya);
 		
+		//testing
 		
 		rdbtnAman.setBounds(196, 95, 90, 23);
 		add(rdbtnAman);
