@@ -1,62 +1,49 @@
 package versi2;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.awt.Font;
 
-import javax.swing.JFrame;
+import javax.swing.ButtonGroup;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
-import javax.swing.ButtonGroup;
-import javax.swing.JScrollBar;
-import javax.swing.JTextField;
-import javax.swing.JLabel;
-
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-
-import javax.swing.JRadioButton;
-import javax.swing.JButton;
-
-import sun.net.www.content.audio.basic;
 
 
 public class Tampilan2 extends JPanel {
 
 	
-	
-	private JPanel contentPane;
-	private JTextField JumlahStopKontak;
-	private JTextField JumlahKabelLCD;
-	private JTextField JumlahLampu;
+	private static final long serialVersionUID = 1L;
+	JTextField JumlahStopKontak;
+	 JTextField JumlahKabelLCD;
+	 JTextField JumlahLampu;
 
-	private ButtonGroup posisiSteker = new ButtonGroup();
-	private JRadioButton rbPosisiSteker1 = new JRadioButton("Dekat Dosen");
-	private JRadioButton rbPosisiSteker2 = new JRadioButton("Dekat Mahasiswa dan dosen");
-	private JRadioButton rbPosisiSteker3 = new JRadioButton("Lain-Lain");
+	 ButtonGroup posisiSteker = new ButtonGroup();
+	  JRadioButton rbPosisiSteker1 = new JRadioButton("Dekat Dosen");
+	 JRadioButton rbPosisiSteker2 = new JRadioButton("Dekat Mahasiswa dan dosen");
+	 JRadioButton rbPosisiSteker3 = new JRadioButton("Lain-Lain");
 	
-	private ButtonGroup kondisiSteker = new ButtonGroup();
-	private JRadioButton rbKondisiSteker1 = new JRadioButton("Baik");
-	private JRadioButton rbKondisiSteker2 = new JRadioButton("Kurang Baik");
+	 ButtonGroup kondisiSteker = new ButtonGroup();
+	 JRadioButton rbKondisiSteker1 = new JRadioButton("Baik");
+	 JRadioButton rbKondisiSteker2 = new JRadioButton("Kurang Baik");
 	
-	private ButtonGroup kondisiLCD = new ButtonGroup();
-	private JRadioButton rbKondisiLCD1 = new JRadioButton("Berfungsi");
-	private JRadioButton rbKondisiLCD2 = new JRadioButton("Tidak Berfungsi");
+	 ButtonGroup kondisiLCD = new ButtonGroup();
+	 JRadioButton rbKondisiLCD1 = new JRadioButton("Berfungsi");
+	 JRadioButton rbKondisiLCD2 = new JRadioButton("Tidak Berfungsi");
 	
-	private ButtonGroup posisiLCD = new ButtonGroup();
-	private JRadioButton rbPosisiLCD1 = new JRadioButton("Dekat Dosen");
-	private JRadioButton rbPosisiLCD2 = new JRadioButton("Dekat Mahasiswa dan dosen");
-	private JRadioButton rbPosisiLCD3 = new JRadioButton("Lain-Lain");
+	 ButtonGroup posisiLCD = new ButtonGroup();
+	 JRadioButton rbPosisiLCD1 = new JRadioButton("Dekat Dosen");
+	 JRadioButton rbPosisiLCD2 = new JRadioButton("Dekat Mahasiswa dan dosen");
+	 JRadioButton rbPosisiLCD3 = new JRadioButton("Lain-Lain");
 	
-	private ButtonGroup posisiLampu = new ButtonGroup();
-	private JRadioButton rbPosisiLampu1 = new JRadioButton("Lain-Lain");
-	private JRadioButton rbPosisiLampu2 = new JRadioButton("Di Atap");
+	 ButtonGroup posisiLampu = new ButtonGroup();
+	 JRadioButton rbPosisiLampu1 = new JRadioButton("Lain-Lain");
+	 JRadioButton rbPosisiLampu2 = new JRadioButton("Di Atap");
 	
-	private ButtonGroup kondisiLampu = new ButtonGroup();
-	private JRadioButton rbKondisiLampu1 = new JRadioButton("Semua Hidup");
-	private JRadioButton rbKondisiLampu2 = new JRadioButton("Ada yang mati");
+	 ButtonGroup kondisiLampu = new ButtonGroup();
+	 JRadioButton rbKondisiLampu1 = new JRadioButton("Semua Hidup");
+	 JRadioButton rbKondisiLampu2 = new JRadioButton("Ada yang mati");
 
 	/**
 	 * Launch the application.
@@ -72,7 +59,7 @@ public class Tampilan2 extends JPanel {
 		//setResizable(false);
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 500, 596);
-		contentPane = new JPanel();
+
 		setBorder(new EmptyBorder(5, 5, 5, 5));
 		//setContentPane(contentPane);
 		setLayout(null);

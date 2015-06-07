@@ -1,48 +1,29 @@
 package versi2;
-import java.awt.BorderLayout;
-
-
-
-
-
-
-import java.awt.Color;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.JLabel;
 
 import java.awt.Font;
 
 import javax.swing.JTextField;
-import javax.swing.JButton;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 
 public class Tampilan extends JPanel {
 	
+
+	private static final long serialVersionUID = 1L;
+
 	private RuangKelas kelasSementara;
 	
-	private JPanel contentPane;
-	private JTextField namaRuang;
-	private JTextField lokasiRuang;
-	private JTextField ProgStudi;
-	private JTextField panjangRuangan;
-	private JTextField LebarRuangan;
-	private JTextField JumlahKursi;
-	private JTextField JumlahPintu;
-	private JTextField JumlahCendela;
+	JTextField namaRuang;
+	 JTextField lokasiRuang;
+	 JTextField ProgStudi;
+	 JTextField panjangRuangan;
+	 JTextField LebarRuangan;
+	 JTextField JumlahKursi;
+	 JTextField JumlahPintu;
+	 JTextField JumlahCendela;
 	
 	
 	

@@ -16,7 +16,7 @@ public abstract class ObjekKelas implements Serializable{
 	public void setNama(String nama) {
 		this.nama = nama;
 	}
-	public boolean isKondisi() {
+	public boolean getKondisi() {
 		return kondisi;
 	}
 	public void setKondisi(boolean kondisi) {

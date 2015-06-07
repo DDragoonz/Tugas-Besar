@@ -1,28 +1,17 @@
 package versi2;
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
-import javax.swing.ButtonGroup;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.TitledBorder;
-import javax.swing.JLabel;
-
 import java.awt.Font;
 
+import javax.swing.ButtonGroup;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-import javax.swing.JButton;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.border.TitledBorder;
 
 
 public class Tampilan32 extends JPanel {
 
-	private JPanel contentPane;
 
-
+	private static final long serialVersionUID = 1L;
 	private ButtonGroup kokoh = new ButtonGroup();
 	JRadioButton rdbtnKokoh = new JRadioButton("Kokoh");
 	JRadioButton rdbtnTidakKokoh = new JRadioButton("Tidak Kokoh");
@@ -34,6 +23,7 @@ public class Tampilan32 extends JPanel {
 	private ButtonGroup aman = new ButtonGroup();
 	JRadioButton rdbtnAman = new JRadioButton("Aman");
 	JRadioButton rdbtnTidakAman = new JRadioButton("Tidak Aman");
+	
 	public Tampilan32() {
 		setLayout(null);
 		setSize(500,650);
@@ -73,7 +63,6 @@ public class Tampilan32 extends JPanel {
 		lblTingkatBahaya.setBounds(30, 96, 172, 19);
 		add(lblTingkatBahaya);
 		
-		//testing
 		
 		rdbtnAman.setBounds(196, 95, 90, 23);
 		add(rdbtnAman);
@@ -82,9 +71,6 @@ public class Tampilan32 extends JPanel {
 		add(rdbtnTidakAman);
 		aman.add(rdbtnAman);
 		aman.add(rdbtnTidakAman);
-		JButton btnSubmit = new JButton("Submit");
-		btnSubmit.setBounds(373, 162, 89, 23);
-		add(btnSubmit);
 		
 		JPanel lblKeamananRuangKelas = new JPanel();
 		lblKeamananRuangKelas.setBorder(new TitledBorder("KEAMANAN RUANG KELAS"));
