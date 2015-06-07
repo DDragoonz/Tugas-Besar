@@ -3,6 +3,7 @@ package versi2;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+
 public class RuangKelas implements Serializable{
 	/**
 	 * 
@@ -13,7 +14,6 @@ public class RuangKelas implements Serializable{
 	private String fakultas;
 	private float panjang = 20;
 	private float lebar = 10;
-	private int kursi;
 	ArrayList<ObjekBenda> daftarObjekBenda = new ArrayList<ObjekBenda>();
 	ArrayList<ObjekNonBenda> daftarObjekNonBenda = new ArrayList<ObjekNonBenda>();
 	ArrayList<ObjekTerukur> daftarObjekTerukur = new ArrayList<ObjekTerukur>();
@@ -112,7 +112,6 @@ public class RuangKelas implements Serializable{
 	
 	void tambahObjekBenda(String nama, boolean kondisi, int jumlah, int min, String posisi){
 		daftarObjekBenda.add(new ObjekBenda(nama, kondisi, jumlah, min, posisi));
-		if(nama.equals("Kursi"))kursi=jumlah;
 	}
 	
 	void tambahObjekNonBenda(String nama, boolean kondisi){
@@ -123,12 +122,14 @@ public class RuangKelas implements Serializable{
 		daftarObjekTerukur.add(new ObjekTerukur(nama, nilai, min, max));
 	}
 	
-	public void analisisObjek(){
+	public String analisisObjek(String nama){
+		String result = "-";
 		for(ObjekBenda a:daftarObjekBenda){
-			if(a.analisisObjek()){
-					System.out.println(a.getNama() + " sesuai");
+			if(a.getNama().equals(nama)){
+				if(a.analisisObjek())result =  " sesuai";
+				else result =  " tidak sesuai";
 				}
-			else System.out.println(a.getNama() + " tidak sesuai");
+			
 		}
 		for(ObjekNonBenda a:daftarObjekNonBenda){
 			if(a.analisisObjek()){
@@ -143,6 +144,7 @@ public class RuangKelas implements Serializable{
 			else System.out.println(a.getNama() + " tidak sesuai");
 		}
 		
+		return result;
 	}
 	
 	public void setJumlahObjek (String nama, String jumlah){
@@ -284,16 +286,6 @@ public class RuangKelas implements Serializable{
 		}
 		
 		return result;
-	}
-	
-	public void tampilInfoKelas(){
-		System.out.println("nama kelas : " + nama);
-		System.out.println("Lokasi kelas: " + lokasi);
-		System.out.println("Fakultas : " + fakultas);
-		if(ukurBentuk())System.out.println("Bentuk kelas sesuai");
-		else System.out.println("Bentuk tidak sesuai");
-		if(hitungRasio(kursi))System.out.println("Rasio kelas sesuai");
-		else System.out.println("Rasio tidak sesuai");
 	}
 	
 }

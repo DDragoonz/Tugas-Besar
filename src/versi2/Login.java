@@ -173,7 +173,7 @@ public class Login extends JFrame {
 						panel.setVisible(false);
 					}
 				}
-				else if (textadmin.getText().equals("sayaAde")){
+				else if (textadmin.getText().equals("RizkyAde")){
 					if(passwordField.getText().equals("rahasia")){
 						btnInputdata.setEnabled(true);
 						btnEditData.setEnabled(true);

@@ -4,9 +4,8 @@ import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javafx.stage.FileChooser;
-
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
@@ -29,17 +28,13 @@ public class MainFrame extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	Tampilan t1 ;
 	Tampilan2 t2 ;
 	Tampilan21 t3 ;
 	Tampilan3 t4 ;
 	Tampilan32 t5;
-
 	RuangKelas kelas;
-	FileChooser fc;
+	Kontrol kontrol = new Kontrol();
 
 	
 	public MainFrame() {
@@ -199,7 +194,9 @@ public class MainFrame extends JFrame {
 							t1.lokasiRuang.getText(), t1.ProgStudi.getText(),
 							Float.parseFloat(t1.panjangRuangan.getText()),
 							Float.parseFloat(t1.LebarRuangan.getText()));
+				
 				kelas.setup();
+				
 				kelas.setJumlahObjek("Kursi", t1.JumlahKursi.getText());
 				kelas.setJumlahObjek("Pintu", t1.JumlahPintu.getText());
 				kelas.setJumlahObjek("Jendela", t1.JumlahCendela.getText());
@@ -207,12 +204,11 @@ public class MainFrame extends JFrame {
 				if(t2.rbKondisiSteker1.isSelected())kelas.setKondisiObjek("Steker", true);
 				else if(t2.rbKondisiSteker2.isSelected())kelas.setKondisiObjek("Steker", false);
 				
+				kontrol.save(kelas);
+				
 			}
 		});
 		t5.add(btnSubmit);
-		
-		
-		
+			
 	}
-
 }
