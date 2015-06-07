@@ -53,6 +53,22 @@ public class Tampilan3 extends JPanel {
 	private ButtonGroup kebising = new ButtonGroup();
 	JRadioButton kebisingan = new JRadioButton("Bising ");
 	JRadioButton kebisingan1 = new JRadioButton("Tidak Bising");
+	
+	private ButtonGroup bau = new ButtonGroup();
+	JRadioButton rdbtnBau = new JRadioButton("Bau");
+	JRadioButton rdbtnTidakBau = new JRadioButton("Tidak Bau");
+	
+	private ButtonGroup kebocoran = new ButtonGroup();
+	JRadioButton kebocoran1 = new JRadioButton("Bocor");
+	JRadioButton kebocoran2 = new JRadioButton("Tidak Bocor");
+	
+	private ButtonGroup kerusakan = new ButtonGroup();
+	JRadioButton kerusakan1 = new JRadioButton("Rusak");
+	JRadioButton kerusakan2 = new JRadioButton("Tidak Rusak");
+	
+	private ButtonGroup aus = new ButtonGroup();
+	JRadioButton rdbtnAus = new JRadioButton("Aus");
+	JRadioButton rdbtnTidakAus = new JRadioButton("Tidak Aus");
 	// private ButtonGroup login = new ButtonGroup();
 
 	 
@@ -235,46 +251,44 @@ public class Tampilan3 extends JPanel {
 		//
 		add(lblBau);
 
-		JRadioButton rdbtnBau = new JRadioButton("Bau");
+		
 		rdbtnBau.setBounds(198, 449, 109, 23);
-		//
 		add(rdbtnBau);
-
-		JRadioButton rdbtnTidakBau = new JRadioButton("Tidak Bau");
+		
 		rdbtnTidakBau.setBounds(322, 449, 109, 23);
-		//
 		add(rdbtnTidakBau);
-
+		bau.add(rdbtnBau);
+		bau.add(rdbtnTidakBau);
 		JLabel lblKebocoran = new JLabel("Kebocoran");
 		lblKebocoran.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKebocoran.setBounds(10, 474, 172, 19);
 		//
 		add(lblKebocoran);
 
-		JRadioButton kondisilantai1_3 = new JRadioButton("Bocor");
-		kondisilantai1_3.setBounds(198, 473, 109, 23);
-		//
-		add(kondisilantai1_3);
-
-		JRadioButton kondisilantai1_4 = new JRadioButton("Tidak Bocor");
-		kondisilantai1_4.setBounds(322, 473, 109, 23);
-		//
-		add(kondisilantai1_4);
-
+		
+		kebocoran1.setBounds(198, 473, 109, 23);
+		add(kebocoran1);
+		
+		kebocoran2.setBounds(322, 473, 109, 23);
+		add(kebocoran2);
+		kebocoran.add(kebocoran1);
+		kebocoran.add(kebocoran2);
+		
 		JLabel lblKerusakan = new JLabel("Kerusakan");
 		lblKerusakan.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKerusakan.setBounds(10, 498, 172, 19);
 		//
 		add(lblKerusakan);
 
-		JRadioButton kondisilantai = new JRadioButton("Rusak");
-		kondisilantai.setBounds(198, 497, 109, 23);
-		//
-		add(kondisilantai);
-
-		JRadioButton rdbtnTidakRusak = new JRadioButton("Tidak Rusak");
-		rdbtnTidakRusak.setBounds(322, 497, 109, 23);
-		add(rdbtnTidakRusak);
+		
+		kerusakan1.setBounds(198, 497, 109, 23);
+		add(kerusakan1);
+		
+		
+		kerusakan2.setBounds(322, 497, 109, 23);
+		add(kerusakan2);
+		kerusakan.add(kerusakan1);
+		kerusakan.add(kerusakan2);
 
 		JLabel lblKeausan = new JLabel("Keausan");
 		lblKeausan.setFont(new Font("Times New Roman", Font.BOLD, 15));
@@ -282,16 +296,13 @@ public class Tampilan3 extends JPanel {
 		//
 		add(lblKeausan);
 
-		JRadioButton rdbtnAus = new JRadioButton("Aus");
+		
 		rdbtnAus.setBounds(198, 522, 109, 23);
-		//
 		add(rdbtnAus);
-
-		JRadioButton rdbtnTidakAus = new JRadioButton("Tidak Aus");
 		rdbtnTidakAus.setBounds(322, 523, 109, 23);
-		//
 		add(rdbtnTidakAus);
-
+		aus.add(rdbtnAus);
+		aus.add(rdbtnTidakAus);
 		JPanel lblLingkunganRuangKelas = new JPanel();
 		lblLingkunganRuangKelas.setBounds(10, 11, 456,185);
 		lblLingkunganRuangKelas.setBorder(new TitledBorder("Lingkungan Ruang Kelas"));
