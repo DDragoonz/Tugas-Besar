@@ -1,25 +1,24 @@
 package versi2;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import javax.swing.UIManager;
-
-import java.awt.Font;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-
-import javax.swing.JPasswordField;
 
 public class Login extends JFrame {
 
+
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField textadmin;
 	private JPasswordField passwordField;
@@ -158,6 +157,9 @@ public class Login extends JFrame {
 		btnLogout.setBounds(49, 116, 102, 23);
 		panel_2.add(btnLogout);
 		btnLogin.addActionListener(new ActionListener() {
+			
+			@SuppressWarnings("deprecation")
+			
 			public void actionPerformed(ActionEvent arg0) {
 				
 				if (textadmin.getText().equals("LAPTOP")){

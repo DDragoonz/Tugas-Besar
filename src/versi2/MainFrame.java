@@ -1,7 +1,5 @@
 package versi2;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,17 +8,14 @@ import javafx.stage.FileChooser;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
-import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 
 public class MainFrame extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -51,7 +46,7 @@ public class MainFrame extends JFrame {
 	try {
 		UIManager.setLookAndFeel(new NimbusLookAndFeel());
 	} catch ( Exception e) {
-		// TODO: handle exception
+		JOptionPane.showMessageDialog(null, "Fail to Load Nimbus theme");
 	}
 	
 		setResizable(false);
@@ -79,7 +74,7 @@ public class MainFrame extends JFrame {
 				
 			}
 		});
-		//frame2
+
 		t2 = new Tampilan2();
 		JButton btnNext1 = new JButton("Next");
 		btnNext1.setBounds(390, 572, 89, 23);
@@ -109,7 +104,6 @@ public class MainFrame extends JFrame {
 			}
 		});
 		t2.add(back);
-		//frame3
 
 		JButton btnNext2 = new JButton("Next");
 		btnNext2.setBounds(390, 572, 89, 23);
@@ -142,7 +136,6 @@ public class MainFrame extends JFrame {
 		});
 		t3.add(back2);
 		
-		//frame4
 		JButton btnNext3 = new JButton("Next");
 		btnNext3.setBounds(390, 572, 89, 23);
 		btnNext3.addActionListener(new ActionListener() {

@@ -1,33 +1,21 @@
 package versi2;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.awt.Font;
 
-import javax.swing.JFrame;
+import javax.swing.ButtonGroup;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
-import javax.swing.ButtonGroup;
-import javax.swing.JScrollBar;
-import javax.swing.JTextField;
-import javax.swing.JLabel;
-
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.File;
-
-import javax.swing.JRadioButton;
-import javax.swing.JButton;
-
-import sun.net.www.content.audio.basic;
 
 
 public class Tampilan2 extends JPanel {
 
 	
-	
-	 JTextField JumlahStopKontak;
+	private static final long serialVersionUID = 1L;
+	JTextField JumlahStopKontak;
 	 JTextField JumlahKabelLCD;
 	 JTextField JumlahLampu;
 

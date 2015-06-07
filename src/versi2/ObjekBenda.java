@@ -1,7 +1,5 @@
 package versi2;
 
-import javax.swing.text.StyledEditorKit.BoldAction;
-
 public class ObjekBenda extends ObjekKelas{
 
 

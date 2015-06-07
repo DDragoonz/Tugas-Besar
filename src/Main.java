@@ -4,8 +4,6 @@ public class Main {
 	public static void main(String[] args) {
 		Control kelas = new Control();
 		
-		int a;
-		
 		kelas.inputIdentitasRuang();
 		kelas.inputKondisiRuang();
 		kelas.inputKursiPintuJendela();
