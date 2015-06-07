@@ -58,6 +58,8 @@ public class Tampilan32 extends JPanel {
 		add(rdbtnTidakAdaKunci);
 		kunci.add(rdbtnAdaKunci);
 		kunci.add(rdbtnTidakAdaKunci);
+		
+		
 		JLabel lblTingkatBahaya = new JLabel("Tingkat Bahaya");
 		lblTingkatBahaya.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblTingkatBahaya.setBounds(30, 96, 172, 19);
