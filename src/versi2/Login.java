@@ -46,16 +46,17 @@ public class Login extends JFrame {
 		} catch ( Exception e) {
 			// TODO: handle exception
 		}
+		setResizable(false);
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 500, 650);
+		setBounds(100, 100, 750, 380);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(10, 11, 289, 150);
+		panel.setBounds(20, 92, 257, 150);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
@@ -89,7 +90,7 @@ public class Login extends JFrame {
 		panel.add(passwordField);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(20, 172, 451, 387);
+		panel_1.setBounds(277, 11, 428, 290);
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
@@ -152,7 +153,7 @@ public class Login extends JFrame {
 		panel_2.setLayout(null);
 		
 		JLabel lblLoginSuksesKakak = new JLabel("LOGIN SUKSES KAKAK");
-		lblLoginSuksesKakak.setBounds(44, 4, 138, 14);
+		lblLoginSuksesKakak.setBounds(50, 52, 138, 14);
 		panel_2.add(lblLoginSuksesKakak);
 		lblLoginSuksesKakak.setFont(new Font("Times New Roman", Font.PLAIN, 12));
 		
