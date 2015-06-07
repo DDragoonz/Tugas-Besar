@@ -2,6 +2,7 @@ package versi2;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Vector;
 
 
 public class RuangKelas implements Serializable{
@@ -64,6 +65,20 @@ public class RuangKelas implements Serializable{
 		this.lebar = lebar;
 	}
 
+	public Vector<String > getData(String nama){
+		Vector<String> data = new Vector<String>();
+
+		data.add(nama);
+		data.add(getJumlahObjek(nama));
+		data.add(getKondisiObjek(nama));
+		data.add(getPosisiObjek(nama));
+		data.add(getNilaiObjek(nama));
+		data.add(getMinObjek(nama));
+		data.add(getMaxObjek(nama));
+		data.add(analisisObjek(nama));
+		
+		return data;
+	}
 	
 	boolean ukurBentuk(){
 		if(panjang!=lebar)return true;
@@ -105,9 +120,6 @@ public class RuangKelas implements Serializable{
 		tambahObjekTerukur("Tingkat Kelembapan", 0, 30, 80);
 		tambahObjekTerukur("Suhu", 0, 30, 80);
 		
-		
-		
-		
 	}
 	
 	void tambahObjekBenda(String nama, boolean kondisi, int jumlah, int min, String posisi){
@@ -133,15 +145,15 @@ public class RuangKelas implements Serializable{
 		}
 		for(ObjekNonBenda a:daftarObjekNonBenda){
 			if(a.analisisObjek()){
-					System.out.println(a.getNama() + " sesuai");
+				result =  " sesuai";
 				}
-			else System.out.println(a.getNama() + " tidak sesuai");
+			else result =  " tidak sesuai";
 		}
 		for(ObjekTerukur a:daftarObjekTerukur){
 			if(a.analisisObjek()){
-					System.out.println(a.getNama() + " sesuai");
+				result =   " sesuai";
 				}
-			else System.out.println(a.getNama() + " tidak sesuai");
+			else result =  " tidak sesuai";
 		}
 		
 		return result;

@@ -22,10 +22,8 @@ public class Login extends JFrame {
 	private JPanel contentPane;
 	private JTextField textadmin;
 	private JPasswordField passwordField;
-
-	/**
-	 * Launch the application.
-	 */
+	private Kontrol kontrol = new Kontrol();
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -123,6 +121,16 @@ public class Login extends JFrame {
 		//lihatdata.setEnabled(false);
 		lihatdata.setBounds(123, 148, 200, 25);
 		panel_1.add(lihatdata);
+		lihatdata.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				getContentPane().removeAll();
+				setContentPane(new TampilanKelas(kontrol.load()));
+				revalidate();
+				repaint();
+			}
+		});
 		
 		JButton btnexit = new JButton("EXIT");
 		btnexit.setBounds(123, 194, 200, 36);
