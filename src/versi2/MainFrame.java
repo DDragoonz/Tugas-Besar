@@ -272,13 +272,26 @@ public class MainFrame extends JFrame {
 				if (t4.kebisingan.isSelected())kelas.setKondisiObjek("Kebisingan", true);
 				else if (t4.kebisingan1.isSelected())kelas.setKondisiObjek("Kebisingan", false);
 				
-//				if (t4.)
+				if (t4.rdbtnBau.isSelected())kelas.setKondisiObjek("Bau", true);
+				else if (t4.rdbtnTidakBau.isSelected())kelas.setKondisiObjek("Bau", false);
+				
+				if (t4.rdbtnAus.isSelected())kelas.setKondisiObjek("Keausan", true);
+				else if (t4.rdbtnTidakAus.isSelected())kelas.setKondisiObjek("Keausan", false);
+				
+				if (t4.kebocoran1.isSelected())kelas.setKondisiObjek("Kebocoran", true);
+				else if (t4.kebocoran2.isSelected())kelas.setKondisiObjek("Kebocoran", false);
+				
+				if (t4.kerusakan1.isSelected())kelas.setKondisiObjek("Kerusakan", true);
+				else if (t4.kerusakan2.isSelected())kelas.setKondisiObjek("Kerusakan", false);
 				
 				if (t5.rdbtnKokoh.isSelected())kelas.setKondisiObjek("Kekokohan", true);
 				else if (t5.rdbtnTidakKokoh.isSelected())kelas.setKondisiObjek("Kekokohan", false);
 				
 				if (t5.rdbtnAdaKunci.isSelected())kelas.setKondisiObjek("Kunci Pintu & Jendela", true);
 				else if (t5.rdbtnTidakAdaKunci.isSelected())kelas.setKondisiObjek("Kunci Pintu & Jendela", false);
+				
+				if (t5.rdbtnAman.isSelected())kelas.setKondisiObjek("Bahaya", true);
+				else if (t5.rdbtnTidakAman.isSelected())kelas.setKondisiObjek("Bahaya", false);
 				
 
 				
