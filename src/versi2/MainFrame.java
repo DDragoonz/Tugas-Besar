@@ -202,6 +202,86 @@ public class MainFrame extends JFrame {
 				kelas.setJumlahObjek("Steker", t2.JumlahStopKontak.getText());
 				if(t2.rbKondisiSteker1.isSelected())kelas.setKondisiObjek("Steker", true);
 				else if(t2.rbKondisiSteker2.isSelected())kelas.setKondisiObjek("Steker", false);
+
+				if(t2.rbPosisiSteker1.isSelected())kelas.setPosisiObjek("Steker",t2.rbPosisiSteker1.getText());
+				else if (t2.rbPosisiSteker2.isSelected())kelas.setPosisiObjek("Steker", t2.rbPosisiSteker2.getText());
+				else if (t2.rbPosisiSteker3.isSelected())kelas.setPosisiObjek("Steker", t2.rbPosisiSteker3.getText());
+				
+				kelas.setJumlahObjek("Kabel LCD", t2.JumlahKabelLCD.getText());
+				if (t2.rbKondisiLCD1.isSelected())kelas.setKondisiObjek("Kabel LCD",true);
+				else if (t2.rbKondisiLCD2.isSelected())kelas.setKondisiObjek("Kabel LCD", false);
+				
+				if(t2.rbPosisiLCD1.isSelected())kelas.setPosisiObjek("Kabel LCD",t2.rbPosisiSteker1.getText());
+				else if (t2.rbPosisiLCD2.isSelected())kelas.setPosisiObjek("Kabel LCD", t2.rbPosisiLCD2.getText());
+				else if (t2.rbPosisiLCD3.isSelected())kelas.setPosisiObjek("Kabel LCD", t2.rbPosisiLCD3.getText());
+				
+				kelas.setJumlahObjek("Lampu", t2.JumlahLampu.getText());
+				if (t2.rbKondisiLampu1.isSelected())kelas.setKondisiObjek("Lampu", true);
+				else if (t2.rbKondisiLampu2.isSelected())kelas.setKondisiObjek("Lampu", false);
+				
+				if(t2.rbPosisiLampu1.isSelected())kelas.setPosisiObjek("Lampu",t2.rbPosisiLampu1.getText());
+				else if (t2.rbPosisiLampu2.isSelected())kelas.setPosisiObjek("Lampu",t2.rbPosisiLampu2.getText());
+				
+				kelas.setJumlahObjek("Kipas Angin", t3.JumlahKipasAngin.getText());
+				if(t3.KondisiKipas.isSelected())kelas.setKondisiObjek("Kipas Angin",true);
+				else if (t3.KondisiKipas1.isSelected())kelas.setKondisiObjek("Kipas Angin", false);
+				
+				kelas.setJumlahObjek("AC", t3.JumlahAC.getText());
+				if (t3.AcBaik.isSelected())kelas.setKondisiObjek("AC", true);
+				else if (t3.AcKurangBaik.isSelected())kelas.setKondisiObjek("AC", false);
+				
+				if (t3.AcBelakang.isSelected())kelas.setPosisiObjek("AC", t3.AcBelakang.getText());
+				else if (t3.AcSamping.isSelected())kelas.setPosisiObjek("AC",t3.AcSamping.getText());
+				else if (t3.AcLainlain_1.isSelected())kelas.setPosisiObjek("AC",t3.AcLainlain_1.getText());
+				
+				if (t3.UmmHospot.isSelected())kelas.setKondisiObjek("SSID",true);
+				else if (t3.SSIDLainlain.isSelected())kelas.setKondisiObjek("SSID", false);
+				
+				if (t3.BisaLogin.isSelected())kelas.setKondisiObjek("BisaLogin", true);
+				else if (t3.TidakBisaLogin.isSelected())kelas.setKondisiObjek("Bisa Login", false);
+				
+				kelas.setJumlahObjek("CCTV", t3.JumlahCCTV.getText());
+				if (t3.cctv1.isSelected())kelas.setKondisiObjek("CCTV", true);
+				else if (t3.cctv2.isSelected())kelas.setKondisiObjek("CCTV", false);
+				
+				if (t3.DepanBelakang.isSelected())kelas.setPosisiObjek("CCTV", t3.DepanBelakang.getText());
+				else if (t3.Lainlain_3.isSelected())kelas.setPosisiObjek("CCTV", t3.Lainlain_3.getText());
+				
+				if (t4.kondisilantai1.isSelected())kelas.setKondisiObjek("Kondisi Lantai", true);
+				else if(t4.kondisilantai2.isSelected())kelas.setKondisiObjek("Kondisi Lantai", false);
+				
+				if (t4.kondisidinding.isSelected())kelas.setKondisiObjek("Kondisi Dinding", true);
+				else if (t4.kondisidinding1.isSelected())kelas.setKondisiObjek("Kondisi Dinding", false);
+				
+				if (t4.kondisiAtap.isSelected())kelas.setKondisiObjek("Kondisi Atap", true);
+				else if (t4.kondisiAtap1.isSelected())kelas.setKondisiObjek("Kondisi Atap", false);
+				
+				if(t4.Kondisipintu.isSelected())kelas.setKondisiObjek("Kondisi Pintu", true);
+				else if (t4.Kondisipintu1.isSelected())kelas.setKondisiObjek("Kondisi Pintu", false);
+				
+				if (t4.kondisiCendela.isSelected())kelas.setKondisiObjek("Kondisi Jendela", true);
+				else if (t4.kondisiCendela1.isSelected())kelas.setKondisiObjek("Kondisi Jendela", false);
+				
+				if (t4.kondisiudara.isSelected())kelas.setKondisiObjek("Sirkulasi Udara", true);
+				else if (t4.kondisiudara1.isSelected())kelas.setKondisiObjek("Sirkulasi Udara", false);
+				
+				kelas.setNilaiObjek("Suhu",t4.Suhu.getText());
+				kelas.setNilaiObjek("Intesitas Cahaya", t4.IntensitasCahaya.getText());
+				kelas.setNilaiObjek("Tingkat Kelembapan", t4.Kelembapan.getText());
+				
+				if (t4.kebisingan.isSelected())kelas.setKondisiObjek("Kebisingan", true);
+				else if (t4.kebisingan1.isSelected())kelas.setKondisiObjek("Kebisingan", false);
+				
+//				if (t4.)
+				
+				if (t5.rdbtnKokoh.isSelected())kelas.setKondisiObjek("Kekokohan", true);
+				else if (t5.rdbtnTidakKokoh.isSelected())kelas.setKondisiObjek("Kekokohan", false);
+				
+				if (t5.rdbtnAdaKunci.isSelected())kelas.setKondisiObjek("Kunci Pintu & Jendela", true);
+				else if (t5.rdbtnTidakAdaKunci.isSelected())kelas.setKondisiObjek("Kunci Pintu & Jendela", false);
+				
+
+				
 				
 				kontrol.save(kelas);
 				

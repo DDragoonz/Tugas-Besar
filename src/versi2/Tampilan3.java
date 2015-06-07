@@ -15,9 +15,9 @@ public class Tampilan3 extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private JTextField IntensitasCahaya;
-	private JTextField Kelembapan;
-	private JTextField Suhu;
+	JTextField IntensitasCahaya;
+	JTextField Kelembapan;
+	JTextField Suhu;
 	
 	private ButtonGroup kondisilantai = new ButtonGroup();
 	JRadioButton kondisilantai1 = new JRadioButton("Baik");
