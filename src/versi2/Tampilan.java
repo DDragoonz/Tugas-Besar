@@ -4,11 +4,15 @@ import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
 import javax.swing.JLabel;
 
+import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.JTextField;
+
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 
 public class Tampilan extends JPanel {
 
@@ -22,6 +26,8 @@ public class Tampilan extends JPanel {
 	JTextField JumlahKursi = new JTextField();
 	JTextField JumlahPintu = new JTextField();
 	JTextField JumlahCendela = new JTextField();
+	
+	private Kontrol kontrol = new Kontrol();
 
 	public Tampilan(RuangKelas kelas) {
 
@@ -77,6 +83,13 @@ public class Tampilan extends JPanel {
 		lblPanjangRuangan.setBounds(20, 243, 142, 19);
 		// getContentPane().
 		add(lblPanjangRuangan);
+		panjangRuangan.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				if(kontrol.cekFloat(panjangRuangan)||panjangRuangan.getText().isEmpty())panjangRuangan.setBackground(null);
+				else panjangRuangan.setBackground(Color.pink);
+			}
+		});
 
 		panjangRuangan.setBounds(221, 243, 165, 20);
 		// getContentPane().
@@ -88,6 +101,13 @@ public class Tampilan extends JPanel {
 		lblLebarRuangan.setBounds(20, 288, 142, 19);
 		// getContentPane().
 		add(lblLebarRuangan);
+		LebarRuangan.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				if(kontrol.cekFloat(LebarRuangan)||LebarRuangan.getText().isEmpty())LebarRuangan.setBackground(null);
+				else LebarRuangan.setBackground(Color.pink);
+			}
+		});
 
 		LebarRuangan.setBounds(221, 288, 165, 20);
 		// getContentPane().
@@ -99,6 +119,13 @@ public class Tampilan extends JPanel {
 		lblJumlahKursi.setBounds(20, 328, 142, 19);
 		// getContentPane().
 		add(lblJumlahKursi);
+		JumlahKursi.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				if(kontrol.cekINT(JumlahKursi))JumlahKursi.setBackground(null);
+				else JumlahKursi.setBackground(Color.PINK);
+			}
+		});
 
 		JumlahKursi.setBounds(221, 328, 165, 20);
 		// getContentPane().
@@ -115,6 +142,14 @@ public class Tampilan extends JPanel {
 		// getContentPane().
 		add(JumlahPintu);
 		JumlahPintu.setColumns(10);
+		JumlahPintu.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				if(kontrol.cekINT(JumlahPintu))JumlahPintu.setBackground(null);
+				else JumlahPintu.setBackground(Color.PINK);
+			}
+		});
+		
 
 		JLabel lblJumlahJendela = new JLabel("Jumlah Jendela");
 		lblJumlahJendela.setFont(new Font("Times New Roman", Font.BOLD, 15));
@@ -126,6 +161,13 @@ public class Tampilan extends JPanel {
 		// getContentPane().
 		add(JumlahCendela);
 		JumlahCendela.setColumns(10);
+		JumlahCendela.addFocusListener(new FocusAdapter() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				if(kontrol.cekINT(JumlahCendela))JumlahCendela.setBackground(null);
+				else JumlahCendela.setBackground(Color.PINK);
+			}
+		});
 
 		JPanel lblIdentitasRuangKelas = new JPanel();
 		lblIdentitasRuangKelas.setBounds(11, 34, 456, 149);

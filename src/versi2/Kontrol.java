@@ -5,8 +5,10 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 public class Kontrol {
 	
@@ -43,15 +45,34 @@ public class Kontrol {
     			kelas = (RuangKelas)is.readObject();
     			is.close();
     		} catch (Exception ex) {
-    			JOptionPane.showMessageDialog(null, "Data not Found !");
+    			JOptionPane.showMessageDialog(null, "Gagal Membuka");
     		}
         }
+        if(returnVal == JFileChooser.CANCEL_OPTION)kelas = null;
         return kelas;
 	}
 	
 	public void hapusKelas(){
 		file.delete();
 		JOptionPane.showMessageDialog(null, "Sukses Hapus");
+	}
+	
+	public boolean cekINT(JTextField t){
+		try{
+			Integer.parseInt(t.getText());
+			return true;
+		} catch (NumberFormatException e){
+			return false;
+		}
+	}
+	
+	public boolean cekFloat(JTextField t){
+		try{
+			Float.parseFloat(t.getText());
+			return true;
+		} catch (NumberFormatException e){
+			return false;
+		}
 	}
 	
 }

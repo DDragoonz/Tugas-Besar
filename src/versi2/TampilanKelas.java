@@ -5,7 +5,6 @@ import javax.swing.border.BevelBorder;
 
 import java.awt.Color;
 
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
@@ -17,13 +16,13 @@ import javax.swing.table.DefaultTableModel;
 
 
 public class TampilanKelas extends JPanel {
-	public TampilanKelas() {
-	}
 
-	
+
+	private static final long serialVersionUID = 1L;
 	private JTable table;
 	JButton editButton = new JButton("Edit");
 	JButton hapusButton = new JButton("Hapus");
+	JButton backButton = new JButton("Back");
 
 	public void init(RuangKelas kelas, boolean login) {
 		
@@ -49,26 +48,57 @@ public class TampilanKelas extends JPanel {
 		lblProgStudi.setBounds(10, 40, 100, 14);
 		panel.add(lblProgStudi);
 		
-		JLabel namaRuang = new JLabel("");
+		JLabel namaRuang = new JLabel(kelas.getNama());
 		namaRuang.setBounds(120, 11, 100, 14);
 		panel.add(namaRuang);
 		
-		JLabel lokasi = new JLabel("");
+		JLabel lokasi = new JLabel(kelas.getLokasi());
 		lokasi.setBounds(120, 25, 100, 14);
 		panel.add(lokasi);
 		
-		JLabel label = new JLabel("");
+		JLabel label = new JLabel(kelas.getFakultas());
 		label.setBounds(120, 40, 100, 14);
 		panel.add(label);
 		
-		
-		editButton.setBounds(592, 11, 89, 43);
+		editButton.setBounds(622, 11, 89, 43);
 		editButton.setEnabled(false);
 		panel.add(editButton);
 		
-		hapusButton.setBounds(493, 11, 89, 43);
+		hapusButton.setBounds(523, 11, 89, 43);
 		hapusButton.setEnabled(false);
 		panel.add(hapusButton);
+		
+		backButton.setBounds(424, 11, 89, 43);
+		panel.add(backButton);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBackground(Color.GRAY);
+		panel_2.setBounds(230, 11, 4, 44);
+		panel.add(panel_2);
+		
+		JLabel lblLuas = new JLabel("Luas");
+		lblLuas.setBounds(244, 11, 46, 14);
+		panel.add(lblLuas);
+		
+		JLabel luas = new JLabel(""+kelas.ukurLuas());
+		luas.setBounds(300, 11, 46, 14);
+		panel.add(luas);
+		
+		JLabel lblRasio = new JLabel("Rasio");
+		lblRasio.setBounds(244, 25, 46, 14);
+		panel.add(lblRasio);
+		
+		JLabel rasio = new JLabel(kelas.hitungRasio());
+		rasio.setBounds(300, 25, 46, 14);
+		panel.add(rasio);
+		
+		JLabel lblBentuk = new JLabel("Bentuk");
+		lblBentuk.setBounds(244, 40, 46, 14);
+		panel.add(lblBentuk);
+		
+		JLabel bentuk = new JLabel(kelas.ukurBentuk());
+		bentuk.setBounds(300, 40, 46, 14);
+		panel.add(bentuk);
 		
 		if(login){
 			editButton.setEnabled(true);

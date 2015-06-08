@@ -39,6 +39,7 @@ public class ObjekTerukur extends ObjekKelas{
 	}
 
 	public ObjekTerukur (String nama ,float nilai , float min, float max){
+		kondisi = analisisObjek();
 		this.nama = nama ;
 		this.min = min ;
 		this.max = max;

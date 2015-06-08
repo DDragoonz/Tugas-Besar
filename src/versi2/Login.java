@@ -15,8 +15,9 @@ import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import javax.swing.border.LineBorder;
+
 import java.awt.Color;
-import javax.swing.JList;
+
 import javax.swing.JComboBox;
 import javax.swing.SwingConstants;
 
@@ -185,6 +186,17 @@ public class Login extends JFrame {
 			}
 		});
 		
+		TK.backButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				getContentPane().remove(TK);
+				setContentPane(contentPane);
+				revalidate();
+				repaint();
+			}
+		});
+		
 		JButton btnexit = new JButton("EXIT");
 		btnexit.setBounds(123, 194, 200, 36);
 		//btnexit.setEnabled(false);
@@ -230,7 +242,7 @@ public class Login extends JFrame {
 		lblTemplateKelas.setBounds(20, 19, 102, 34);
 		panel_3.add(lblTemplateKelas);
 		
-		JComboBox comboBox = new JComboBox();
+		JComboBox<String> comboBox = new JComboBox<String>();
 		comboBox.setBounds(132, 19, 102, 34);
 		comboBox.addItem("Default");
 		panel_3.add(comboBox);
