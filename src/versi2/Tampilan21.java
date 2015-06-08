@@ -64,6 +64,23 @@ public class Tampilan21 extends JPanel {
 			JumlahAC.setText(kelas.getJumlahObjek("AC"));
 			if(kelas.getKondisiObjek("AC").equals(AcBaik.getText()))AcBaik.setSelected(true);
 			else if(kelas.getKondisiObjek("AC").equals(AcKurangBaik.getText()))AcKurangBaik.setSelected(true);
+			
+			if (kelas.getPosisiObjek("AC").equals(AcBelakang.getText()))AcBelakang.setSelected(true);
+			else if (kelas.getPosisiObjek("AC").equals(AcSamping.getText()))AcSamping.setSelected(true);
+			else if (kelas.getPosisiObjek("AC").equals(AcLainlain_1.getText()))AcLainlain_1.setSelected(true);
+			
+			if (kelas.getKondisiObjek("SSID").equals(UmmHospot.getText()))UmmHospot.setSelected(true);
+			else if (kelas.getKondisiObjek("SSID").equals(SSIDLainlain.getText()))UmmHospot.setSelected(true);
+			
+			if (kelas.getKondisiObjek("Bisa Login").equals(BisaLogin.getText()))BisaLogin.setSelected(true);
+			else if (kelas.getKondisiObjek("Bisa Login").equals(TidakBisaLogin.getText()))TidakBisaLogin.setSelected(true);
+			
+			JumlahCCTV.setText(kelas.getJumlahObjek("CCTV"));
+			if (kelas.getKondisiObjek("CCTV").equals(cctv1.getText()))cctv1.setSelected(true);
+			else if (kelas.getKondisiObjek("CCTV").equals(cctv2.getText()))cctv2.setSelected(true);
+			
+			if (kelas.getPosisiObjek("CCTV").equals(DepanBelakang.getText()))DepanBelakang.setSelected(true);
+			else if (kelas.getKondisiObjek("CCTV").equals(Lainlain_3.getText()))Lainlain_3.setSelected(true);
 		}
 		
 		

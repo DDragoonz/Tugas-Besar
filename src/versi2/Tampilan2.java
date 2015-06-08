@@ -70,6 +70,40 @@ public class Tampilan2 extends JPanel {
 		//
 		add(lblJumlahStopKontaksteker);
 		
+		if (kelas!=null)
+		{
+			JumlahStopKontak.setText(kelas.getJumlahObjek("Steker"));
+			
+			if (kelas.getKondisiObjek("Steker").equals(rbKondisiSteker1.getText()))rbKondisiSteker1.setSelected(true);
+			else if (kelas.getKondisiObjek("Steker").equals(rbKondisiSteker2.getText()))rbKondisiSteker2.setSelected(true);
+			
+			if (kelas.getPosisiObjek("Steker").equals(rbPosisiSteker1.getText()))rbPosisiSteker1.setSelected(true);
+			else if (kelas.getPosisiObjek("Steker").equals(rbPosisiSteker2.getText()))rbPosisiSteker2.setSelected(true);
+			else if (kelas.getPosisiObjek("Steker").equals(rbPosisiSteker3.getText()))rbPosisiSteker3.setSelected(true);
+			
+			JumlahKabelLCD.setText(kelas.getJumlahObjek("Kabel LCD"));
+			
+			if (kelas.getKondisiObjek("Kabel LCD").equals(rbKondisiLCD1.getText()))rbKondisiLCD2.setSelected(true);
+			else if (kelas.getKondisiObjek("Kabel LCD").equals(rbKondisiLCD2.getText()))rbKondisiLCD2.setSelected(true);
+			
+			if(kelas.getPosisiObjek("Kabel LCD").equals(rbPosisiLCD1.getText()))rbPosisiLCD1.setSelected(true);
+			else if (kelas.getPosisiObjek("Kabel LCD").equals(rbPosisiLCD2.getText()))rbPosisiLCD2.setSelected(true);
+			else if (kelas.getPosisiObjek("Kabel LCC").equals(rbPosisiLCD3.getText()))rbPosisiLCD3.setSelected(true);
+			
+			JumlahLampu.setText(kelas.getJumlahObjek("Lampu"));
+			
+			if (kelas.getKondisiObjek("Lampu").equals(rbKondisiLampu1.getText()))rbKondisiLampu1.setSelected(true);
+			else if (kelas.getKondisiObjek("Lampu").equals(rbKondisiLampu2.getText()))rbKondisiLampu2.setSelected(true);
+			
+			if (kelas.getPosisiObjek("Lampu").equals(rbPosisiLampu1.getText()))rbPosisiLampu1.setSelected(true);
+			else if (kelas.getPosisiObjek("Lampu").equals(rbPosisiLampu2.getText()))rbPosisiLampu2.setSelected(true);
+			
+			
+			
+			
+		}
+		
+		
 		JumlahStopKontak = new JTextField();
 		JumlahStopKontak.setBounds(249, 45, 200, 20);
 		add(JumlahStopKontak);
