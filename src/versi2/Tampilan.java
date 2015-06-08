@@ -51,7 +51,7 @@ public class Tampilan extends JPanel {
 			JumlahCendela.setText(kelas.getJumlahObjek("Jendela"));
 		}
 
-		namaRuang.setBounds(221, 71, 165, 30);
+		namaRuang.setBounds(221, 71, 165, 20);
 		// getContentPane().
 		add(namaRuang);
 		namaRuang.setColumns(10);
@@ -62,7 +62,7 @@ public class Tampilan extends JPanel {
 		// getContentPane().
 		add(lblLokasiRuang);
 
-		lokasiRuang.setBounds(221, 104, 165, 30);
+		lokasiRuang.setBounds(221, 104, 165, 20);
 		// getContentPane().
 		add(lokasiRuang);
 		lokasiRuang.setColumns(10);
@@ -73,7 +73,7 @@ public class Tampilan extends JPanel {
 		// getContentPane().
 		add(lblProgramStudi);
 
-		ProgStudi.setBounds(221, 134, 165, 30);
+		ProgStudi.setBounds(221, 134, 165, 20);
 		// getContentPane().
 		add(ProgStudi);
 		ProgStudi.setColumns(10);
@@ -91,7 +91,7 @@ public class Tampilan extends JPanel {
 			}
 		});
 
-		panjangRuangan.setBounds(221, 243, 165, 30);
+		panjangRuangan.setBounds(221, 243, 165, 20);
 		// getContentPane().
 		add(panjangRuangan);
 		panjangRuangan.setColumns(10);
@@ -109,7 +109,7 @@ public class Tampilan extends JPanel {
 			}
 		});
 
-		LebarRuangan.setBounds(221, 288, 165, 30);
+		LebarRuangan.setBounds(221, 288, 165, 20);
 		// getContentPane().
 		add(LebarRuangan);
 		LebarRuangan.setColumns(10);
@@ -127,7 +127,7 @@ public class Tampilan extends JPanel {
 			}
 		});
 
-		JumlahKursi.setBounds(221, 328, 165, 30);
+		JumlahKursi.setBounds(221, 328, 165, 20);
 		// getContentPane().
 		add(JumlahKursi);
 		JumlahKursi.setColumns(10);
@@ -138,7 +138,7 @@ public class Tampilan extends JPanel {
 		// getContentPane().
 		add(lblJumlahPintu);
 
-		JumlahPintu.setBounds(221, 371, 165, 30);
+		JumlahPintu.setBounds(221, 371, 165, 20);
 		// getContentPane().
 		add(JumlahPintu);
 		JumlahPintu.setColumns(10);
@@ -157,7 +157,7 @@ public class Tampilan extends JPanel {
 		// getContentPane().
 		add(lblJumlahJendela);
 
-		JumlahCendela.setBounds(221, 410, 165, 30);
+		JumlahCendela.setBounds(221, 410, 165, 20);
 		// getContentPane().
 		add(JumlahCendela);
 		JumlahCendela.setColumns(10);

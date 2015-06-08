@@ -102,12 +102,7 @@ public class Tampilan2 extends JPanel {
 		}
 		
 		
-
 		JumlahStopKontak.setBounds(249, 45, 200, 20);
-
-		JumlahStopKontak = new JTextField();
-		JumlahStopKontak.setBounds(249, 45, 200, 30);
-
 		add(JumlahStopKontak);
 		JumlahStopKontak.setColumns(10);
 		
@@ -158,12 +153,7 @@ public class Tampilan2 extends JPanel {
 		//
 		add(lblJumlahKabelLcd);
 		
-
 		JumlahKabelLCD.setBounds(249, 207, 137, 20);
-
-		JumlahKabelLCD = new JTextField();
-		JumlahKabelLCD.setBounds(249, 207, 137, 30);
-
 		//
 		add(JumlahKabelLCD);
 		JumlahKabelLCD.setColumns(10);
@@ -215,12 +205,7 @@ public class Tampilan2 extends JPanel {
 		//
 		add(lblJumlah);
 		
-
 		JumlahLampu.setBounds(249, 378, 137, 19);
-
-		JumlahLampu = new JTextField();
-		JumlahLampu.setBounds(249, 378, 137, 30);
-
 		//
 		add(JumlahLampu);
 		JumlahLampu.setColumns(10);
