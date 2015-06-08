@@ -218,7 +218,7 @@ public class Tampilan3 extends JPanel {
 		add(lblIntensitasCahaya);
 
 		
-		IntensitasCahaya.setBounds(198, 279, 38, 20);
+		IntensitasCahaya.setBounds(198, 279, 38, 30);
 		//
 		add(IntensitasCahaya);
 		IntensitasCahaya.setColumns(10);
@@ -229,7 +229,7 @@ public class Tampilan3 extends JPanel {
 		//
 		add(lblKelembapan);
 
-		Kelembapan.setBounds(198, 319, 38, 20);
+		Kelembapan.setBounds(198, 319, 38, 30);
 		//
 		add(Kelembapan);
 		Kelembapan.setColumns(10);
@@ -240,7 +240,7 @@ public class Tampilan3 extends JPanel {
 		//
 		add(lblSuhu);
 
-		Suhu.setBounds(199, 354, 37, 20);
+		Suhu.setBounds(199, 354, 37, 30);
 		//
 		add(Suhu);
 		Suhu.setColumns(10);

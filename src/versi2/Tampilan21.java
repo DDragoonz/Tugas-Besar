@@ -90,7 +90,7 @@ public class Tampilan21 extends JPanel {
 
 		add(lblJumlahKipasAngin);
 
-		JumlahKipasAngin.setBounds(248, 48, 100, 20);
+		JumlahKipasAngin.setBounds(248, 48, 100, 30);
 		add(JumlahKipasAngin);
 		JumlahKipasAngin.setColumns(10);
 
@@ -110,11 +110,11 @@ public class Tampilan21 extends JPanel {
 
 		JLabel lblJumlahKipasAc = new JLabel("Jumlah AC");
 		lblJumlahKipasAc.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		lblJumlahKipasAc.setBounds(20, 167, 172, 19);
+		lblJumlahKipasAc.setBounds(20, 167, 172, 30);
 		//
 		add(lblJumlahKipasAc);
 
-		JumlahAC.setBounds(248, 167, 100, 20);
+		JumlahAC.setBounds(248, 167, 100, 30);
 		//
 		add(JumlahAC);
 		JumlahAC.setColumns(10);
@@ -189,11 +189,11 @@ public class Tampilan21 extends JPanel {
 
 		JLabel lblJumlahCctv = new JLabel("Jumlah CCTV");
 		lblJumlahCctv.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		lblJumlahCctv.setBounds(20, 405, 172, 19);
+		lblJumlahCctv.setBounds(20, 405, 172, 30);
 		//
 		add(lblJumlahCctv);
 
-		JumlahCCTV.setBounds(248, 405, 100, 20);
+		JumlahCCTV.setBounds(248, 405, 100, 30);
 		//
 		add(JumlahCCTV);
 		JumlahCCTV.setColumns(10);

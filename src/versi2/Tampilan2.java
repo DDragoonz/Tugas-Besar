@@ -66,7 +66,7 @@ public class Tampilan2 extends JPanel {
 		
 		JLabel lblJumlahStopKontaksteker = new JLabel("Jumlah Stop Kontak/Steker");
 		lblJumlahStopKontaksteker.setFont(new Font("Times New Roman", Font.BOLD, 15));
-		lblJumlahStopKontaksteker.setBounds(22, 45, 200, 19);
+		lblJumlahStopKontaksteker.setBounds(22, 45, 200, 30);
 		//
 		add(lblJumlahStopKontaksteker);
 		
@@ -102,7 +102,7 @@ public class Tampilan2 extends JPanel {
 		}
 		
 		
-		JumlahStopKontak.setBounds(249, 45, 200, 20);
+		JumlahStopKontak.setBounds(249, 45, 200, 30);
 		add(JumlahStopKontak);
 		JumlahStopKontak.setColumns(10);
 		
@@ -153,7 +153,7 @@ public class Tampilan2 extends JPanel {
 		//
 		add(lblJumlahKabelLcd);
 		
-		JumlahKabelLCD.setBounds(249, 207, 137, 20);
+		JumlahKabelLCD.setBounds(249, 207, 137, 30);
 		//
 		add(JumlahKabelLCD);
 		JumlahKabelLCD.setColumns(10);
@@ -205,7 +205,7 @@ public class Tampilan2 extends JPanel {
 		//
 		add(lblJumlah);
 		
-		JumlahLampu.setBounds(249, 378, 137, 19);
+		JumlahLampu.setBounds(249, 378, 137, 30);
 		//
 		add(JumlahLampu);
 		JumlahLampu.setColumns(10);
