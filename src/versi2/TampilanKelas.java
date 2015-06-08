@@ -23,19 +23,19 @@ public class TampilanKelas extends JPanel {
 	public static void main(String[] args) {
 		JFrame f = new JFrame();
 		f.setVisible(true);
-		f.add(new TampilanKelas(new RuangKelas("a", "", "")));
+		f.getContentPane().add(new TampilanKelas(new RuangKelas("a", "", "")));
 	}
 	
 	private JTable table;
 
 	public TampilanKelas(RuangKelas kelas) {
 		
-		setSize(500, 650);
+		setSize(850,500);
 		setLayout(null);
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(new BevelBorder(BevelBorder.RAISED, new Color(255, 0, 0), null, new Color(255, 0, 0), null));
-		panel.setBounds(10, 11, 480, 66);
+		panel.setBounds(10, 11, 730, 66);
 		add(panel);
 		panel.setLayout(null);
 		
@@ -64,21 +64,19 @@ public class TampilanKelas extends JPanel {
 		panel.add(label);
 		
 		JButton editButton = new JButton("Edit");
-		editButton.setBounds(381, 11, 89, 43);
+		editButton.setBounds(592, 11, 89, 43);
 		panel.add(editButton);
 		
 		JButton hapusButton = new JButton("Hapus");
-		hapusButton.setBounds(286, 11, 89, 43);
+		hapusButton.setBounds(493, 11, 89, 43);
 		panel.add(hapusButton);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(10, 88, 480, 551);
+		panel_1.setBounds(10, 88, 730, 281);
 		add(panel_1);
-		panel_1.setLayout(new BorderLayout(0, 0));
 		
-		table = new JTable();
+		
 		DefaultTableModel model = new DefaultTableModel();
-		table.setModel(model);
 		String[] coloumndata = new String[] {
 				"Nama", "Jumlah", "Kondisi", "Posisi", "Nilai", "Min", "Max", "Sesuai?"
 			};
@@ -91,15 +89,22 @@ public class TampilanKelas extends JPanel {
 		model.addRow(kelas.getData(a.getNama()));
 		for(ObjekTerukur a:kelas.daftarObjekTerukur)
 		model.addRow(kelas.getData(a.getNama()));
+		panel_1.setLayout(null);
+		
+		
+		
+		
+		
+		table = new JTable();
+		table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+		table.setBounds(0, 0, 850, 450);
+		table.setModel(model);
+		table.setFillsViewportHeight(true);
 		
 		
 		JScrollPane scrollPane = new JScrollPane(table);
-		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-		panel_1.add(scrollPane, BorderLayout.CENTER);
-		table.setFillsViewportHeight(true);
-		table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
-		
-		
+		scrollPane.setBounds(0, 0, 730, 281);
+		panel_1.add(scrollPane);
 		
 
 	}
