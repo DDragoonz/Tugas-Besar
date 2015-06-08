@@ -37,14 +37,14 @@ public class Tampilan32 extends JPanel {
 		
 		if (kelas!=null)
 		{
-			if (kelas.getKondisiObjek("Kokoh").equals(rdbtnKokoh.getText()))rdbtnKokoh.setSelected(true);
-			else if (kelas.getKondisiObjek("Kokoh").equals(rdbtnTidakKokoh.getText()))rdbtnTidakKokoh.setSelected(true);
+			if (kelas.getKondisiObjek("Kekokohan").equals("Baik"))rdbtnKokoh.setSelected(true);
+			else if (kelas.getKondisiObjek("kekokohan").equals("Buruk"))rdbtnTidakKokoh.setSelected(true);
 			
-			if (kelas.getKondisiObjek("Kunci Pintu & Jendela").equals(rdbtnAdaKunci.getText()))rdbtnAdaKunci.setSelected(true);
-			else if (kelas.getKondisiObjek("Kunci Pintu & Jendela").equals(rdbtnTidakAdaKunci.getText()))rdbtnTidakAdaKunci.setSelected(true);
+			if (kelas.getKondisiObjek("Kunci Pintu & Jendela").equals("Baik"))rdbtnAdaKunci.setSelected(true);
+			else if (kelas.getKondisiObjek("Kunci Pintu & Jendela").equals("Buruk"))rdbtnTidakAdaKunci.setSelected(true);
 			
-			if (kelas.getKondisiObjek("Bahaya").equals(rdbtnAman.getText()))rdbtnAman.setSelected(true);
-			else if (kelas.getKondisiObjek("Bahaya").equals(rdbtnTidakAman.getText()))rdbtnTidakAman.setSelected(true);		
+			if (kelas.getKondisiObjek("Bahaya").equals("Baik"))rdbtnAman.setSelected(true);
+			else if (kelas.getKondisiObjek("Bahaya").equals("Buruk"))rdbtnTidakAman.setSelected(true);		
 		}
 		
 		rdbtnKokoh.setBounds(196, 35, 90, 23);

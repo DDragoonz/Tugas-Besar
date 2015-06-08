@@ -76,42 +76,42 @@ public class Tampilan3 extends JPanel {
 		add(lblKondisiLantai);
 		
 		if(kelas!=null){
-			 if(kelas.getKondisiObjek("Kondisi Lantai").equals(kondisilantai1.getText()))kondisilantai1.setSelected(true);
-			 else if(kelas.getKondisiObjek("Kondisi Lantai").equals(kondisilantai2.getText()))kondisilantai2.setSelected(true);
+			 if(kelas.getKondisiObjek("Kondisi Lantai").equals("Baik"))kondisilantai1.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kondisi Lantai").equals("Buruk"))kondisilantai2.setSelected(true);
 			 
-			 if(kelas.getKondisiObjek("Kondisi Dinding").equals(kondisidinding.getText()))kondisidinding.setSelected(true);
-			 else if(kelas.getKondisiObjek("Kondisi Dinding").equals(kondisidinding1.getText()))kondisidinding1.setSelected(true);
+			 if(kelas.getKondisiObjek("Kondisi Dinding").equals("Baik"))kondisidinding.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kondisi Dinding").equals("Buruk"))kondisidinding1.setSelected(true);
 			 
-			 if(kelas.getKondisiObjek("Kondisi Atap").equals(kondisiAtap.getText()))kondisiAtap.setSelected(true);
-			 else if(kelas.getKondisiObjek("Kondisi Atap1").equals(kondisiAtap1.getText()))kondisiAtap1.setSelected(true);
+			 if(kelas.getKondisiObjek("Kondisi Atap").equals("Baik"))kondisiAtap.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kondisi Atap1").equals("Buruk"))kondisiAtap1.setSelected(true);
 			 
-			 if(kelas.getKondisiObjek("Kondisi Pintu").equals(Kondisipintu.getText()))Kondisipintu.setSelected(true);
-			 else if(kelas.getKondisiObjek("Kondisi Pintu").equals(Kondisipintu1.getText()))Kondisipintu1.setSelected(true);
+			 if(kelas.getKondisiObjek("Kondisi Pintu").equals("Baik"))Kondisipintu.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kondisi Pintu").equals("Buruk"))Kondisipintu1.setSelected(true);
 			 
-			 if(kelas.getKondisiObjek("Kondisi Jendela").equals(kondisiCendela.getText()))kondisiCendela.setSelected(true);
-			 else if(kelas.getKondisiObjek("Kondisi Jendela").equals(kondisiCendela1.getText()))kondisiCendela1.setSelected(true);
+			 if(kelas.getKondisiObjek("Kondisi Jendela").equals("Baik"))kondisiCendela.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kondisi Jendela").equals("Buruk"))kondisiCendela1.setSelected(true);
 			
-			 if(kelas.getKondisiObjek("Sirkulasi Udara").equals(kondisiudara.getText()))kondisiudara.setSelected(true);
-			 else if(kelas.getKondisiObjek("Sirkulasi Udara").equals(kondisiudara1.getText()))kondisiudara1.setSelected(true);
+			 if(kelas.getKondisiObjek("Sirkulasi Udara").equals("Baik"))kondisiudara.setSelected(true);
+			 else if(kelas.getKondisiObjek("Sirkulasi Udara").equals("Buruk"))kondisiudara1.setSelected(true);
 			
 			 IntensitasCahaya.setText(kelas.getNilaiObjek("Intesitas Cahaya"));
 			 Kelembapan.setText(kelas.getNilaiObjek("Kelembapan"));
 			 Suhu.setText(kelas.getNilaiObjek("Suhu"));
 			 
-			 if(kelas.getKondisiObjek("Kebisingan").equals(kebisingan.getText()))kebisingan.setSelected(true);
-			 else if(kelas.getKondisiObjek("Kebisingan").equals(kebisingan1.getText()))kebisingan1.setSelected(true);
+			 if(kelas.getKondisiObjek("Kebisingan").equals("Baik"))kebisingan.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kebisingan").equals("Buruk"))kebisingan1.setSelected(true);
 			 
-			 if(kelas.getKondisiObjek("Bau").equals(rdbtnBau.getText()))rdbtnBau.setSelected(true);
-			 else if(kelas.getKondisiObjek("Bau").equals(rdbtnTidakBau.getText()))rdbtnTidakBau.setSelected(true);
+			 if(kelas.getKondisiObjek("Bau").equals("Baik"))rdbtnBau.setSelected(true);
+			 else if(kelas.getKondisiObjek("Bau").equals("Buruk"))rdbtnTidakBau.setSelected(true);
+			 	 
+			 if(kelas.getKondisiObjek("Kebocoran").equals("Baik"))kebocoran1.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kebocoran").equals("Buruk"))kebocoran2.setSelected(true);
 			 
-			 if(kelas.getKondisiObjek("Kebocoran").equals(kebocoran1.getText()))kebocoran1.setSelected(true);
-			 else if(kelas.getKondisiObjek("Kebocoran").equals(kebocoran2.getText()))kebocoran2.setSelected(true);
+			 if(kelas.getKondisiObjek("Keausan").equals("Baik"))rdbtnAus.setSelected(true);
+			 else if(kelas.getKondisiObjek("Keausan").equals("Buruk"))rdbtnTidakAus.setSelected(true);
 			 
-			 if(kelas.getKondisiObjek("Kebocoran").equals(kebocoran1.getText()))kebocoran1.setSelected(true);
-			 else if(kelas.getKondisiObjek("Kebocoran").equals(kebocoran2.getText()))kebocoran2.setSelected(true);
-			 
-			 if(kelas.getKondisiObjek("Keausan").equals(rdbtnAus.getText()))rdbtnAus.setSelected(true);
-			 else if(kelas.getKondisiObjek("Keausan").equals(rdbtnTidakAus.getText()))rdbtnTidakAus.setSelected(true);
+			 if(kelas.getKondisiObjek("Kerusakan").equals("Baik"))kerusakan1.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kerusakan").equals("Buruk"))kerusakan2.setSelected(true);
 		}
 		
 		kondisilantai1.setBounds(198, 44, 109, 23);

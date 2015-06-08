@@ -57,7 +57,7 @@ public class MainFrame extends JFrame {
 		t3 = new Tampilan21(kelas);
 		t4 = new Tampilan3(kelas);
 		t5 = new Tampilan32(kelas);
-		t2 = new Tampilan2(kelas);
+		t2 = new Tampilan2(kelasNew);
 		t1 = new Tampilan(kelas);
 
 		getContentPane().add(t1);

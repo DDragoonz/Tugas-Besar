@@ -168,7 +168,6 @@ public class Login extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				new MainFrame(kelas,Login.this);
-				
 				dispose();
 			}
 		});
