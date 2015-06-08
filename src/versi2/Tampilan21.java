@@ -90,7 +90,7 @@ public class Tampilan21 extends JPanel {
 
 		add(lblJumlahKipasAngin);
 
-		JumlahKipasAngin.setBounds(248, 48, 100, 20);
+		JumlahKipasAngin.setBounds(248, 48, 100, 30);
 		add(JumlahKipasAngin);
 		JumlahKipasAngin.setColumns(10);
 
@@ -114,7 +114,7 @@ public class Tampilan21 extends JPanel {
 		//
 		add(lblJumlahKipasAc);
 
-		JumlahAC.setBounds(248, 167, 100, 20);
+		JumlahAC.setBounds(248, 167, 100, 30);
 		//
 		add(JumlahAC);
 		JumlahAC.setColumns(10);
@@ -193,7 +193,7 @@ public class Tampilan21 extends JPanel {
 		//
 		add(lblJumlahCctv);
 
-		JumlahCCTV.setBounds(248, 405, 100, 20);
+		JumlahCCTV.setBounds(248, 405, 100, 30);
 		//
 		add(JumlahCCTV);
 		JumlahCCTV.setColumns(10);
