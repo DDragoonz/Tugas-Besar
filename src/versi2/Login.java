@@ -89,7 +89,7 @@ public class Login extends JFrame {
 		lblpass.setFont(new Font("Times New Roman", Font.PLAIN, 13));
 		
 		textadmin = new JTextField();
-		textadmin.setBounds(112, 46, 102, 23);
+		textadmin.setBounds(112, 46, 102, 30);
 		panel.add(textadmin);
 		textadmin.setColumns(10);
 		
@@ -98,7 +98,7 @@ public class Login extends JFrame {
 		panel.add(btnLogin);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(112, 82, 102, 21);
+		passwordField.setBounds(112, 82, 102, 30);
 		panel.add(passwordField);
 		
 		JPanel panel_1 = new JPanel();
