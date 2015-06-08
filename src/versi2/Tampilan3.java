@@ -15,9 +15,9 @@ public class Tampilan3 extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	JTextField IntensitasCahaya;
-	JTextField Kelembapan;
-	JTextField Suhu;
+	JTextField IntensitasCahaya = new JTextField();
+	JTextField Kelembapan=new JTextField();
+	JTextField Suhu= new JTextField();
 	
 	private ButtonGroup kondisilantai = new ButtonGroup();
 	JRadioButton kondisilantai1 = new JRadioButton("Baik");
@@ -66,17 +66,53 @@ public class Tampilan3 extends JPanel {
 
 	 
 	 
-	public Tampilan3() {
+	public Tampilan3(RuangKelas kelas) {
 		setLayout(null);
-		
-
 		
 		JLabel lblKondisiLantai = new JLabel("Kondisi Lantai");
 		lblKondisiLantai.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblKondisiLantai.setBounds(20, 45, 172, 19);
-		//
+		
 		add(lblKondisiLantai);
-
+		
+		if(kelas!=null){
+			 if(kelas.getKondisiObjek("Kondisi Lantai").equals(kondisilantai1.getText()))kondisilantai1.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kondisi Lantai").equals(kondisilantai2.getText()))kondisilantai2.setSelected(true);
+			 
+			 if(kelas.getKondisiObjek("Kondisi Dinding").equals(kondisidinding.getText()))kondisidinding.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kondisi Dinding").equals(kondisidinding1.getText()))kondisidinding1.setSelected(true);
+			 
+			 if(kelas.getKondisiObjek("Kondisi Atap").equals(kondisiAtap.getText()))kondisiAtap.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kondisi Atap1").equals(kondisiAtap1.getText()))kondisiAtap1.setSelected(true);
+			 
+			 if(kelas.getKondisiObjek("Kondisi Pintu").equals(Kondisipintu.getText()))Kondisipintu.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kondisi Pintu").equals(Kondisipintu1.getText()))Kondisipintu1.setSelected(true);
+			 
+			 if(kelas.getKondisiObjek("Kondisi Jendela").equals(kondisiCendela.getText()))kondisiCendela.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kondisi Jendela").equals(kondisiCendela1.getText()))kondisiCendela1.setSelected(true);
+			
+			 if(kelas.getKondisiObjek("Sirkulasi Udara").equals(kondisiudara.getText()))kondisiudara.setSelected(true);
+			 else if(kelas.getKondisiObjek("Sirkulasi Udara").equals(kondisiudara1.getText()))kondisiudara1.setSelected(true);
+			
+			 IntensitasCahaya.setText(kelas.getNilaiObjek("Intesitas Cahaya"));
+			 Kelembapan.setText(kelas.getNilaiObjek("Kelembapan"));
+			 Suhu.setText(kelas.getNilaiObjek("Suhu"));
+			 
+			 if(kelas.getKondisiObjek("Kebisingan").equals(kebisingan.getText()))kebisingan.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kebisingan").equals(kebisingan1.getText()))kebisingan1.setSelected(true);
+			 
+			 if(kelas.getKondisiObjek("Bau").equals(rdbtnBau.getText()))rdbtnBau.setSelected(true);
+			 else if(kelas.getKondisiObjek("Bau").equals(rdbtnTidakBau.getText()))rdbtnTidakBau.setSelected(true);
+			 
+			 if(kelas.getKondisiObjek("Kebocoran").equals(kebocoran1.getText()))kebocoran1.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kebocoran").equals(kebocoran2.getText()))kebocoran2.setSelected(true);
+			 
+			 if(kelas.getKondisiObjek("Kebocoran").equals(kebocoran1.getText()))kebocoran1.setSelected(true);
+			 else if(kelas.getKondisiObjek("Kebocoran").equals(kebocoran2.getText()))kebocoran2.setSelected(true);
+			 
+			 if(kelas.getKondisiObjek("Keausan").equals(rdbtnAus.getText()))rdbtnAus.setSelected(true);
+			 else if(kelas.getKondisiObjek("Keausan").equals(rdbtnTidakAus.getText()))rdbtnTidakAus.setSelected(true);
+		}
 		
 		kondisilantai1.setBounds(198, 44, 109, 23);
 		//
@@ -181,7 +217,7 @@ public class Tampilan3 extends JPanel {
 		//
 		add(lblIntensitasCahaya);
 
-		IntensitasCahaya = new JTextField();
+		
 		IntensitasCahaya.setBounds(198, 279, 38, 20);
 		//
 		add(IntensitasCahaya);
@@ -193,7 +229,6 @@ public class Tampilan3 extends JPanel {
 		//
 		add(lblKelembapan);
 
-		Kelembapan = new JTextField();
 		Kelembapan.setBounds(198, 319, 38, 20);
 		//
 		add(Kelembapan);
@@ -205,7 +240,6 @@ public class Tampilan3 extends JPanel {
 		//
 		add(lblSuhu);
 
-		Suhu = new JTextField();
 		Suhu.setBounds(199, 354, 37, 20);
 		//
 		add(Suhu);

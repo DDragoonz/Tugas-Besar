@@ -117,7 +117,7 @@ public class RuangKelas implements Serializable{
 		tambahObjekNonBenda("Kunci Pintu & Jendela", true);
 		tambahObjekNonBenda("Bahaya", true);
 		tambahObjekTerukur("Intesitas Cahaya", 0, 30, 80);
-		tambahObjekTerukur("Tingkat Kelembapan", 0, 30, 80);
+		tambahObjekTerukur("Kelembapan", 0, 30, 80);
 		tambahObjekTerukur("Suhu", 0, 30, 80);
 		
 	}
@@ -136,26 +136,34 @@ public class RuangKelas implements Serializable{
 	
 	public String analisisObjek(String nama){
 		String result = "-";
+		boolean next = true;
 		for(ObjekBenda a:daftarObjekBenda){
 			if(a.getNama().equals(nama)){
-				if(a.analisisObjek())result =  " sesuai";
+				if(a.analisisObjek()){
+					result =  " sesuai";
+					next = false;
+				}
 				else result =  " tidak sesuai";
 				}
 			
 		}
+		if(next){
 		for(ObjekNonBenda a:daftarObjekNonBenda){
 			if(a.analisisObjek()){
 				result =  " sesuai";
+				next = false;
 				}
 			else result =  " tidak sesuai";
-		}
+		}}
+		if(next){
 		for(ObjekTerukur a:daftarObjekTerukur){
 			if(a.analisisObjek()){
+				next = false;
 				result =   " sesuai";
 				}
 			else result =  " tidak sesuai";
 		}
-		
+		}
 		return result;
 	}
 	
@@ -220,28 +228,27 @@ public class RuangKelas implements Serializable{
 	}
 	
 	public String getKondisiObjek (String nama){
-		boolean hasil = false;
+		
 		String result = "-";
 		for(ObjekBenda a:daftarObjekBenda){
 			if(a.getNama().equals(nama)){
-					hasil = a.getKondisi();
+					if(a.getKondisi())result = "Baik";
 					break;
 				}
 		}
 		for(ObjekNonBenda a:daftarObjekNonBenda){
 			if(a.getNama().equals(nama)){
-				hasil = a.getKondisi();
+				if(a.getKondisi())result = "Baik";
 				break;
 			}
 		}
 		for(ObjekTerukur a:daftarObjekTerukur){
 			if(a.getNama().equals(nama)){
-				hasil = a.getKondisi();
+				if(a.getKondisi())result = "Baik";
 				break;
 			}
 		}
 		
-		if(hasil)result = "Baik";
 		
 		return result;
 	}

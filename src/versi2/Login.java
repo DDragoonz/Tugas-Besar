@@ -14,6 +14,11 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+import javax.swing.JList;
+import javax.swing.JComboBox;
+import javax.swing.SwingConstants;
 
 public class Login extends JFrame {
 
@@ -23,6 +28,9 @@ public class Login extends JFrame {
 	private JTextField textadmin;
 	private JPasswordField passwordField;
 	private Kontrol kontrol = new Kontrol();
+	private boolean login = false;
+	private TampilanKelas TK = new TampilanKelas();
+	private RuangKelas kelas;
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -41,6 +49,7 @@ public class Login extends JFrame {
 	 * Create the frame.
 	 */
 	public Login() {
+		setTitle("Inventaris Lab v 1.0.17");
 		try {
 			UIManager.setLookAndFeel(new NimbusLookAndFeel());
 		} catch ( Exception e) {
@@ -51,18 +60,20 @@ public class Login extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 750, 380);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.GRAY);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(20, 92, 257, 150);
+		panel.setBorder(new LineBorder(new Color(0, 0, 0), 2, true));
+		panel.setBounds(20, 11, 257, 150);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
 		
 		JLabel lblLoginDuluKa = new JLabel("LOGIN DULU KAKAK");
-		lblLoginDuluKa.setBounds(44, 4, 123, 14);
+		lblLoginDuluKa.setBounds(60, 11, 123, 14);
 		panel.add(lblLoginDuluKa);
 		lblLoginDuluKa.setFont(new Font("Times New Roman", Font.PLAIN, 12));
 		
@@ -90,19 +101,21 @@ public class Login extends JFrame {
 		panel.add(passwordField);
 		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(277, 11, 428, 290);
+		panel_1.setBorder(new LineBorder(new Color(0, 0, 0), 2, true));
+		panel_1.setBounds(287, 11, 418, 310);
 		contentPane.add(panel_1);
 		panel_1.setLayout(null);
 		
-		JLabel lblMenu = new JLabel("MENU");
-		lblMenu.setFont(new Font("Times New Roman", Font.PLAIN, 14));
-		lblMenu.setBounds(199, 11, 60, 25);
+		JLabel lblMenu = new JLabel("MENU KELAS");
+		lblMenu.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMenu.setFont(new Font("Urdu Typesetting", Font.BOLD, 14));
+		lblMenu.setBounds(123, 11, 200, 25);
 		panel_1.add(lblMenu);
 		
 		JButton btnInputdata = new JButton("INPUT DATA");
 		btnInputdata.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				new MainFrame().setVisible(true);
+				new MainFrame(null,Login.this).setVisible(true);
 				dispose();
 			}
 		});
@@ -116,6 +129,17 @@ public class Login extends JFrame {
 		btnEditData.setEnabled(false);
 		btnEditData.setBounds(123, 105, 200, 25);
 		panel_1.add(btnEditData);
+		btnEditData.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				RuangKelas kelas = kontrol.load();
+				if(kelas!=null){
+					new MainFrame(kelas, Login.this).setVisible(true);
+					dispose();
+				}
+			}
+		});
 		
 		JButton lihatdata = new JButton("LIHAT DATA");
 		lihatdata.setFont(new Font("Times New Roman", Font.PLAIN, 12));
@@ -126,8 +150,36 @@ public class Login extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				getContentPane().removeAll();
-				setContentPane(new TampilanKelas(kontrol.load()));
+				kelas = kontrol.load();
+				if(kelas!=null){
+					getContentPane().remove(contentPane);
+					TK.init(kelas, login);
+					setContentPane(TK);
+					revalidate();
+					repaint();
+				}
+				
+			}
+		});
+		
+		TK.editButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				new MainFrame(kelas,Login.this);
+				
+				dispose();
+			}
+		});
+		
+		TK.hapusButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				kontrol.hapusKelas();
+				kelas = null;
+				getContentPane().remove(TK);
+				setContentPane(contentPane);
 				revalidate();
 				repaint();
 			}
@@ -141,13 +193,14 @@ public class Login extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
 				System.exit(0);
 			}
 		});
 		
 		JPanel panel_2 = new JPanel();
-		panel_2.setBounds(10, 11, 289, 150);
+		panel_2.setBorder(new LineBorder(new Color(0, 0, 0), 2, true));
+
+		panel_2.setBounds(20, 11, 257, 150);
 		contentPane.add(panel_2);
 		panel_2.setVisible(false);
 		panel_2.setLayout(null);
@@ -163,8 +216,59 @@ public class Login extends JFrame {
 		panel_2.add(WELCOME);
 		
 		JButton btnLogout = new JButton("LOGOUT");
-		btnLogout.setBounds(49, 116, 102, 23);
+		btnLogout.setBounds(70, 110, 102, 23);
 		panel_2.add(btnLogout);
+		
+		JPanel panel_3 = new JPanel();
+		panel_3.setBorder(new LineBorder(new Color(0, 0, 0), 2, true));
+		panel_3.setBounds(20, 172, 257, 149);
+		contentPane.add(panel_3);
+		panel_3.setLayout(null);
+		
+		JLabel lblTemplateKelas = new JLabel("Template Kelas");
+		lblTemplateKelas.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblTemplateKelas.setBounds(20, 19, 102, 34);
+		panel_3.add(lblTemplateKelas);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(132, 19, 102, 34);
+		comboBox.addItem("Default");
+		panel_3.add(comboBox);
+		
+		JButton btnBuatTemplate = new JButton("Buat Baru");
+		btnBuatTemplate.setBounds(20, 74, 100, 36);
+		panel_3.add(btnBuatTemplate);
+		
+		JButton btnHapusTemplate = new JButton("Hapus");
+		btnHapusTemplate.setBounds(132, 74, 102, 36);
+		panel_3.add(btnHapusTemplate);
+		
+		JLabel lblComingSoon = new JLabel("Coming Soon!");
+		lblComingSoon.setBounds(87, 121, 82, 14);
+		panel_3.add(lblComingSoon);
+		
+		JLabel lblCopyrightTeamTbjava = new JLabel("Copyright 2015 Team TBJava. All right is reserved.");
+		lblCopyrightTeamTbjava.setForeground(Color.RED);
+		lblCopyrightTeamTbjava.setFont(new Font("Tahoma", Font.PLAIN, 11));
+		lblCopyrightTeamTbjava.setBounds(20, 332, 267, 14);
+		contentPane.add(lblCopyrightTeamTbjava);
+		
+		JLabel lblVAlpha = new JLabel("v 1.0.17 Alpha");
+		lblVAlpha.setForeground(Color.LIGHT_GRAY);
+		lblVAlpha.setBounds(645, 332, 89, 14);
+		contentPane.add(lblVAlpha);
+		btnLogout.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				panel.setVisible(true);
+				panel_2.setVisible(false);
+				login = false;
+				btnEditData.setEnabled(false);
+				btnInputdata.setEnabled(false);
+			}
+		});
+		
 		btnLogin.addActionListener(new ActionListener() {
 			
 			@SuppressWarnings("deprecation")
@@ -180,6 +284,7 @@ public class Login extends JFrame {
 						WELCOME.setText("WELCOME  "+textadmin.getText());
 						panel_2.setVisible(true);
 						panel.setVisible(false);
+						login = true;
 					}
 				}
 				else if (textadmin.getText().equals("RizkyAde")){
@@ -191,6 +296,7 @@ public class Login extends JFrame {
 						WELCOME.setText("WELCOME  "+textadmin.getText());
 						panel_2.setVisible(true);
 						panel.setVisible(false);
+						login = true;
 					}
 				}
 				else if (textadmin.getText().equals("Sandynoob")){
@@ -202,6 +308,7 @@ public class Login extends JFrame {
 						WELCOME.setText("WELCOME  "+textadmin.getText());
 						panel_2.setVisible(true);
 						panel.setVisible(false);
+						login = true;
 					
 				}
 				}

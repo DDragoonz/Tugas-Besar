@@ -24,7 +24,7 @@ public class Tampilan32 extends JPanel {
 	JRadioButton rdbtnAman = new JRadioButton("Aman");
 	JRadioButton rdbtnTidakAman = new JRadioButton("Tidak Aman");
 	
-	public Tampilan32() {
+	public Tampilan32(RuangKelas kelas) {
 		setLayout(null);
 		setSize(500,650);
 		

@@ -12,21 +12,22 @@ public class Kontrol {
 	
 	private JFileChooser fc = new JFileChooser();
 	private RuangKelas kelas;
+	File file;
 	
 	public void save(RuangKelas kelas){
 		
 		
-		int returnVal = fc.showOpenDialog(null);
+		int returnVal = fc.showSaveDialog(null);
 
         if (returnVal == JFileChooser.APPROVE_OPTION) {
-            File file = fc.getSelectedFile();
+            file = fc.getSelectedFile();
             try {
    	         ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(file));
    	         os.writeObject(kelas);
    	         os.close();
    	         JOptionPane.showMessageDialog(null, "Kelas berhasil disimpan");
    	      } catch(Exception ex) {
-   	          ex.printStackTrace();
+
    	      }
         }
 	}
@@ -35,7 +36,7 @@ public class Kontrol {
 		int returnVal = fc.showOpenDialog(null);
 
         if (returnVal == JFileChooser.APPROVE_OPTION) {
-            File file = fc.getSelectedFile();
+            file = fc.getSelectedFile();
             try {
 
     			ObjectInputStream is = new ObjectInputStream(new FileInputStream(file));
@@ -43,10 +44,14 @@ public class Kontrol {
     			is.close();
     		} catch (Exception ex) {
     			JOptionPane.showMessageDialog(null, "Data not Found !");
-    			ex.printStackTrace();
     		}
         }
         return kelas;
+	}
+	
+	public void hapusKelas(){
+		file.delete();
+		JOptionPane.showMessageDialog(null, "Sukses Hapus");
 	}
 	
 }

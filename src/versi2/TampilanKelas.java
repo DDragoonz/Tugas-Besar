@@ -9,33 +9,31 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
-import java.awt.BorderLayout;
 
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.ScrollPaneConstants;
 
 
 
 public class TampilanKelas extends JPanel {
-	
-	public static void main(String[] args) {
-		JFrame f = new JFrame();
-		f.setVisible(true);
-		f.getContentPane().add(new TampilanKelas(new RuangKelas("a", "", "")));
+	public TampilanKelas() {
 	}
+
 	
 	private JTable table;
+	JButton editButton = new JButton("Edit");
+	JButton hapusButton = new JButton("Hapus");
 
-	public TampilanKelas(RuangKelas kelas) {
+	public void init(RuangKelas kelas, boolean login) {
 		
 		setSize(850,500);
 		setLayout(null);
+		setBackground(Color.GRAY);
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(new BevelBorder(BevelBorder.RAISED, new Color(255, 0, 0), null, new Color(255, 0, 0), null));
-		panel.setBounds(10, 11, 730, 66);
+		panel.setBounds(10, 11, 725, 66);
 		add(panel);
 		panel.setLayout(null);
 		
@@ -63,16 +61,22 @@ public class TampilanKelas extends JPanel {
 		label.setBounds(120, 40, 100, 14);
 		panel.add(label);
 		
-		JButton editButton = new JButton("Edit");
+		
 		editButton.setBounds(592, 11, 89, 43);
+		editButton.setEnabled(false);
 		panel.add(editButton);
 		
-		JButton hapusButton = new JButton("Hapus");
 		hapusButton.setBounds(493, 11, 89, 43);
+		hapusButton.setEnabled(false);
 		panel.add(hapusButton);
 		
+		if(login){
+			editButton.setEnabled(true);
+			hapusButton.setEnabled(true);
+		}
+		
 		JPanel panel_1 = new JPanel();
-		panel_1.setBounds(10, 88, 730, 281);
+		panel_1.setBounds(10, 88, 725, 250);
 		add(panel_1);
 		
 		
@@ -96,14 +100,13 @@ public class TampilanKelas extends JPanel {
 		
 		
 		table = new JTable();
-		table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
-		table.setBounds(0, 0, 850, 450);
+		table.setBounds(0, 0, 725, 425);
 		table.setModel(model);
 		table.setFillsViewportHeight(true);
 		
 		
 		JScrollPane scrollPane = new JScrollPane(table);
-		scrollPane.setBounds(0, 0, 730, 281);
+		scrollPane.setBounds(0, 0, 725, 250);
 		panel_1.add(scrollPane);
 		
 

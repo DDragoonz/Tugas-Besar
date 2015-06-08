@@ -51,7 +51,7 @@ public class Tampilan2 extends JPanel {
 
 	
 	
-	public Tampilan2() {
+	public Tampilan2(RuangKelas kelas) {
 		setLayout(null);
 		//setTitle("keLAS");
 		setVisible(true);

@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
+import javax.swing.SwingConstants;
 
 public class MainFrame extends JFrame {
 
@@ -18,7 +19,7 @@ public class MainFrame extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MainFrame frame = new MainFrame();
+					MainFrame frame = new MainFrame(null,null);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,27 +37,42 @@ public class MainFrame extends JFrame {
 	Kontrol kontrol = new Kontrol();
 
 	
-	public MainFrame() {
+	public MainFrame(RuangKelas kelasNew, Login login) {
+		setTitle("Inventaris Lab v 1.0.17");
+		
 	try {
 		UIManager.setLookAndFeel(new NimbusLookAndFeel());
 	} catch ( Exception e) {
 		JOptionPane.showMessageDialog(null, "Fail to Load Nimbus theme");
 	}
 	
+	if(kelasNew!=null)kelas = kelasNew;
+	
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 500, 650);
 		getContentPane().setLayout(null);
 		
-		t3 = new Tampilan21();
-		t4 = new Tampilan3();
-		t5 = new Tampilan32();
-		t2 = new Tampilan2();
-		t1 = new Tampilan();
+		t3 = new Tampilan21(kelas);
+		t4 = new Tampilan3(kelas);
+		t5 = new Tampilan32(kelas);
+		t2 = new Tampilan2(kelas);
+		t1 = new Tampilan(kelas);
+		
 		getContentPane().add(t1);
 		JButton btnNext = new JButton("Next");
 		btnNext.setBounds(390, 572, 89, 23);
 		t1.add(btnNext);
+		
+		JButton btnCancel = new JButton("Cancel");
+		btnCancel.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				dispose();
+				login.setVisible(true);
+			}
+		});
+		btnCancel.setBounds(291, 572, 89, 23);
+		t1.add(btnCancel);
 		btnNext.addActionListener(new ActionListener() {
 			
 			@Override
@@ -69,7 +85,6 @@ public class MainFrame extends JFrame {
 			}
 		});
 
-		t2 = new Tampilan2();
 		JButton btnNext1 = new JButton("Next");
 		btnNext1.setBounds(390, 572, 89, 23);
 		btnNext1.addActionListener(new ActionListener() {
@@ -184,6 +199,7 @@ public class MainFrame extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				if(kelasNew==null){
 				if (t1.panjangRuangan.getText().isEmpty()
 						|| t1.LebarRuangan.getText().isEmpty())
 					kelas = new RuangKelas(t1.namaRuang.getText(),
@@ -195,6 +211,7 @@ public class MainFrame extends JFrame {
 							Float.parseFloat(t1.LebarRuangan.getText()));
 				
 				kelas.setup();
+				}
 				
 				kelas.setJumlahObjek("Kursi", t1.JumlahKursi.getText());
 				kelas.setJumlahObjek("Pintu", t1.JumlahPintu.getText());
@@ -267,7 +284,7 @@ public class MainFrame extends JFrame {
 				
 				kelas.setNilaiObjek("Suhu",t4.Suhu.getText());
 				kelas.setNilaiObjek("Intesitas Cahaya", t4.IntensitasCahaya.getText());
-				kelas.setNilaiObjek("Tingkat Kelembapan", t4.Kelembapan.getText());
+				kelas.setNilaiObjek("Kelembapan", t4.Kelembapan.getText());
 				
 				if (t4.kebisingan.isSelected())kelas.setKondisiObjek("Kebisingan", true);
 				else if (t4.kebisingan1.isSelected())kelas.setKondisiObjek("Kebisingan", false);
@@ -292,11 +309,12 @@ public class MainFrame extends JFrame {
 				
 				if (t5.rdbtnAman.isSelected())kelas.setKondisiObjek("Bahaya", true);
 				else if (t5.rdbtnTidakAman.isSelected())kelas.setKondisiObjek("Bahaya", false);
-				
 
 				
-				
 				kontrol.save(kelas);
+				
+				dispose();
+				login.setVisible(true);
 				
 			}
 		});

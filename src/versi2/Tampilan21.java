@@ -52,10 +52,21 @@ public class Tampilan21 extends JPanel {
 	 * Launch the application.
 	 */
 
-	public Tampilan21() {
+	public Tampilan21(RuangKelas kelas) {
 		new JPanel();
 		setLayout(null);
 
+		if(kelas!=null){
+			JumlahKipasAngin.setText(kelas.getJumlahObjek("Kipas Angin"));
+			if(kelas.getKondisiObjek("Kipas Angin").equals(KondisiKipas.getText()))KondisiKipas.setSelected(true);
+			else if(kelas.getKondisiObjek("Kipas Angin").equals(KondisiKipas1.getText()))KondisiKipas1.setSelected(true);
+			
+			JumlahAC.setText(kelas.getJumlahObjek("AC"));
+			if(kelas.getKondisiObjek("AC").equals(AcBaik.getText()))AcBaik.setSelected(true);
+			else if(kelas.getKondisiObjek("AC").equals(AcKurangBaik.getText()))AcKurangBaik.setSelected(true);
+		}
+		
+		
 		JLabel lblJumlahKipasAngin = new JLabel("Jumlah Kipas Angin");
 		lblJumlahKipasAngin.setFont(new Font("Times New Roman", Font.BOLD, 15));
 		lblJumlahKipasAngin.setBounds(20, 48, 190, 19);
